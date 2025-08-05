@@ -16,20 +16,12 @@ const Hero = () => {
             <div className="space-y-6">
               <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
                 <span className="bg-gradient-hero bg-clip-text text-transparent">
-                  Run Lean.
-                </span>
-                <br />
-                <span className="bg-gradient-hero bg-clip-text text-transparent">
-                  Scale Smart.
-                </span>
-                <br />
-                <span className="text-accent">
-                  The AI Way.
+                  Get AI Agents That Cut 80% Manual Work in 14 Days
                 </span>
               </h1>
               
               <p className="text-xl text-muted-foreground leading-relaxed max-w-lg">
-                Custom AI agents that automate your manual workflows. Built for GCC businesses with Arabic/English support and WhatsApp integration.
+                Stop drowning in repetitive tasks that kill productivity and drain profits. Our custom AI agents eliminate manual workflows, boost efficiency by 80%, and deliver measurable ROI within 2 weeks - guaranteed for GCC businesses.
               </p>
             </div>
 
@@ -64,27 +56,6 @@ const Hero = () => {
               </div>
             </div>
 
-            <div className="space-y-4">
-              <h3 className="text-lg font-semibold">Industries We Serve:</h3>
-              <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
-                <Link to="/industries/manufacturing" className="flex items-center space-x-2 text-sm bg-accent/50 rounded-lg p-3 hover:bg-accent/70 transition-colors">
-                  <span>🏭</span>
-                  <span>Manufacturing</span>
-                </Link>
-                <Link to="/industries/healthcare" className="flex items-center space-x-2 text-sm bg-accent/50 rounded-lg p-3 hover:bg-accent/70 transition-colors">
-                  <span>🏥</span>
-                  <span>Healthcare</span>
-                </Link>
-                <Link to="/industries/logistics" className="flex items-center space-x-2 text-sm bg-accent/50 rounded-lg p-3 hover:bg-accent/70 transition-colors">
-                  <span>🚛</span>
-                  <span>Logistics</span>
-                </Link>
-                <Link to="/industries/retail" className="flex items-center space-x-2 text-sm bg-accent/50 rounded-lg p-3 hover:bg-accent/70 transition-colors">
-                  <span>🛍️</span>
-                  <span>Retail & Hypermarkets</span>
-                </Link>
-              </div>
-            </div>
           </div>
 
           <div className="relative">

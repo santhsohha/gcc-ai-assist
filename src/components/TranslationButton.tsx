@@ -8,15 +8,19 @@ const TranslationButton = () => {
   const toggleLanguage = () => {
     setIsArabic(!isArabic);
     
-    // In a real implementation, this would trigger translation
-    // For now, we'll just toggle the state and could integrate with a translation service
-    if (!isArabic) {
-      document.documentElement.setAttribute('dir', 'rtl');
-      document.documentElement.setAttribute('lang', 'ar');
-    } else {
-      document.documentElement.setAttribute('dir', 'ltr');
-      document.documentElement.setAttribute('lang', 'en');
-    }
+    // Simple text translation for demonstration
+    // In production, this would use a proper translation service
+    const elements = document.querySelectorAll('[data-translate]');
+    elements.forEach((element) => {
+      const englishText = element.getAttribute('data-en');
+      const arabicText = element.getAttribute('data-ar');
+      
+      if (!isArabic && arabicText) {
+        element.textContent = arabicText;
+      } else if (isArabic && englishText) {
+        element.textContent = englishText;
+      }
+    });
   };
 
   return (

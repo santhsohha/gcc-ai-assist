@@ -23,20 +23,20 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold mb-4">Services</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>Custom AI Agents</li>
-              <li>WhatsApp Automation</li>
-              <li>Process Optimization</li>
-              <li>Arabic/English Support</li>
+              <li><Link to="/services/customaiagents" className="hover:text-primary transition-colors">Custom AI Agents</Link></li>
+              <li><Link to="/services/whatsappautomation" className="hover:text-primary transition-colors">WhatsApp Automation</Link></li>
+              <li><Link to="/services/processoptimization" className="hover:text-primary transition-colors">Process Optimization</Link></li>
+              <li><Link to="/services/gcclocalization" className="hover:text-primary transition-colors">GCC Localization</Link></li>
             </ul>
           </div>
 
           <div>
             <h3 className="font-semibold mb-4">Industries</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>Manufacturing</li>
-              <li>Healthcare</li>
-              <li>Logistics</li>
-              <li>Retail & Hypermarkets</li>
+              <li><Link to="/industries/manufacturing" className="hover:text-primary transition-colors">Manufacturing</Link></li>
+              <li><Link to="/industries/healthcare" className="hover:text-primary transition-colors">Healthcare</Link></li>
+              <li><Link to="/industries/logistics" className="hover:text-primary transition-colors">Logistics</Link></li>
+              <li><Link to="/industries/retail" className="hover:text-primary transition-colors">Retail & Hypermarkets</Link></li>
             </ul>
           </div>
 
