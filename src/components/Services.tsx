@@ -5,28 +5,32 @@ import { Button } from "@/components/ui/button";
 const Services = () => {
   const services = [
     {
-      icon: "🤖",
+      icon: "⚡",
       title: "Custom AI Agents",
       description: "Tailored AI solutions that mimic your best employee but work 24/7",
-      features: ["WhatsApp Integration", "Arabic/English Support", "ERP Integration", "Custom Workflows"]
+      features: ["WhatsApp Integration", "Arabic/English Support", "ERP Integration", "Custom Workflows"],
+      gradient: "from-blue-500 to-cyan-500"
     },
     {
-      icon: "📱",
-      title: "WhatsApp Automation",
+      icon: "💬",
+      title: "WhatsApp Automation", 
       description: "Critical for MENA market - automated order updates, vendor coordination",
-      features: ["Order Status Updates", "Vendor Follow-ups", "Customer Support", "Appointment Scheduling"]
+      features: ["Order Status Updates", "Vendor Follow-ups", "Customer Support", "Appointment Scheduling"],
+      gradient: "from-green-500 to-emerald-500"
     },
     {
-      icon: "🌍",
+      icon: "🎯",
       title: "GCC Localization",
-      description: "Built with UAE/Saudi cultural context and business practices",
-      features: ["Arabic Language Support", "Local Business Practices", "Cultural Adaptation", "Regional Compliance"]
+      description: "Built with UAE/Saudi cultural context and business practices", 
+      features: ["Arabic Language Support", "Local Business Practices", "Cultural Adaptation", "Regional Compliance"],
+      gradient: "from-orange-500 to-red-500"
     },
     {
-      icon: "📊",
+      icon: "📈",
       title: "Process Optimization",
       description: "Analyze and streamline your workflows for maximum efficiency",
-      features: ["Workflow Analysis", "Process Mapping", "Efficiency Reports", "Continuous Improvement"]
+      features: ["Workflow Analysis", "Process Mapping", "Efficiency Reports", "Continuous Improvement"],
+      gradient: "from-purple-500 to-pink-500"
     }
   ];
 
@@ -47,9 +51,11 @@ const Services = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, index) => (
-            <Card key={index} className="shadow-card hover:shadow-glow transition-all duration-300 hover:-translate-y-2">
+            <Card key={index} className="shadow-card hover:shadow-glow transition-all duration-300 hover:-translate-y-2 group">
               <CardHeader className="text-center">
-                <div className="text-4xl mb-4">{service.icon}</div>
+                <div className={`w-16 h-16 mx-auto bg-gradient-to-r ${service.gradient} rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                  <span className="text-2xl">{service.icon}</span>
+                </div>
                 <CardTitle className="text-xl">{service.title}</CardTitle>
               </CardHeader>
               <CardContent>

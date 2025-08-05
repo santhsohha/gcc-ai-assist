@@ -102,62 +102,130 @@ const Pricing = () => {
             </CardContent>
           </Card>
 
-          {/* Workflow Tiers */}
+          {/* Workflow Tiers with FOMO */}
           <div className="space-y-6">
-            <h3 className="text-2xl font-bold text-center mb-6">Workflow Complexity Tiers</h3>
+            <div className="text-center mb-8">
+              <Badge variant="secondary" className="bg-orange-100 text-orange-700 mb-4 animate-pulse">
+                ⚡ Your Automation Roadmap
+              </Badge>
+              <h3 className="text-2xl font-bold mb-4"
+                  data-translate
+                  data-en="What You Get vs What Competitors Are Missing"
+                  data-ar="ما تحصل عليه مقابل ما يفقده المنافسون">
+                What You Get vs What Competitors Are Missing
+              </h3>
+              <p className="text-muted-foreground"
+                 data-translate
+                 data-en="While others pay per user and struggle with English-only systems, you get everything included."
+                 data-ar="بينما يدفع الآخرون عن كل مستخدم ويعانون من الأنظمة الإنجليزية فقط، تحصل على كل شيء متضمن.">
+                While others pay per user and struggle with English-only systems, you get everything included.
+              </p>
+            </div>
+            
             {workflowTiers.map((tier, index) => (
-              <Card key={index} className={`shadow-card ${tier.included > 0 ? 'border-primary' : 'border-border'}`}>
+              <Card key={index} className={`shadow-card hover:shadow-glow transition-all duration-300 transform hover:-translate-y-1 ${tier.included > 0 ? 'border-primary bg-gradient-to-r from-green-50/50 to-emerald-50/50 dark:from-green-950/20 dark:to-emerald-950/20' : 'border-border hover:border-primary/50'} relative overflow-hidden`}>
+                {tier.included > 0 && (
+                  <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-green-500 to-emerald-500"></div>
+                )}
                 <CardContent className="p-6">
                   <div className="flex justify-between items-start mb-4">
-                    <div>
-                      <h4 className="text-xl font-bold">{tier.tier}</h4>
-                      <p className="text-primary font-semibold">{tier.hours}</p>
+                    <div className="flex items-center space-x-4">
+                      <div className={`w-12 h-12 rounded-full flex items-center justify-center ${tier.included > 0 ? 'bg-green-100 dark:bg-green-900/20' : 'bg-orange-100 dark:bg-orange-900/20'}`}>
+                        <span className="text-2xl">
+                          {index === 0 ? '⚡' : index === 1 ? '🚀' : '🎯'}
+                        </span>
+                      </div>
+                      <div>
+                        <h4 className="text-xl font-bold">{tier.tier}</h4>
+                        <p className="text-primary font-semibold">{tier.hours}</p>
+                      </div>
                     </div>
-                    {tier.included > 0 && (
-                      <Badge variant="default" className="bg-green-100 text-green-700">
-                        {tier.included} Included
+                    {tier.included > 0 ? (
+                      <Badge variant="default" className="bg-green-100 text-green-700 animate-bounce">
+                        ✅ {tier.included} Included FREE
+                      </Badge>
+                    ) : (
+                      <Badge variant="outline" className="border-orange-500 text-orange-600">
+                        🔥 Additional Value
                       </Badge>
                     )}
                   </div>
-                  <div className="space-y-2">
-                    <p className="font-medium text-sm">Examples:</p>
-                    <ul className="text-sm text-muted-foreground space-y-1">
+                  <div className="space-y-3">
+                    <p className="font-medium text-sm">Real Business Impact:</p>
+                    <ul className="text-sm space-y-2">
                       {tier.examples.map((example, idx) => (
-                        <li key={idx}>• {example}</li>
+                        <li key={idx} className="flex items-start space-x-2">
+                          <span className="text-primary mt-1">•</span>
+                          <span className="text-muted-foreground">{example}</span>
+                        </li>
                       ))}
                     </ul>
+                    {tier.included > 0 && (
+                      <div className="bg-green-50 dark:bg-green-950/30 rounded-lg p-3 mt-4">
+                        <p className="text-green-700 dark:text-green-400 text-sm font-medium">
+                          💰 Value: AED {index === 0 ? '8,000' : '12,000'}/month - Yours FREE
+                        </p>
+                      </div>
+                    )}
                   </div>
                 </CardContent>
               </Card>
             ))}
+            
+            <div className="text-center mt-8 bg-gradient-to-r from-orange-50 to-red-50 dark:from-orange-950/20 dark:to-red-950/20 rounded-xl p-6 border-2 border-orange-200">
+              <p className="text-orange-700 font-semibold mb-2"
+                 data-translate
+                 data-en="⚠️ While competitors charge AED 2,000+ per user monthly..."
+                 data-ar="⚠️ بينما يتقاضى المنافسون 2,000+ درهم لكل مستخدم شهرياً...">
+                ⚠️ While competitors charge AED 2,000+ per user monthly...
+              </p>
+              <p className="text-muted-foreground"
+                 data-translate
+                 data-en="You get unlimited users, Arabic support, and custom workflows for one fixed price."
+                 data-ar="تحصل على مستخدمين غير محدودين ودعم العربية وسير عمل مخصص بسعر ثابت واحد.">
+                You get unlimited users, Arabic support, and custom workflows for one fixed price.
+              </p>
+            </div>
           </div>
         </div>
 
         <div className="mt-16 text-center">
-          <div className="bg-background rounded-2xl p-8 shadow-card max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold mb-4">Compare vs Traditional Solutions</h3>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <h4 className="font-semibold text-red-600 mb-3">❌ Generic Software</h4>
-                <ul className="text-sm space-y-2 text-muted-foreground">
-                  <li>• Per-user licensing fees</li>
-                  <li>• English-only interface</li>
-                  <li>• Rigid, non-customizable</li>
-                  <li>• No WhatsApp integration</li>
-                  <li>• Self-service configuration</li>
-                </ul>
+          <div className="bg-gradient-to-r from-red-50 to-green-50 dark:from-red-950/20 dark:to-green-950/20 rounded-2xl p-8 shadow-glow max-w-5xl mx-auto border">
+            <Badge className="bg-red-100 text-red-700 mb-4 animate-pulse">
+              🚨 Reality Check: ROI Calculator
+            </Badge>
+            <h3 className="text-3xl font-bold mb-6"
+                data-translate
+                data-en="The True Cost of Staying Manual"
+                data-ar="التكلفة الحقيقية للبقاء يدوياً">
+              The True Cost of Staying Manual
+            </h3>
+            
+            <div className="grid md:grid-cols-3 gap-6 mb-8">
+              <div className="bg-white dark:bg-gray-900 rounded-xl p-6 shadow-md">
+                <div className="text-3xl font-bold text-red-600 mb-2">AED 45,000</div>
+                <p className="text-sm text-muted-foreground">Monthly cost of manual inefficiencies (3 employees × 30 hours × AED 500/hour)</p>
               </div>
-              <div>
-                <h4 className="font-semibold text-green-600 mb-3">✅ Nunar AI Agents</h4>
-                <ul className="text-sm space-y-2 text-muted-foreground">
-                  <li>• Fixed monthly retainer</li>
-                  <li>• Full Arabic/English support</li>
-                  <li>• 100% custom-built for you</li>
-                  <li>• Native WhatsApp integration</li>
-                  <li>• Full-service consultancy</li>
-                </ul>
+              <div className="bg-white dark:bg-gray-900 rounded-xl p-6 shadow-md">
+                <div className="text-3xl font-bold text-green-600 mb-2">AED 16,500</div>
+                <p className="text-sm text-muted-foreground">Nunar's fixed monthly cost with unlimited automation</p>
+              </div>
+              <div className="bg-white dark:bg-gray-900 rounded-xl p-6 shadow-md">
+                <div className="text-3xl font-bold text-blue-600 mb-2">AED 28,500</div>
+                <p className="text-sm text-muted-foreground">Your monthly savings = 172% ROI</p>
               </div>
             </div>
+            
+            <p className="text-lg text-muted-foreground mb-6"
+               data-translate
+               data-en="Every month you wait costs you AED 28,500 in lost efficiency. How many months can you afford to lose?"
+               data-ar="كل شهر تنتظره يكلفك 28,500 درهم في الكفاءة المفقودة. كم شهراً يمكنك تحمل خسارته؟">
+              Every month you wait costs you AED 28,500 in lost efficiency. How many months can you afford to lose?
+            </p>
+            
+            <Button size="lg" className="bg-gradient-to-r from-red-500 via-orange-500 to-yellow-500 hover:shadow-glow text-white text-lg px-12 py-6 animate-pulse">
+              Stop Losing Money - Start Free Trial
+            </Button>
           </div>
         </div>
       </div>
