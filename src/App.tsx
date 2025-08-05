@@ -5,6 +5,17 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import Manufacturing from "./pages/industries/Manufacturing";
+import Healthcare from "./pages/industries/Healthcare";
+import Logistics from "./pages/industries/Logistics";
+import Retail from "./pages/industries/Retail";
+import CustomAIAgents from "./pages/services/CustomAIAgents";
+import WhatsAppAutomation from "./pages/services/WhatsAppAutomation";
+import GCCLocalization from "./pages/services/GCCLocalization";
+import ProcessOptimization from "./pages/services/ProcessOptimization";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfService from "./pages/TermsOfService";
+import Support from "./pages/Support";
 
 const queryClient = new QueryClient();
 
