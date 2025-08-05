@@ -9,32 +9,50 @@ All colors MUST be HSL.
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 20 14.3% 4.1%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 20 14.3% 4.1%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 20 14.3% 4.1%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 20.5 90.2% 48.2%;
+    --primary-foreground: 60 9.1% 97.8%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 30 25% 96%;
+    --secondary-foreground: 20 14.3% 4.1%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 25 25% 95%;
+    --muted-foreground: 25 5.3% 44.7%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 24 9.8% 10%;
+    --accent-foreground: 60 9.1% 97.8%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 60 9.1% 97.8%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 20 5.9% 90%;
+    --input: 20 5.9% 90%;
+    --ring: 20.5 90.2% 48.2%;
+
+    /* Orange theme gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(20.5 90.2% 48.2%), hsl(35 91% 65%));
+    --gradient-secondary: linear-gradient(180deg, hsl(30 25% 96%), hsl(25 25% 95%));
+    --gradient-hero: linear-gradient(135deg, hsl(20.5 90.2% 48.2%) 0%, hsl(35 91% 65%) 50%, hsl(45 93% 76%) 100%);
+    
+    /* Shadows with orange tints */
+    --shadow-primary: 0 10px 30px -10px hsl(20.5 90.2% 48.2% / 0.3);
+    --shadow-glow: 0 0 40px hsl(35 91% 65% / 0.4);
+    --shadow-card: 0 4px 6px -1px hsl(20.5 90.2% 48.2% / 0.1);
+
+    /* Custom orange variants */
+    --orange-50: 33 100% 96%;
+    --orange-100: 34 100% 92%;
+    --orange-500: 20.5 90.2% 48.2%;
+    --orange-600: 17 88% 40%;
+    --orange-700: 15 79% 32%;
+    --orange-900: 15 75% 28%;
 
     --radius: 0.5rem;
 
