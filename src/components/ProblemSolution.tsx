@@ -1,89 +1,96 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+import { Check, X } from "lucide-react";
 
 const ProblemSolution = () => {
   return (
-    <section className="py-20 px-4 bg-background">
-      <div className="container mx-auto">
+    <section className="py-24 bg-gradient-to-br from-muted/10 to-background">
+      <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <Badge variant="secondary" className="bg-orange-50 text-orange-700 border-orange-200 mb-4">
-            The Challenge
-          </Badge>
-          <h2 className="text-4xl font-bold mb-6">
-            GCC SMBs Are <span className="bg-gradient-primary bg-clip-text text-transparent">Drowning in Manual Work</span>
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-8">
+            Compare vs Traditional Solutions
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            While your competitors grow, you're stuck managing repetitive tasks that eat 80+ hours monthly
-          </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
-          <Card className="border-2 border-red-200 shadow-card">
-            <CardContent className="p-8">
-              <div className="text-red-600 text-2xl mb-4">❌</div>
-              <h3 className="text-2xl font-bold mb-4 text-red-700">Your Current Reality</h3>
-              <ul className="space-y-3 text-muted-foreground">
-                <li className="flex items-start">
-                  <span className="text-red-500 mr-2">•</span>
-                  Hours spent on WhatsApp vendor follow-ups daily
-                </li>
-                <li className="flex items-start">
-                  <span className="text-red-500 mr-2">•</span>
-                  Manual report generation eating your weekends
-                </li>
-                <li className="flex items-start">
-                  <span className="text-red-500 mr-2">•</span>
-                  Generic software that doesn't fit local practices
-                </li>
-                <li className="flex items-start">
-                  <span className="text-red-500 mr-2">•</span>
-                  No Arabic support for customer communications
-                </li>
-                <li className="flex items-start">
-                  <span className="text-red-500 mr-2">•</span>
-                  Growth bottlenecks from operational overhead
-                </li>
-              </ul>
-            </CardContent>
-          </Card>
+        <div className="max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Generic Software */}
+            <div className="bg-card rounded-xl p-8 border shadow-sm">
+              <div className="flex items-center mb-6">
+                <X className="h-6 w-6 text-red-500 mr-3" />
+                <h3 className="text-xl font-bold text-red-600">Generic Software</h3>
+              </div>
+              
+              <div className="space-y-4">
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-red-500 rounded-full mt-2 shrink-0"></div>
+                  <p className="text-muted-foreground">Per-user licensing fees</p>
+                </div>
+                
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-red-500 rounded-full mt-2 shrink-0"></div>
+                  <p className="text-muted-foreground">English-only interface</p>
+                </div>
+                
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-red-500 rounded-full mt-2 shrink-0"></div>
+                  <p className="text-muted-foreground">Rigid, non-customizable</p>
+                </div>
+                
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-red-500 rounded-full mt-2 shrink-0"></div>
+                  <p className="text-muted-foreground">No WhatsApp integration</p>
+                </div>
+                
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-red-500 rounded-full mt-2 shrink-0"></div>
+                  <p className="text-muted-foreground">Self-service configuration</p>
+                </div>
+              </div>
+            </div>
 
-          <Card className="border-2 border-green-200 shadow-glow">
-            <CardContent className="p-8">
-              <div className="text-green-600 text-2xl mb-4">✅</div>
-              <h3 className="text-2xl font-bold mb-4 text-green-700">With Nunar AI Agents</h3>
-              <ul className="space-y-3 text-muted-foreground">
-                <li className="flex items-start">
-                  <span className="text-green-500 mr-2">•</span>
-                  AI handles WhatsApp vendor coordination 24/7
-                </li>
-                <li className="flex items-start">
-                  <span className="text-green-500 mr-2">•</span>
-                  Automated reports generated in minutes
-                </li>
-                <li className="flex items-start">
-                  <span className="text-green-500 mr-2">•</span>
-                  Custom-built for YOUR exact workflows
-                </li>
-                <li className="flex items-start">
-                  <span className="text-green-500 mr-2">•</span>
-                  Full Arabic/English bilingual support
-                </li>
-                <li className="flex items-start">
-                  <span className="text-green-500 mr-2">•</span>
-                  3X output with same team size
-                </li>
-              </ul>
-            </CardContent>
-          </Card>
-        </div>
-
-        <div className="text-center">
-          <div className="inline-flex items-center space-x-4 bg-orange-50 px-8 py-4 rounded-full">
-            <span className="text-2xl">💡</span>
-            <span className="text-lg font-semibold text-orange-700">
-              Stop hiring more staff. Start automating smarter.
-            </span>
+            {/* Nunar AI Agents */}
+            <div className="bg-gradient-to-br from-green-50 to-green-100 dark:from-green-950/20 dark:to-green-900/20 rounded-xl p-8 border border-green-200 dark:border-green-800">
+              <div className="flex items-center mb-6">
+                <Check className="h-6 w-6 text-green-500 mr-3" />
+                <h3 className="text-xl font-bold text-green-600">Nunar AI Agents</h3>
+              </div>
+              
+              <div className="space-y-4">
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-green-500 rounded-full mt-2 shrink-0"></div>
+                  <p className="text-muted-foreground">Fixed monthly retainer</p>
+                </div>
+                
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-green-500 rounded-full mt-2 shrink-0"></div>
+                  <p className="text-muted-foreground">Full Arabic/English support</p>
+                </div>
+                
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-green-500 rounded-full mt-2 shrink-0"></div>
+                  <p className="text-muted-foreground">100% custom-built for you</p>
+                </div>
+                
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-green-500 rounded-full mt-2 shrink-0"></div>
+                  <p className="text-muted-foreground">Native WhatsApp integration</p>
+                </div>
+                
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-green-500 rounded-full mt-2 shrink-0"></div>
+                  <p className="text-muted-foreground">Full-service consultancy</p>
+                </div>
+              </div>
+            </div>
           </div>
+        </div>
+
+        <div className="text-center mt-12">
+          <p className="text-xl font-semibold text-foreground mb-4">
+            Choose the solution built for GCC businesses
+          </p>
+          <p className="text-lg text-muted-foreground">
+            Stop adapting to software. Get software that adapts to you.
+          </p>
         </div>
       </div>
     </section>

@@ -1,5 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
+import PainPoint from "@/components/PainPoint";
+import Partnership from "@/components/Partnership";
 import ProblemSolution from "@/components/ProblemSolution";
 import Services from "@/components/Services";
 import RevenueCalculator from "@/components/RevenueCalculator";
@@ -18,10 +20,12 @@ const Index = () => {
       <ExitIntentPopup />
       <Navigation />
       <Hero />
-      <ProblemSolution />
+      <PainPoint />
+      <Partnership />
       <Services />
-      <RevenueCalculator />
+      <ProblemSolution />
       <HowItWorks />
+      <RevenueCalculator />
       <Pricing />
       <FAQ />
       <CTA />

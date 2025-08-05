@@ -42,14 +42,14 @@ const RevenueCalculator = () => {
   const results = showResults ? calculateSavings() : null;
 
   return (
-    <section id="calculator" className="py-20 px-4 bg-gradient-secondary">
+    <section id="roi-calculator" className="py-20 px-4 bg-gradient-secondary">
       <div className="container mx-auto max-w-4xl">
         <div className="text-center mb-16">
           <Badge variant="secondary" className="bg-orange-50 text-orange-700 border-orange-200 mb-4">
-            Revenue Calculator
+            ROI Calculator
           </Badge>
           <h2 className="text-4xl font-bold mb-6">
-            Calculate Your <span className="bg-gradient-primary bg-clip-text text-transparent">AI Savings</span>
+            Calculate Your <span className="bg-gradient-primary bg-clip-text text-transparent">ROI</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             See exactly how much money you could save with AI agents vs. losing without them
