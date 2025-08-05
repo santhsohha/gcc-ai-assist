@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import TranslationButton from "./TranslationButton";
 
 const Navigation = () => {
   return (
@@ -20,16 +21,20 @@ const Navigation = () => {
           <a href="#how-it-works" className="text-foreground hover:text-primary transition-colors">
             How It Works
           </a>
+          <a href="#calculator" className="text-foreground hover:text-primary transition-colors">
+            Calculator
+          </a>
           <a href="#pricing" className="text-foreground hover:text-primary transition-colors">
             Pricing
           </a>
-          <a href="#contact" className="text-foreground hover:text-primary transition-colors">
-            Contact
+          <a href="#faq" className="text-foreground hover:text-primary transition-colors">
+            FAQ
           </a>
         </div>
 
         <div className="flex items-center space-x-4">
           <span className="text-sm text-muted-foreground">🇦🇪 Based in UAE • Serving GCC</span>
+          <TranslationButton />
           <Button size="sm" className="bg-gradient-primary hover:shadow-glow">
             Start Free Trial
           </Button>
