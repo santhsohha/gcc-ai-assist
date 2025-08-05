@@ -1,5 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 
 const Services = () => {
   const services = [
@@ -53,7 +54,7 @@ const Services = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground mb-4">{service.description}</p>
-                <ul className="space-y-2">
+                <ul className="space-y-2 mb-4">
                   {service.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-sm">
                       <span className="text-primary mr-2">•</span>
@@ -61,6 +62,16 @@ const Services = () => {
                     </li>
                   ))}
                 </ul>
+                <Button 
+                  size="sm" 
+                  className="w-full bg-gradient-primary hover:shadow-glow"
+                  onClick={() => {
+                    const serviceSlug = service.title.toLowerCase().replace(/\s+/g, '').replace(/&/g, '');
+                    window.location.href = `/services/${serviceSlug}`;
+                  }}
+                >
+                  Learn More
+                </Button>
               </CardContent>
             </Card>
           ))}

@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-image.jpg";
 
 const Hero = () => {
@@ -48,7 +49,7 @@ const Hero = () => {
               </Button>
             </div>
 
-            <div className="flex items-center space-x-8 text-sm text-muted-foreground">
+            <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
               <div className="flex items-center space-x-2">
                 <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                 <span>30+ Workflows Built</span>
@@ -60,6 +61,28 @@ const Hero = () => {
               <div className="flex items-center space-x-2">
                 <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                 <span>100% Localized</span>
+              </div>
+            </div>
+
+            <div className="space-y-4">
+              <h3 className="text-lg font-semibold">Industries We Serve:</h3>
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
+                <Link to="/industries/manufacturing" className="flex items-center space-x-2 text-sm bg-accent/50 rounded-lg p-3 hover:bg-accent/70 transition-colors">
+                  <span>🏭</span>
+                  <span>Manufacturing</span>
+                </Link>
+                <Link to="/industries/healthcare" className="flex items-center space-x-2 text-sm bg-accent/50 rounded-lg p-3 hover:bg-accent/70 transition-colors">
+                  <span>🏥</span>
+                  <span>Healthcare</span>
+                </Link>
+                <Link to="/industries/logistics" className="flex items-center space-x-2 text-sm bg-accent/50 rounded-lg p-3 hover:bg-accent/70 transition-colors">
+                  <span>🚛</span>
+                  <span>Logistics</span>
+                </Link>
+                <Link to="/industries/retail" className="flex items-center space-x-2 text-sm bg-accent/50 rounded-lg p-3 hover:bg-accent/70 transition-colors">
+                  <span>🛍️</span>
+                  <span>Retail & Hypermarkets</span>
+                </Link>
               </div>
             </div>
           </div>
