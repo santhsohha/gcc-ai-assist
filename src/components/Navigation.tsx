@@ -30,37 +30,49 @@ const Navigation = () => {
                 Services
               </NavigationMenuTrigger>
               <NavigationMenuContent>
-                <div className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                <div className="w-[300px] p-2">
                   <NavigationMenuLink asChild>
-                    <a href="/services/customaiagents" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
-                      <div className="text-sm font-medium leading-none">Custom AI Agents</div>
-                      <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                        Tailored AI solutions for your business
-                      </p>
+                    <a href="/services/customaiagents" className="flex items-center space-x-3 p-3 rounded-md hover:bg-accent transition-colors">
+                      <div className="w-8 h-8 bg-blue-100 dark:bg-blue-900/20 rounded-lg flex items-center justify-center">
+                        <span className="text-blue-600 text-sm">🤖</span>
+                      </div>
+                      <div>
+                        <div className="font-medium text-sm">Custom AI Agents</div>
+                        <p className="text-xs text-muted-foreground">Tailored AI solutions</p>
+                      </div>
                     </a>
                   </NavigationMenuLink>
                   <NavigationMenuLink asChild>
-                    <a href="/services/whatsappautomation" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
-                      <div className="text-sm font-medium leading-none">WhatsApp Automation</div>
-                      <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                        Automate customer communication
-                      </p>
+                    <a href="/services/whatsappautomation" className="flex items-center space-x-3 p-3 rounded-md hover:bg-accent transition-colors">
+                      <div className="w-8 h-8 bg-green-100 dark:bg-green-900/20 rounded-lg flex items-center justify-center">
+                        <span className="text-green-600 text-sm">📱</span>
+                      </div>
+                      <div>
+                        <div className="font-medium text-sm">WhatsApp Automation</div>
+                        <p className="text-xs text-muted-foreground">Automate communication</p>
+                      </div>
                     </a>
                   </NavigationMenuLink>
                   <NavigationMenuLink asChild>
-                    <a href="/services/gcclocalization" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
-                      <div className="text-sm font-medium leading-none">GCC Localization</div>
-                      <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                        Arabic and regional customization
-                      </p>
+                    <a href="/services/gcclocalization" className="flex items-center space-x-3 p-3 rounded-md hover:bg-accent transition-colors">
+                      <div className="w-8 h-8 bg-orange-100 dark:bg-orange-900/20 rounded-lg flex items-center justify-center">
+                        <span className="text-orange-600 text-sm">🌍</span>
+                      </div>
+                      <div>
+                        <div className="font-medium text-sm">GCC Localization</div>
+                        <p className="text-xs text-muted-foreground">Arabic customization</p>
+                      </div>
                     </a>
                   </NavigationMenuLink>
                   <NavigationMenuLink asChild>
-                    <a href="/services/processoptimization" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
-                      <div className="text-sm font-medium leading-none">Process Optimization</div>
-                      <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                        Streamline your workflows
-                      </p>
+                    <a href="/services/processoptimization" className="flex items-center space-x-3 p-3 rounded-md hover:bg-accent transition-colors">
+                      <div className="w-8 h-8 bg-purple-100 dark:bg-purple-900/20 rounded-lg flex items-center justify-center">
+                        <span className="text-purple-600 text-sm">⚡</span>
+                      </div>
+                      <div>
+                        <div className="font-medium text-sm">Process Optimization</div>
+                        <p className="text-xs text-muted-foreground">Streamline workflows</p>
+                      </div>
                     </a>
                   </NavigationMenuLink>
                 </div>
@@ -72,37 +84,49 @@ const Navigation = () => {
                 Industries
               </NavigationMenuTrigger>
               <NavigationMenuContent>
-                <div className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                <div className="w-[300px] p-2">
                   <NavigationMenuLink asChild>
-                    <a href="/industries/manufacturing" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
-                      <div className="text-sm font-medium leading-none">Manufacturing</div>
-                      <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                        Production & supply chain automation
-                      </p>
+                    <a href="/industries/manufacturing" className="flex items-center space-x-3 p-3 rounded-md hover:bg-accent transition-colors">
+                      <div className="w-8 h-8 bg-gray-100 dark:bg-gray-900/20 rounded-lg flex items-center justify-center">
+                        <span className="text-gray-600 text-sm">🏭</span>
+                      </div>
+                      <div>
+                        <div className="font-medium text-sm">Manufacturing</div>
+                        <p className="text-xs text-muted-foreground">Production automation</p>
+                      </div>
                     </a>
                   </NavigationMenuLink>
                   <NavigationMenuLink asChild>
-                    <a href="/industries/healthcare" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
-                      <div className="text-sm font-medium leading-none">Healthcare</div>
-                      <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                        Patient management & appointments
-                      </p>
+                    <a href="/industries/healthcare" className="flex items-center space-x-3 p-3 rounded-md hover:bg-accent transition-colors">
+                      <div className="w-8 h-8 bg-red-100 dark:bg-red-900/20 rounded-lg flex items-center justify-center">
+                        <span className="text-red-600 text-sm">🏥</span>
+                      </div>
+                      <div>
+                        <div className="font-medium text-sm">Healthcare</div>
+                        <p className="text-xs text-muted-foreground">Patient management</p>
+                      </div>
                     </a>
                   </NavigationMenuLink>
                   <NavigationMenuLink asChild>
-                    <a href="/industries/logistics" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
-                      <div className="text-sm font-medium leading-none">Logistics</div>
-                      <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                        Delivery & shipment tracking
-                      </p>
+                    <a href="/industries/logistics" className="flex items-center space-x-3 p-3 rounded-md hover:bg-accent transition-colors">
+                      <div className="w-8 h-8 bg-blue-100 dark:bg-blue-900/20 rounded-lg flex items-center justify-center">
+                        <span className="text-blue-600 text-sm">🚚</span>
+                      </div>
+                      <div>
+                        <div className="font-medium text-sm">Logistics</div>
+                        <p className="text-xs text-muted-foreground">Delivery tracking</p>
+                      </div>
                     </a>
                   </NavigationMenuLink>
                   <NavigationMenuLink asChild>
-                    <a href="/industries/retail" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
-                      <div className="text-sm font-medium leading-none">Retail & Hypermarkets</div>
-                      <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                        Inventory & customer service
-                      </p>
+                    <a href="/industries/retail" className="flex items-center space-x-3 p-3 rounded-md hover:bg-accent transition-colors">
+                      <div className="w-8 h-8 bg-green-100 dark:bg-green-900/20 rounded-lg flex items-center justify-center">
+                        <span className="text-green-600 text-sm">🛒</span>
+                      </div>
+                      <div>
+                        <div className="font-medium text-sm">Retail & Hypermarkets</div>
+                        <p className="text-xs text-muted-foreground">Inventory management</p>
+                      </div>
                     </a>
                   </NavigationMenuLink>
                 </div>
