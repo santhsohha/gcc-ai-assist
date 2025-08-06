@@ -104,7 +104,7 @@ const Partnership = () => {
               </div>
 
               <div className="space-y-4">
-                <h4 className="text-sm font-semibold text-foreground mb-4">Integrates with 50+ platforms</h4>
+                <h4 className="text-foreground mb-4 font-bold text-xl">50+ Integrations to boost your productivity by 5X</h4>
                 <div className="grid grid-cols-6 gap-3">
                   <div className="w-10 h-10 bg-red-100 dark:bg-red-900/20 rounded-lg flex items-center justify-center">
                     <span className="text-red-600 text-lg">📧</span>
