@@ -157,45 +157,21 @@ const Partnership = () => {
                   <div className="w-10 h-10 bg-red-100 dark:bg-red-900/20 rounded-lg flex items-center justify-center">
                     <span className="text-red-600 text-lg">📱</span>
                   </div>
-                  <div className="w-10 h-10 bg-blue-100 dark:bg-blue-900/20 rounded-lg flex items-center justify-center">
-                    <span className="text-blue-600 text-lg">💻</span>
-                  </div>
-                  <div className="w-10 h-10 bg-green-100 dark:bg-green-900/20 rounded-lg flex items-center justify-center">
-                    <span className="text-green-600 text-lg">🔐</span>
-                  </div>
-                  <div className="w-10 h-10 bg-yellow-100 dark:bg-yellow-900/20 rounded-lg flex items-center justify-center">
-                    <span className="text-yellow-600 text-lg">⚙️</span>
-                  </div>
-                  <div className="w-10 h-10 bg-purple-100 dark:bg-purple-900/20 rounded-lg flex items-center justify-center">
-                    <span className="text-purple-600 text-lg">🎯</span>
-                  </div>
+                  
+                  
+                  
+                  
                   <div className="w-10 h-10 bg-indigo-100 dark:bg-indigo-900/20 rounded-lg flex items-center justify-center">
                     <span className="text-indigo-600 text-lg">📦</span>
                   </div>
-                  <div className="w-10 h-10 bg-pink-100 dark:bg-pink-900/20 rounded-lg flex items-center justify-center">
-                    <span className="text-pink-600 text-lg">🚀</span>
-                  </div>
-                  <div className="w-10 h-10 bg-teal-100 dark:bg-teal-900/20 rounded-lg flex items-center justify-center">
-                    <span className="text-teal-600 text-lg">🎨</span>
-                  </div>
-                  <div className="w-10 h-10 bg-orange-100 dark:bg-orange-900/20 rounded-lg flex items-center justify-center">
-                    <span className="text-orange-600 text-lg">📝</span>
-                  </div>
-                  <div className="w-10 h-10 bg-cyan-100 dark:bg-cyan-900/20 rounded-lg flex items-center justify-center">
-                    <span className="text-cyan-600 text-lg">🔔</span>
-                  </div>
-                  <div className="w-10 h-10 bg-emerald-100 dark:bg-emerald-900/20 rounded-lg flex items-center justify-center">
-                    <span className="text-emerald-600 text-lg">📹</span>
-                  </div>
-                  <div className="w-10 h-10 bg-violet-100 dark:bg-violet-900/20 rounded-lg flex items-center justify-center">
-                    <span className="text-violet-600 text-lg">🗂️</span>
-                  </div>
-                  <div className="w-10 h-10 bg-amber-100 dark:bg-amber-900/20 rounded-lg flex items-center justify-center">
-                    <span className="text-amber-600 text-lg">🌟</span>
-                  </div>
-                  <div className="w-10 h-10 bg-lime-100 dark:bg-lime-900/20 rounded-lg flex items-center justify-center">
-                    <span className="text-lime-600 text-lg">🔧</span>
-                  </div>
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
                 </div>
               </div>
             </div>
