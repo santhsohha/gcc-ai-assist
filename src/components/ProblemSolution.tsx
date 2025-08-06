@@ -89,7 +89,7 @@ const ProblemSolution = () => {
             Choose the solution built for GCC businesses
           </p>
           <p className="text-lg text-muted-foreground">
-            Stop adapting to software. Get software that adapts to you.
+            Stop adapting to software. Get AI Agents that adapts to you.
           </p>
         </div>
       </div>
