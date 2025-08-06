@@ -1,4 +1,46 @@
 import { Users, Lightbulb, Puzzle, TrendingUp } from "lucide-react";
+
+// Import company logos
+import chatgptLogo from "@/assets/logos/chatgpt.png";
+import whatsappLogo from "@/assets/logos/whatsapp.png";
+import facebookLogo from "@/assets/logos/facebook.png";
+import microsoftLogo from "@/assets/logos/microsoft.png";
+import mailchimpLogo from "@/assets/logos/mailchimp.png";
+import asanaLogo from "@/assets/logos/asana.png";
+import shopifyLogo from "@/assets/logos/shopify.png";
+import paypalLogo from "@/assets/logos/paypal.png";
+import stripeLogo from "@/assets/logos/stripe.png";
+import azureLogo from "@/assets/logos/azure.png";
+import instagramLogo from "@/assets/logos/instagram.png";
+import googleLogo from "@/assets/logos/google.png";
+import linkedinLogo from "@/assets/logos/linkedin.png";
+import slackIconLogo from "@/assets/logos/slack-icon.png";
+import typescriptLogo from "@/assets/logos/typescript.png";
+import reactLogo from "@/assets/logos/react.png";
+import javascriptLogo from "@/assets/logos/javascript.png";
+import gitLogo from "@/assets/logos/git.png";
+import githubLogo from "@/assets/logos/github.png";
+import dockerLogo from "@/assets/logos/docker.png";
+import figmaLogo from "@/assets/logos/figma.png";
+import jupyterLogo from "@/assets/logos/jupyter.png";
+import pythonLogo from "@/assets/logos/python.png";
+import phpLogo from "@/assets/logos/php.png";
+import nodejsLogo from "@/assets/logos/nodejs.png";
+import databaseLogo from "@/assets/logos/database.png";
+import mongodbLogo from "@/assets/logos/mongodb.png";
+import postgresqlLogo from "@/assets/logos/postgresql.png";
+import androidLogo from "@/assets/logos/android.png";
+import appleLogo from "@/assets/logos/apple.png";
+import amazonLogo from "@/assets/logos/amazon.png";
+import awsLogo from "@/assets/logos/aws.png";
+import quickbooksLogo from "@/assets/logos/quickbooks.png";
+import geminiLogo from "@/assets/logos/gemini.png";
+import slackLogo from "@/assets/logos/slack.png";
+import trelloLogo from "@/assets/logos/trello.png";
+import dropboxLogo from "@/assets/logos/dropbox.png";
+import zoomLogo from "@/assets/logos/zoom.png";
+import gmailLogo from "@/assets/logos/gmail.png";
+import notionLogo from "@/assets/logos/notion.png";
 const Partnership = () => {
   return <section className="py-20 bg-gradient-to-br from-muted/10 to-background">
       <div className="container mx-auto px-4">
@@ -104,74 +146,98 @@ const Partnership = () => {
               </div>
 
               <div className="space-y-4">
-                <h4 className="text-foreground mb-4 font-bold text-xl">50+ Integrations to boost your productivity by 5X</h4>
+                <h4 className="text-foreground mb-4 font-bold text-xl">30+ Integrations to boost your productivity by 5X</h4>
                 <div className="grid grid-cols-6 gap-3">
-                  <div className="w-10 h-10 bg-red-100 dark:bg-red-900/20 rounded-lg flex items-center justify-center">
-                    <span className="text-red-600 text-lg">📧</span>
+                  <div className="w-10 h-10 bg-background border border-border rounded-lg flex items-center justify-center p-1">
+                    <img src={gmailLogo} alt="Gmail" className="w-full h-full object-contain" />
                   </div>
-                  <div className="w-10 h-10 bg-blue-100 dark:bg-blue-900/20 rounded-lg flex items-center justify-center">
-                    <span className="text-blue-600 text-lg">📮</span>
+                  <div className="w-10 h-10 bg-background border border-border rounded-lg flex items-center justify-center p-1">
+                    <img src={whatsappLogo} alt="WhatsApp" className="w-full h-full object-contain" />
                   </div>
-                  <div className="w-10 h-10 bg-purple-100 dark:bg-purple-900/20 rounded-lg flex items-center justify-center">
-                    <span className="text-purple-600 text-lg">💾</span>
+                  <div className="w-10 h-10 bg-background border border-border rounded-lg flex items-center justify-center p-1">
+                    <img src={quickbooksLogo} alt="QuickBooks" className="w-full h-full object-contain" />
                   </div>
-                  <div className="w-10 h-10 bg-green-100 dark:bg-green-900/20 rounded-lg flex items-center justify-center">
-                    <span className="text-green-600 text-lg">🗄️</span>
+                  <div className="w-10 h-10 bg-background border border-border rounded-lg flex items-center justify-center p-1">
+                    <img src={googleLogo} alt="Google" className="w-full h-full object-contain" />
                   </div>
-                  <div className="w-10 h-10 bg-orange-100 dark:bg-orange-900/20 rounded-lg flex items-center justify-center">
-                    <span className="text-orange-600 text-lg">💰</span>
+                  <div className="w-10 h-10 bg-background border border-border rounded-lg flex items-center justify-center p-1">
+                    <img src={chatgptLogo} alt="ChatGPT" className="w-full h-full object-contain" />
                   </div>
-                  <div className="w-10 h-10 bg-indigo-100 dark:bg-indigo-900/20 rounded-lg flex items-center justify-center">
-                    <span className="text-indigo-600 text-lg">📊</span>
+                  <div className="w-10 h-10 bg-background border border-border rounded-lg flex items-center justify-center p-1">
+                    <img src={geminiLogo} alt="Google Gemini" className="w-full h-full object-contain" />
                   </div>
-                  <div className="w-10 h-10 bg-pink-100 dark:bg-pink-900/20 rounded-lg flex items-center justify-center">
-                    <span className="text-pink-600 text-lg">📞</span>
+                  <div className="w-10 h-10 bg-background border border-border rounded-lg flex items-center justify-center p-1">
+                    <img src={facebookLogo} alt="Facebook" className="w-full h-full object-contain" />
                   </div>
-                  <div className="w-10 h-10 bg-teal-100 dark:bg-teal-900/20 rounded-lg flex items-center justify-center">
-                    <span className="text-teal-600 text-lg">💬</span>
+                  <div className="w-10 h-10 bg-background border border-border rounded-lg flex items-center justify-center p-1">
+                    <img src={instagramLogo} alt="Instagram" className="w-full h-full object-contain" />
                   </div>
-                  <div className="w-10 h-10 bg-cyan-100 dark:bg-cyan-900/20 rounded-lg flex items-center justify-center">
-                    <span className="text-cyan-600 text-lg">☁️</span>
+                  <div className="w-10 h-10 bg-background border border-border rounded-lg flex items-center justify-center p-1">
+                    <img src={linkedinLogo} alt="LinkedIn" className="w-full h-full object-contain" />
                   </div>
-                  <div className="w-10 h-10 bg-amber-100 dark:bg-amber-900/20 rounded-lg flex items-center justify-center">
-                    <span className="text-amber-600 text-lg">📋</span>
+                  <div className="w-10 h-10 bg-background border border-border rounded-lg flex items-center justify-center p-1">
+                    <img src={slackLogo} alt="Slack" className="w-full h-full object-contain" />
                   </div>
-                  <div className="w-10 h-10 bg-lime-100 dark:bg-lime-900/20 rounded-lg flex items-center justify-center">
-                    <span className="text-lime-600 text-lg">📈</span>
+                  <div className="w-10 h-10 bg-background border border-border rounded-lg flex items-center justify-center p-1">
+                    <img src={microsoftLogo} alt="Microsoft" className="w-full h-full object-contain" />
                   </div>
-                  <div className="w-10 h-10 bg-emerald-100 dark:bg-emerald-900/20 rounded-lg flex items-center justify-center">
-                    <span className="text-emerald-600 text-lg">🔗</span>
+                  <div className="w-10 h-10 bg-background border border-border rounded-lg flex items-center justify-center p-1">
+                    <img src={trelloLogo} alt="Trello" className="w-full h-full object-contain" />
                   </div>
-                  <div className="w-10 h-10 bg-violet-100 dark:bg-violet-900/20 rounded-lg flex items-center justify-center">
-                    <span className="text-violet-600 text-lg">📄</span>
+                  <div className="w-10 h-10 bg-background border border-border rounded-lg flex items-center justify-center p-1">
+                    <img src={notionLogo} alt="Notion" className="w-full h-full object-contain" />
                   </div>
-                  <div className="w-10 h-10 bg-rose-100 dark:bg-rose-900/20 rounded-lg flex items-center justify-center">
-                    <span className="text-rose-600 text-lg">🛒</span>
+                  <div className="w-10 h-10 bg-background border border-border rounded-lg flex items-center justify-center p-1">
+                    <img src={asanaLogo} alt="Asana" className="w-full h-full object-contain" />
                   </div>
-                  <div className="w-10 h-10 bg-sky-100 dark:bg-sky-900/20 rounded-lg flex items-center justify-center">
-                    <span className="text-sky-600 text-lg">🌐</span>
+                  <div className="w-10 h-10 bg-background border border-border rounded-lg flex items-center justify-center p-1">
+                    <img src={shopifyLogo} alt="Shopify" className="w-full h-full object-contain" />
                   </div>
-                  <div className="w-10 h-10 bg-slate-100 dark:bg-slate-700/20 rounded-lg flex items-center justify-center">
-                    <span className="text-slate-600 text-lg">⚡</span>
+                  <div className="w-10 h-10 bg-background border border-border rounded-lg flex items-center justify-center p-1">
+                    <img src={paypalLogo} alt="PayPal" className="w-full h-full object-contain" />
                   </div>
-                  <div className="w-10 h-10 bg-red-100 dark:bg-red-900/20 rounded-lg flex items-center justify-center">
-                    <span className="text-red-600 text-lg">📱</span>
+                  <div className="w-10 h-10 bg-background border border-border rounded-lg flex items-center justify-center p-1">
+                    <img src={stripeLogo} alt="Stripe" className="w-full h-full object-contain" />
                   </div>
-                  
-                  
-                  
-                  
-                  <div className="w-10 h-10 bg-indigo-100 dark:bg-indigo-900/20 rounded-lg flex items-center justify-center">
-                    <span className="text-indigo-600 text-lg">📦</span>
+                  <div className="w-10 h-10 bg-background border border-border rounded-lg flex items-center justify-center p-1">
+                    <img src={dropboxLogo} alt="Dropbox" className="w-full h-full object-contain" />
                   </div>
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
+                  <div className="w-10 h-10 bg-background border border-border rounded-lg flex items-center justify-center p-1">
+                    <img src={zoomLogo} alt="Zoom" className="w-full h-full object-contain" />
+                  </div>
+                  <div className="w-10 h-10 bg-background border border-border rounded-lg flex items-center justify-center p-1">
+                    <img src={awsLogo} alt="AWS" className="w-full h-full object-contain" />
+                  </div>
+                  <div className="w-10 h-10 bg-background border border-border rounded-lg flex items-center justify-center p-1">
+                    <img src={azureLogo} alt="Microsoft Azure" className="w-full h-full object-contain" />
+                  </div>
+                  <div className="w-10 h-10 bg-background border border-border rounded-lg flex items-center justify-center p-1">
+                    <img src={reactLogo} alt="React" className="w-full h-full object-contain" />
+                  </div>
+                  <div className="w-10 h-10 bg-background border border-border rounded-lg flex items-center justify-center p-1">
+                    <img src={nodejsLogo} alt="Node.js" className="w-full h-full object-contain" />
+                  </div>
+                  <div className="w-10 h-10 bg-background border border-border rounded-lg flex items-center justify-center p-1">
+                    <img src={pythonLogo} alt="Python" className="w-full h-full object-contain" />
+                  </div>
+                  <div className="w-10 h-10 bg-background border border-border rounded-lg flex items-center justify-center p-1">
+                    <img src={mongodbLogo} alt="MongoDB" className="w-full h-full object-contain" />
+                  </div>
+                  <div className="w-10 h-10 bg-background border border-border rounded-lg flex items-center justify-center p-1">
+                    <img src={postgresqlLogo} alt="PostgreSQL" className="w-full h-full object-contain" />
+                  </div>
+                  <div className="w-10 h-10 bg-background border border-border rounded-lg flex items-center justify-center p-1">
+                    <img src={dockerLogo} alt="Docker" className="w-full h-full object-contain" />
+                  </div>
+                  <div className="w-10 h-10 bg-background border border-border rounded-lg flex items-center justify-center p-1">
+                    <img src={githubLogo} alt="GitHub" className="w-full h-full object-contain" />
+                  </div>
+                  <div className="w-10 h-10 bg-background border border-border rounded-lg flex items-center justify-center p-1">
+                    <img src={figmaLogo} alt="Figma" className="w-full h-full object-contain" />
+                  </div>
+                  <div className="w-10 h-10 bg-background border border-border rounded-lg flex items-center justify-center p-1">
+                    <img src={mailchimpLogo} alt="Mailchimp" className="w-full h-full object-contain" />
+                  </div>
                 </div>
               </div>
             </div>
