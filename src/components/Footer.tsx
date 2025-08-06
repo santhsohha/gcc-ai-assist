@@ -1,8 +1,6 @@
 import { Link } from "react-router-dom";
-
 const Footer = () => {
-  return (
-    <footer className="bg-accent text-accent-foreground py-16 px-4">
+  return <footer className="bg-accent text-accent-foreground py-16 px-4">
       <div className="container mx-auto">
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           <div className="space-y-4">
@@ -17,7 +15,8 @@ const Footer = () => {
             <p className="text-muted-foreground text-sm">
               AI workflow automation consultancy for GCC SMBs. Custom AI agents that save 80+ hours monthly.
             </p>
-            <p className="text-sm font-semibold">🇦🇪 Based in UAE • Serving GCC</p>
+            <p className="text-sm font-semibold">
+          </p>
           </div>
 
           <div>
@@ -41,12 +40,17 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="font-semibold mb-4">Contact</h3>
+            <h3 className="font-semibold mb-4">
+          </h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>📧 hello@nunar.ai</li>
-              <li>📱 WhatsApp: +971-XX-XXXXXXX</li>
-              <li>🏢 Dubai, UAE</li>
-              <li>🌐 Serving GCC Region</li>
+              <li>
+            </li>
+              <li>
+            </li>
+              <li>
+            </li>
+              <li>
+            </li>
             </ul>
           </div>
         </div>
@@ -64,8 +68,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
