@@ -1,8 +1,6 @@
 import { Users, Lightbulb, Puzzle, TrendingUp } from "lucide-react";
-
 const Partnership = () => {
-  return (
-    <section className="py-20 bg-gradient-to-br from-muted/10 to-background">
+  return <section className="py-20 bg-gradient-to-br from-muted/10 to-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
@@ -107,12 +105,12 @@ const Partnership = () => {
 
               <div className="space-y-4">
                 <div className="flex items-center space-x-4 bg-background rounded-xl p-4 border shadow-sm">
-                  <div className="w-10 h-10 bg-green-100 dark:bg-green-900/20 rounded-xl flex items-center justify-center">
-                    <span className="text-green-600 text-lg">📱</span>
-                  </div>
+                  
                   <div className="flex-1">
-                    <div className="text-sm font-semibold text-foreground">WhatsApp Integration</div>
-                    <div className="text-xs text-muted-foreground">Real-time customer communication</div>
+                    <div className="text-sm font-semibold text-foreground">
+                  </div>
+                    <div className="text-xs text-muted-foreground">
+                  </div>
                   </div>
                 </div>
                 
@@ -140,8 +138,6 @@ const Partnership = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Partnership;
