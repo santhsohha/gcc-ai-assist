@@ -39,6 +39,22 @@ const Pricing = () => {
           </p>
         </div>
 
+        {/* Competitor Comparison - Moved to top */}
+        <div className="mb-12 text-center bg-gradient-to-r from-orange-50 to-red-50 dark:from-orange-950/20 dark:to-red-950/20 rounded-xl p-6 border-2 border-orange-200 max-w-4xl mx-auto">
+          <p className="text-orange-700 font-semibold mb-2"
+             data-translate
+             data-en="⚠️ While competitors charge AED 2,000+ per user monthly..."
+             data-ar="⚠️ بينما يتقاضى المنافسون 2,000+ درهم لكل مستخدم شهرياً...">
+            ⚠️ While competitors charge AED 2,000+ per user monthly...
+          </p>
+          <p className="text-muted-foreground"
+             data-translate
+             data-en="You get unlimited users, Arabic support, and custom workflows for one fixed price."
+             data-ar="تحصل على مستخدمين غير محدودين ودعم العربية وسير عمل مخصص بسعر ثابت واحد.">
+            You get unlimited users, Arabic support, and custom workflows for one fixed price.
+          </p>
+        </div>
+
         <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Main Pricing Card */}
           <Card className="shadow-glow border-2 border-primary relative overflow-hidden">
@@ -46,53 +62,65 @@ const Pricing = () => {
               MOST POPULAR
             </div>
             <CardHeader className="text-center pb-4">
-              <CardTitle className="text-3xl font-bold">AI Automation Retainer</CardTitle>
+              <CardTitle className="text-2xl font-bold">AI Automation Retainer</CardTitle>
               <div className="space-y-2">
-                <div className="text-5xl font-bold bg-gradient-primary bg-clip-text text-transparent">
+                <div className="text-4xl font-bold bg-gradient-primary bg-clip-text text-transparent">
                   AED 16,500
                 </div>
-                <div className="text-2xl font-semibold text-muted-foreground">
+                <div className="text-xl font-semibold text-muted-foreground">
                   SAR 18,000
                 </div>
                 <p className="text-muted-foreground">per month</p>
               </div>
             </CardHeader>
-            <CardContent className="space-y-6">
-              <div className="space-y-4">
+            <CardContent className="space-y-4">
+              <div className="space-y-3">
                 <h3 className="font-semibold text-lg border-b pb-2">What's Included:</h3>
-                <ul className="space-y-3">
+                <ul className="space-y-2">
                   <li className="flex items-center">
                     <span className="text-green-500 mr-3">✓</span>
-                    <span>1 Dedicated AI Developer</span>
+                    <span className="text-sm">1 Dedicated AI Developer</span>
                   </li>
                   <li className="flex items-center">
                     <span className="text-green-500 mr-3">✓</span>
-                    <span>1 Process Consultant</span>
+                    <span className="text-sm">1 Process Consultant</span>
                   </li>
                   <li className="flex items-center">
                     <span className="text-green-500 mr-3">✓</span>
-                    <span>80 Development Hours/Month</span>
+                    <span className="text-sm">80 Development Hours/Month</span>
                   </li>
                   <li className="flex items-center">
                     <span className="text-green-500 mr-3">✓</span>
-                    <span>2 Medium Complexity Workflows</span>
+                    <span className="text-sm">2 Medium Complexity Workflows</span>
                   </li>
                   <li className="flex items-center">
                     <span className="text-green-500 mr-3">✓</span>
-                    <span>Arabic/English Support</span>
+                    <span className="text-sm">Arabic/English Support</span>
                   </li>
                   <li className="flex items-center">
                     <span className="text-green-500 mr-3">✓</span>
-                    <span>WhatsApp Integration</span>
+                    <span className="text-sm">WhatsApp Integration</span>
                   </li>
                   <li className="flex items-center">
                     <span className="text-green-500 mr-3">✓</span>
-                    <span>Ongoing Support & Optimization</span>
+                    <span className="text-sm">Ongoing Support & Optimization</span>
+                  </li>
+                  <li className="flex items-center">
+                    <span className="text-green-500 mr-3">✓</span>
+                    <span className="text-sm">Custom Dashboard & Reports</span>
+                  </li>
+                  <li className="flex items-center">
+                    <span className="text-green-500 mr-3">✓</span>
+                    <span className="text-sm">24/7 Technical Support</span>
+                  </li>
+                  <li className="flex items-center">
+                    <span className="text-green-500 mr-3">✓</span>
+                    <span className="text-sm">No Setup or Hidden Fees</span>
                   </li>
                 </ul>
               </div>
               
-              <Button className="w-full bg-gradient-primary hover:shadow-glow text-lg py-6">
+              <Button className="w-full bg-gradient-primary hover:shadow-glow text-lg py-4">
                 Start Your Free Trial
               </Button>
               
@@ -104,17 +132,17 @@ const Pricing = () => {
 
           {/* Workflow Tiers with FOMO */}
           <div className="space-y-6">
-            <div className="text-center mb-8">
+            <div className="text-center mb-6">
               <Badge variant="secondary" className="bg-orange-100 text-orange-700 mb-4 animate-pulse">
                 ⚡ Your Automation Roadmap
               </Badge>
-              <h3 className="text-2xl font-bold mb-4"
+              <h3 className="text-xl font-bold mb-3"
                   data-translate
                   data-en="What You Get vs What Competitors Are Missing"
                   data-ar="ما تحصل عليه مقابل ما يفقده المنافسون">
                 What You Get vs What Competitors Are Missing
               </h3>
-              <p className="text-muted-foreground"
+              <p className="text-sm text-muted-foreground"
                  data-translate
                  data-en="While others pay per user and struggle with English-only systems, you get everything included."
                  data-ar="بينما يدفع الآخرون عن كل مستخدم ويعانون من الأنظمة الإنجليزية فقط، تحصل على كل شيء متضمن.">
@@ -171,21 +199,6 @@ const Pricing = () => {
                 </CardContent>
               </Card>
             ))}
-            
-            <div className="text-center mt-8 bg-gradient-to-r from-orange-50 to-red-50 dark:from-orange-950/20 dark:to-red-950/20 rounded-xl p-6 border-2 border-orange-200">
-              <p className="text-orange-700 font-semibold mb-2"
-                 data-translate
-                 data-en="⚠️ While competitors charge AED 2,000+ per user monthly..."
-                 data-ar="⚠️ بينما يتقاضى المنافسون 2,000+ درهم لكل مستخدم شهرياً...">
-                ⚠️ While competitors charge AED 2,000+ per user monthly...
-              </p>
-              <p className="text-muted-foreground"
-                 data-translate
-                 data-en="You get unlimited users, Arabic support, and custom workflows for one fixed price."
-                 data-ar="تحصل على مستخدمين غير محدودين ودعم العربية وسير عمل مخصص بسعر ثابت واحد.">
-                You get unlimited users, Arabic support, and custom workflows for one fixed price.
-              </p>
-            </div>
           </div>
         </div>
 
@@ -208,7 +221,7 @@ const Pricing = () => {
               </div>
               <div className="bg-white dark:bg-gray-900 rounded-xl p-6 shadow-md">
                 <div className="text-3xl font-bold text-green-600 mb-2">AED 16,500</div>
-                <p className="text-sm text-muted-foreground">Nunar's fixed monthly cost with unlimited automation</p>
+                <p className="text-sm text-muted-foreground">Nunar IQ's fixed monthly cost with unlimited automation</p>
               </div>
               <div className="bg-white dark:bg-gray-900 rounded-xl p-6 shadow-md">
                 <div className="text-3xl font-bold text-blue-600 mb-2">AED 28,500</div>

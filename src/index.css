@@ -17,7 +17,7 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 20 14.3% 4.1%;
 
-    --primary: 20.5 90.2% 48.2%;
+    --primary: 20.5 80% 45%;
     --primary-foreground: 60 9.1% 97.8%;
 
     --secondary: 30 25% 96%;
@@ -36,20 +36,20 @@ All colors MUST be HSL.
     --input: 20 5.9% 90%;
     --ring: 20.5 90.2% 48.2%;
 
-    /* Orange theme gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(20.5 90.2% 48.2%), hsl(35 91% 65%));
+    /* Orange theme gradients - softer tones */
+    --gradient-primary: linear-gradient(135deg, hsl(20.5 80% 45%), hsl(35 80% 58%));
     --gradient-secondary: linear-gradient(180deg, hsl(30 25% 96%), hsl(25 25% 95%));
-    --gradient-hero: linear-gradient(135deg, hsl(20.5 90.2% 48.2%) 0%, hsl(35 91% 65%) 50%, hsl(45 93% 76%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(20.5 80% 45%) 0%, hsl(35 80% 58%) 50%, hsl(45 85% 70%) 100%);
     
     /* Shadows with orange tints */
-    --shadow-primary: 0 10px 30px -10px hsl(20.5 90.2% 48.2% / 0.3);
-    --shadow-glow: 0 0 40px hsl(35 91% 65% / 0.4);
-    --shadow-card: 0 4px 6px -1px hsl(20.5 90.2% 48.2% / 0.1);
+    --shadow-primary: 0 10px 30px -10px hsl(20.5 80% 45% / 0.3);
+    --shadow-glow: 0 0 40px hsl(35 80% 58% / 0.4);
+    --shadow-card: 0 4px 6px -1px hsl(20.5 80% 45% / 0.1);
 
     /* Custom orange variants */
     --orange-50: 33 100% 96%;
     --orange-100: 34 100% 92%;
-    --orange-500: 20.5 90.2% 48.2%;
+    --orange-500: 20.5 80% 45%;
     --orange-600: 17 88% 40%;
     --orange-700: 15 79% 32%;
     --orange-900: 15 75% 28%;
