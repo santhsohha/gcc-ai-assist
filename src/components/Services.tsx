@@ -6,7 +6,7 @@ const Services = () => {
     icon: "⚡",
     title: "Custom AI Agents",
     description: "Tailored AI solutions that mimic your best employee but work 24/7",
-    features: ["WhatsApp Integration", "Arabic/English Support", "ERP Integration", "Custom Workflows"],
+    features: ["WhatsApp Integration", "Email Parsing Intelligence", "ERP/API Integration", "Dynamic Report Handling"],
     gradient: "from-blue-500 to-cyan-500"
   }, {
     icon: "💬",
