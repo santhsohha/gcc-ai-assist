@@ -104,33 +104,97 @@ const Partnership = () => {
               </div>
 
               <div className="space-y-4">
-                <div className="flex items-center space-x-4 bg-background rounded-xl p-4 border shadow-sm">
-                  
-                  <div className="flex-1">
-                    <div className="text-sm font-semibold text-foreground">
+                <h4 className="text-sm font-semibold text-foreground mb-4">Integrates with 50+ platforms</h4>
+                <div className="grid grid-cols-6 gap-3">
+                  <div className="w-10 h-10 bg-red-100 dark:bg-red-900/20 rounded-lg flex items-center justify-center">
+                    <span className="text-red-600 text-lg">📧</span>
                   </div>
-                    <div className="text-xs text-muted-foreground">
+                  <div className="w-10 h-10 bg-blue-100 dark:bg-blue-900/20 rounded-lg flex items-center justify-center">
+                    <span className="text-blue-600 text-lg">📮</span>
                   </div>
+                  <div className="w-10 h-10 bg-purple-100 dark:bg-purple-900/20 rounded-lg flex items-center justify-center">
+                    <span className="text-purple-600 text-lg">💾</span>
                   </div>
-                </div>
-                
-                <div className="flex items-center space-x-4 bg-background rounded-xl p-4 border shadow-sm">
-                  <div className="w-10 h-10 bg-blue-100 dark:bg-blue-900/20 rounded-xl flex items-center justify-center">
-                    <span className="text-blue-600 text-lg">📊</span>
+                  <div className="w-10 h-10 bg-green-100 dark:bg-green-900/20 rounded-lg flex items-center justify-center">
+                    <span className="text-green-600 text-lg">🗄️</span>
                   </div>
-                  <div className="flex-1">
-                    <div className="text-sm font-semibold text-foreground">ERP/System Integration</div>
-                    <div className="text-xs text-muted-foreground">Unified data management</div>
+                  <div className="w-10 h-10 bg-orange-100 dark:bg-orange-900/20 rounded-lg flex items-center justify-center">
+                    <span className="text-orange-600 text-lg">💰</span>
                   </div>
-                </div>
-                
-                <div className="flex items-center space-x-4 bg-background rounded-xl p-4 border shadow-sm">
-                  <div className="w-10 h-10 bg-purple-100 dark:bg-purple-900/20 rounded-xl flex items-center justify-center">
-                    <span className="text-purple-600 text-lg">🤖</span>
+                  <div className="w-10 h-10 bg-indigo-100 dark:bg-indigo-900/20 rounded-lg flex items-center justify-center">
+                    <span className="text-indigo-600 text-lg">📊</span>
                   </div>
-                  <div className="flex-1">
-                    <div className="text-sm font-semibold text-foreground">AI Dashboard</div>
-                    <div className="text-xs text-muted-foreground">Smart analytics & insights</div>
+                  <div className="w-10 h-10 bg-pink-100 dark:bg-pink-900/20 rounded-lg flex items-center justify-center">
+                    <span className="text-pink-600 text-lg">📞</span>
+                  </div>
+                  <div className="w-10 h-10 bg-teal-100 dark:bg-teal-900/20 rounded-lg flex items-center justify-center">
+                    <span className="text-teal-600 text-lg">💬</span>
+                  </div>
+                  <div className="w-10 h-10 bg-cyan-100 dark:bg-cyan-900/20 rounded-lg flex items-center justify-center">
+                    <span className="text-cyan-600 text-lg">☁️</span>
+                  </div>
+                  <div className="w-10 h-10 bg-amber-100 dark:bg-amber-900/20 rounded-lg flex items-center justify-center">
+                    <span className="text-amber-600 text-lg">📋</span>
+                  </div>
+                  <div className="w-10 h-10 bg-lime-100 dark:bg-lime-900/20 rounded-lg flex items-center justify-center">
+                    <span className="text-lime-600 text-lg">📈</span>
+                  </div>
+                  <div className="w-10 h-10 bg-emerald-100 dark:bg-emerald-900/20 rounded-lg flex items-center justify-center">
+                    <span className="text-emerald-600 text-lg">🔗</span>
+                  </div>
+                  <div className="w-10 h-10 bg-violet-100 dark:bg-violet-900/20 rounded-lg flex items-center justify-center">
+                    <span className="text-violet-600 text-lg">📄</span>
+                  </div>
+                  <div className="w-10 h-10 bg-rose-100 dark:bg-rose-900/20 rounded-lg flex items-center justify-center">
+                    <span className="text-rose-600 text-lg">🛒</span>
+                  </div>
+                  <div className="w-10 h-10 bg-sky-100 dark:bg-sky-900/20 rounded-lg flex items-center justify-center">
+                    <span className="text-sky-600 text-lg">🌐</span>
+                  </div>
+                  <div className="w-10 h-10 bg-slate-100 dark:bg-slate-700/20 rounded-lg flex items-center justify-center">
+                    <span className="text-slate-600 text-lg">⚡</span>
+                  </div>
+                  <div className="w-10 h-10 bg-red-100 dark:bg-red-900/20 rounded-lg flex items-center justify-center">
+                    <span className="text-red-600 text-lg">📱</span>
+                  </div>
+                  <div className="w-10 h-10 bg-blue-100 dark:bg-blue-900/20 rounded-lg flex items-center justify-center">
+                    <span className="text-blue-600 text-lg">💻</span>
+                  </div>
+                  <div className="w-10 h-10 bg-green-100 dark:bg-green-900/20 rounded-lg flex items-center justify-center">
+                    <span className="text-green-600 text-lg">🔐</span>
+                  </div>
+                  <div className="w-10 h-10 bg-yellow-100 dark:bg-yellow-900/20 rounded-lg flex items-center justify-center">
+                    <span className="text-yellow-600 text-lg">⚙️</span>
+                  </div>
+                  <div className="w-10 h-10 bg-purple-100 dark:bg-purple-900/20 rounded-lg flex items-center justify-center">
+                    <span className="text-purple-600 text-lg">🎯</span>
+                  </div>
+                  <div className="w-10 h-10 bg-indigo-100 dark:bg-indigo-900/20 rounded-lg flex items-center justify-center">
+                    <span className="text-indigo-600 text-lg">📦</span>
+                  </div>
+                  <div className="w-10 h-10 bg-pink-100 dark:bg-pink-900/20 rounded-lg flex items-center justify-center">
+                    <span className="text-pink-600 text-lg">🚀</span>
+                  </div>
+                  <div className="w-10 h-10 bg-teal-100 dark:bg-teal-900/20 rounded-lg flex items-center justify-center">
+                    <span className="text-teal-600 text-lg">🎨</span>
+                  </div>
+                  <div className="w-10 h-10 bg-orange-100 dark:bg-orange-900/20 rounded-lg flex items-center justify-center">
+                    <span className="text-orange-600 text-lg">📝</span>
+                  </div>
+                  <div className="w-10 h-10 bg-cyan-100 dark:bg-cyan-900/20 rounded-lg flex items-center justify-center">
+                    <span className="text-cyan-600 text-lg">🔔</span>
+                  </div>
+                  <div className="w-10 h-10 bg-emerald-100 dark:bg-emerald-900/20 rounded-lg flex items-center justify-center">
+                    <span className="text-emerald-600 text-lg">📹</span>
+                  </div>
+                  <div className="w-10 h-10 bg-violet-100 dark:bg-violet-900/20 rounded-lg flex items-center justify-center">
+                    <span className="text-violet-600 text-lg">🗂️</span>
+                  </div>
+                  <div className="w-10 h-10 bg-amber-100 dark:bg-amber-900/20 rounded-lg flex items-center justify-center">
+                    <span className="text-amber-600 text-lg">🌟</span>
+                  </div>
+                  <div className="w-10 h-10 bg-lime-100 dark:bg-lime-900/20 rounded-lg flex items-center justify-center">
+                    <span className="text-lime-600 text-lg">🔧</span>
                   </div>
                 </div>
               </div>
