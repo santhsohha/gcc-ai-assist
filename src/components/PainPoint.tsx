@@ -52,7 +52,7 @@ const PainPoint = () => {
 
             <div>
               <p className="text-xl text-foreground font-medium" data-translate data-en="With Nunar, we bring AI automation that works exactly like your best employee — only faster and 24/7." data-ar="مع نونار، نجلب لك أتمتة الذكاء الاصطناعي التي تعمل تماماً مثل أفضل موظف لديك — لكن أسرع وعلى مدار 24/7.">
-                With <span className="font-bold text-primary">Nunar</span>, we bring AI automation that works exactly like your best employee — only faster and 24/7.
+                With <span className="font-bold text-primary">NunarIQ</span>, we bring AI automation that works exactly like your best employee — only faster and 24/7.
               </p>
             </div>
           </div>
