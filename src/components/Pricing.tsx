@@ -32,11 +32,11 @@ const Pricing = () => {
 
         <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Main Pricing Card */}
-          <Card className="shadow-glow border-2 border-primary relative overflow-hidden my-[102px]">
+          <Card className="shadow-glow border-2 border-primary relative overflow-hidden my-0">
             <div className="absolute top-0 right-0 bg-gradient-primary text-primary-foreground px-4 py-2 text-sm font-semibold">
               MOST POPULAR
             </div>
-            <CardHeader className="text-center pb-4 my-[240px]">
+            <CardHeader className="text-center pb-4 my-[105px]">
               <CardTitle className="text-3xl font-bold">AI Automation Retainer</CardTitle>
               <div className="space-y-2">
                 <div className="text-5xl font-bold bg-gradient-primary bg-clip-text text-transparent">
@@ -48,7 +48,7 @@ const Pricing = () => {
                 <p className="text-muted-foreground">per month</p>
               </div>
             </CardHeader>
-            <CardContent className="space-y-6">
+            <CardContent className="space-y-6 my-0">
               <div className="space-y-4">
                 <h3 className="font-semibold text-lg border-b pb-2">What's Included:</h3>
                 <ul className="space-y-3">
@@ -157,7 +157,7 @@ const Pricing = () => {
             <div className="grid md:grid-cols-3 gap-6 mb-8">
               <div className="bg-white dark:bg-gray-900 rounded-xl p-6 shadow-md">
                 <div className="text-3xl font-bold text-red-600 mb-2">AED 48,000</div>
-                <p className="text-sm text-muted-foreground">Yearly cost of manual inefficiencies (2 employees x 40 hours x AED 50/hour)</p>
+                <p className="text-sm text-muted-foreground">Monthly cost of manual inefficiencies (2 employees x 40 hours x AED 50/hour)</p>
               </div>
               <div className="bg-white dark:bg-gray-900 rounded-xl p-6 shadow-md">
                 <div className="text-3xl font-bold text-green-600 mb-2">AED 16,500</div>
@@ -169,7 +169,7 @@ const Pricing = () => {
               </div>
             </div>
             
-            <p className="text-lg text-muted-foreground mb-6" data-translate data-en="Every year you wait costs you AED 31,500 in lost efficiency. How many months can you afford to lose?" data-ar="كل عام تنتظره يكلفك 31,500 درهم في الكفاءة المفقودة. كم شهراً يمكنك تحمل خسارته؟">Every year you wait costs you AED 31,500 in lost efficiency. How many months can you afford to lose?</p>
+            <p className="text-lg text-muted-foreground mb-6" data-translate data-en="Every month you wait costs you AED 28,500 in lost efficiency. How many months can you afford to lose?" data-ar="كل شهر تنتظره يكلفك 28,500 درهم في الكفاءة المفقودة. كم شهراً يمكنك تحمل خسارته؟">Every month you wait costs you AED 31,500 in lost efficiency. How many months can you afford to lose?</p>
             
             <Button size="lg" className="bg-gradient-to-r from-red-500 via-orange-500 to-yellow-500 hover:shadow-glow text-white text-lg px-12 py-6 animate-pulse" aria-label="Stop Losing Money and Start Free Trial Now">
               Stop Losing Money - Start Free Trial
