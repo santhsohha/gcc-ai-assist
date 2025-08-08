@@ -7,30 +7,112 @@ import { ArrowLeft, Truck, MapPin, Package, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Logistics = () => {
-  const solutions = [
+  const solutionCategories = [
     {
-      icon: <Truck className="h-8 w-8" />,
-      title: "Fleet Management Automation",
-      description: "AI-powered fleet tracking and optimization with real-time route planning for GCC region deliveries.",
-      benefits: ["25% fuel cost reduction", "Real-time vehicle tracking", "Predictive maintenance alerts"]
+      title: "Communication Automation (WhatsApp + Email)",
+      icon: <Phone className="h-6 w-6" />,
+      solutions: [
+        {
+          title: "AI Email Parser & WhatsApp Responder",
+          description: "Auto-read emails, detect intents like RFQs, Shipment status, Payment follow-ups and draft or send WhatsApp replies."
+        },
+        {
+          title: "Multi-channel Lead Qualification",
+          description: "Auto-capture leads from Email/WhatsApp, qualify using LLM, push into CRM with context."
+        },
+        {
+          title: "Daily Client Status Broadcast",
+          description: "Auto-push shipment or payment updates to clients via WhatsApp/email based on data triggers."
+        },
+        {
+          title: "Escalation Handler",
+          description: "Detect negative sentiment or urgency in messages and escalate to CFO or Ops head immediately."
+        }
+      ]
     },
     {
-      icon: <Package className="h-8 w-8" />,
-      title: "Warehouse Optimization",
-      description: "Smart inventory management and automated order processing with Arabic/English support.",
-      benefits: ["40% faster order processing", "99.5% inventory accuracy", "Automated reorder points"]
+      title: "Document Intelligence (Excel, Word, PDF)",
+      icon: <Package className="h-6 w-6" />,
+      solutions: [
+        {
+          title: "Excel to Workflow Trigger",
+          description: "CFO maintains Excel with pending vendor payments or open shipments – AI watches sheet changes and triggers automated follow-up mails/WhatsApp."
+        },
+        {
+          title: "Invoice & BoL Extraction",
+          description: "Auto-read scanned or attached PDF/Word invoices and BoL, extract metadata and log into TMS/ERP."
+        },
+        {
+          title: "Customs Document Verifier",
+          description: "AI validates uploaded or emailed documents (Packing List, Invoice, HS code sheet) and raises alerts on missing fields."
+        },
+        {
+          title: "Word Docs – Contract Review Bot",
+          description: "Automatically read Word-format vendor/customer contracts, highlight risks, key terms, or missing clauses."
+        },
+        {
+          title: "AI Summary from Excel",
+          description: "Read a messy Excel sheet (e.g., sales, P&L, freight cost) and generate summary or charts for CFO WhatsApp share."
+        }
+      ]
     },
     {
-      icon: <MapPin className="h-8 w-8" />,
-      title: "Delivery Coordination",
-      description: "WhatsApp-based delivery updates and customer communication system for MENA market preferences.",
-      benefits: ["95% delivery success rate", "Real-time customer updates", "Multilingual communication"]
+      title: "Cognitive Assistant for Finance Ops (Ideal for CFO)",
+      icon: <Truck className="h-6 w-6" />,
+      solutions: [
+        {
+          title: "Aging Report Bot",
+          description: "AI pulls receivables from Excel/ERP and sends an aging summary daily/weekly on WhatsApp."
+        },
+        {
+          title: "Auto Payment Reminder Generator",
+          description: "Reads due dates from Excel or ERP, drafts gentle payment follow-up messages (email/WhatsApp)."
+        },
+        {
+          title: "Credit Note Drafting Agent",
+          description: "Auto-generate credit note justifications based on contract terms and delivery logs."
+        },
+        {
+          title: "Collections Prioritization Bot",
+          description: "AI prioritizes collections based on customer behavior, amount, and due date – suggests next action."
+        }
+      ]
     },
     {
-      icon: <Phone className="h-8 w-8" />,
-      title: "Customer Service Automation",
-      description: "AI agents that handle delivery inquiries, schedule changes, and complaint resolution 24/7.",
-      benefits: ["24/7 customer support", "Instant query resolution", "Multi-channel communication"]
+      title: "Operations Automation",
+      icon: <MapPin className="h-6 w-6" />,
+      solutions: [
+        {
+          title: "Shipment ETA Trigger",
+          description: "Reads tracking sheets or portal data and sends ETA to client on WhatsApp."
+        },
+        {
+          title: "Delay Reason AI Writer",
+          description: "If shipment delay occurs, AI auto-drafts reason email/WhatsApp from historical patterns."
+        },
+        {
+          title: "Driver/Vendor WhatsApp Assistant",
+          description: "Reads incoming messages from field and updates system or triggers next action (like POD follow-up)."
+        }
+      ]
+    },
+    {
+      title: "Approvals & Compliance Workflows",
+      icon: <Phone className="h-6 w-6" />,
+      solutions: [
+        {
+          title: "WhatsApp Approvals",
+          description: "Convert Excel/ERP approval flow to WhatsApp interaction (PO, payment, pricing)."
+        },
+        {
+          title: "Document Submission Tracker",
+          description: "AI tracks document deadlines and nudges employees/vendors who haven't submitted via email/WhatsApp."
+        },
+        {
+          title: "Auto-Generate Approval Summary",
+          description: "Reads through email threads or Excel logs and composes a clear approval summary for CXOs."
+        }
+      ]
     }
   ];
 
@@ -88,29 +170,31 @@ const Logistics = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {solutions.map((solution, index) => (
-              <Card key={index} className="shadow-card hover:shadow-glow transition-all duration-300">
-                <CardHeader>
-                  <div className="flex items-center space-x-4">
-                    <div className="p-3 bg-primary/10 rounded-lg text-primary">
-                      {solution.icon}
+          <div className="space-y-16">
+            {solutionCategories.map((category, categoryIndex) => (
+              <div key={categoryIndex} className="space-y-8">
+                <div className="text-center">
+                  <div className="flex items-center justify-center space-x-3 mb-4">
+                    <div className="p-2 bg-primary/10 rounded-lg text-primary">
+                      {category.icon}
                     </div>
-                    <CardTitle className="text-xl">{solution.title}</CardTitle>
+                    <h3 className="text-2xl font-bold">{category.title}</h3>
                   </div>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground mb-4">{solution.description}</p>
-                  <ul className="space-y-2">
-                    {solution.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-center text-sm">
-                        <span className="text-green-500 mr-2">✓</span>
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
+                </div>
+                
+                <div className="grid md:grid-cols-2 gap-6">
+                  {category.solutions.map((solution, solutionIndex) => (
+                    <Card key={solutionIndex} className="shadow-card hover:shadow-glow transition-all duration-300">
+                      <CardHeader>
+                        <CardTitle className="text-lg leading-tight">{solution.title}</CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <p className="text-muted-foreground text-sm leading-relaxed">{solution.description}</p>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+              </div>
             ))}
           </div>
         </div>
