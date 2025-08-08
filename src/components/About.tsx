@@ -7,7 +7,7 @@ const About = () => {
         </h2>
         <p className="text-lg text-foreground leading-relaxed">
           Nunar is a strategic initiative of <span className="font-semibold text-primary">
-  <a href="https://www.hakunamatatatech.com/">Hakuna Matata Solutions</a>
+  <a href="https://www.hakunamatatatech.com/" target="_blank">Hakuna Matata Solutions</a>
 </span>, 
           a global leader in digital engineering and AI-driven solutions. Backed by 17+ years of delivering 
           enterprise-grade applications, Nunar brings cutting-edge AI workflow automation to SMBs in the 

@@ -57,9 +57,9 @@ const Footer = () => {
 
         <div className="border-t border-border pt-8 text-center">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-sm text-muted-foreground">
-              © Nunar, a Hakuna Matata Solutions brand.
-            </p>
+           <p className="text-sm text-muted-foreground">
+  © Nunar, a <a href="https://www.hakunamatatatech.com/" target="_blank">Hakuna Matata Solutions</a> brand.
+</p>
             <div className="flex space-x-6 text-sm text-muted-foreground">
               <Link to="/privacy-policy" className="hover:text-primary transition-colors">Privacy Policy</Link>
               <Link to="/terms-of-service" className="hover:text-primary transition-colors">Terms of Service</Link>
