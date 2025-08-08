@@ -32,11 +32,11 @@ const Pricing = () => {
 
         <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Main Pricing Card */}
-          <Card className="shadow-glow border-2 border-primary relative overflow-hidden my-[240px]">
+          <Card className="shadow-glow border-2 border-primary relative overflow-hidden my-[102px]">
             <div className="absolute top-0 right-0 bg-gradient-primary text-primary-foreground px-4 py-2 text-sm font-semibold">
               MOST POPULAR
             </div>
-            <CardHeader className="text-center pb-4">
+            <CardHeader className="text-center pb-4 my-[240px]">
               <CardTitle className="text-3xl font-bold">AI Automation Retainer</CardTitle>
               <div className="space-y-2">
                 <div className="text-5xl font-bold bg-gradient-primary bg-clip-text text-transparent">
