@@ -13,12 +13,12 @@ const Hero = () => {
             
             <div className="space-y-6">
               <div className="space-y-2">
-                <p className="text-sm text-muted-foreground font-medium">
-                  Nunar – An AI Workflow Automation Service by <a href="https://www.hakunamatatatech.com/">Hakuna Matata Solutions</a>
-                </p>
+<p className="text-sm text-muted-foreground font-medium">
+  Nunar – An AI Workflow Automation Service by <a href="https://www.hakunamatatatech.com/" target="_blank">Hakuna Matata Solutions</a>
+</p>
                 <h1 className="text-5xl lg:text-6xl font-bold leading-tight" data-translate data-en="Get AI Agents That Cut 80% Manual Work in 14 Days" data-ar="احصل على وكلاء ذكيين يقطعون 80% من العمل اليدوي في 14 يوم">
                   <span className="bg-gradient-hero bg-clip-text text-transparent">
-                    Get AI Agents That Cut 80% Manual Work in <b>14 Days</b>
+                    Get AI Agents That Cut 80% Manual Work in 14 Days
                   </span>
                 </h1>
               </div>
