@@ -5,8 +5,8 @@ import whatsappLogo from "https://drive.google.com/file/d/12NX8AD2D-rbRv9uU4quEe
 import chatgptLogo from "https://drive.google.com/file/d/15HeZKDKtafXkouy6YjhoiyMGA5Jhs245/view?usp=sharing";
 import facebookLogo from "@/assets/logos/facebook.png";
 import gmailLogo from "@/assets/logos/gmail.png";
-import notionLogo from "@/assets/logos/notion.png";
-import slackLogo from "@/assets/logos/slack.png";
+import notionLogo from "https://drive.google.com/file/d/15HeZKDKtafXkouy6YjhoiyMGA5Jhs245/view?usp=sharing";
+import slackLogo from "https://drive.google.com/file/d/15HeZKDKtafXkouy6YjhoiyMGA5Jhs245/view?usp=sharing";
 import zoomLogo from "@/assets/logos/zoom.png";
 import dropboxLogo from "@/assets/logos/dropbox.png";
 import trelloLogo from "@/assets/logos/trello.png";
