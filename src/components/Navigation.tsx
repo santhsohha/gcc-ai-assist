@@ -157,7 +157,7 @@ const Navigation = () => {
         </NavigationMenu>
 
         <div className="flex items-center space-x-4">
-          <Button size="sm" className="bg-gradient-primary hover:shadow-glow">
+          <Button size="sm" className="bg-gradient-primary hover:shadow-glow" aria-label="Start Free Trial of AI Automation">
             Start Free Trial
           </Button>
         </div>

@@ -60,6 +60,11 @@ export default {
 					700: 'hsl(var(--orange-700))',
 					900: 'hsl(var(--orange-900))'
 				},
+				green: {
+					500: 'hsl(var(--green-500))',
+					600: 'hsl(var(--green-600))',
+					700: 'hsl(var(--green-700))'
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',

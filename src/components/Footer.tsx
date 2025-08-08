@@ -58,7 +58,7 @@ const Footer = () => {
         <div className="border-t border-border pt-8 text-center">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-sm text-muted-foreground">
-              © 2025 Nunar AI. All rights reserved.
+              © Nunar, a Hakuna Matata Solutions brand.
             </p>
             <div className="flex space-x-6 text-sm text-muted-foreground">
               <Link to="/privacy-policy" className="hover:text-primary transition-colors">Privacy Policy</Link>

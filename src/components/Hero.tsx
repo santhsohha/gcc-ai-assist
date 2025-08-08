@@ -12,11 +12,16 @@ const Hero = () => {
             </Badge>
             
             <div className="space-y-6">
-              <h1 className="text-5xl lg:text-6xl font-bold leading-tight" data-translate data-en="Get AI Agents That Cut 80% Manual Work in 14 Days" data-ar="احصل على وكلاء ذكيين يقطعون 80% من العمل اليدوي في 14 يوم">
-                <span className="bg-gradient-hero bg-clip-text text-transparent">
-                  Get AI Agents That Cut 80% Manual Work in 14 Days
-                </span>
-              </h1>
+              <div className="space-y-2">
+                <p className="text-sm text-muted-foreground font-medium">
+                  Nunar – An AI Workflow Automation Service by Hakuna Matata Solutions
+                </p>
+                <h1 className="text-5xl lg:text-6xl font-bold leading-tight" data-translate data-en="Get AI Agents That Cut 80% Manual Work in 14 Days" data-ar="احصل على وكلاء ذكيين يقطعون 80% من العمل اليدوي في 14 يوم">
+                  <span className="bg-gradient-hero bg-clip-text text-transparent">
+                    Get AI Agents That Cut 80% Manual Work in 14 Days
+                  </span>
+                </h1>
+              </div>
               
               <p className="text-xl text-muted-foreground leading-relaxed max-w-lg" data-translate data-en="Stop drowning in repetitive tasks that kill productivity and drain profits. Our custom AI agents eliminate manual workflows, boost efficiency by 80%, and deliver measurable ROI within 2 weeks - guaranteed for GCC businesses." data-ar="توقف عن الغرق في المهام المتكررة التي تقتل الإنتاجية وتستنزف الأرباح. وكلاؤنا الذكيون المخصصون يلغون سير العمل اليدوي، ويعززون الكفاءة بنسبة 80%، ويقدمون عائد استثمار قابل للقياس خلال أسبوعين - مضمون لشركات دول الخليج.">
                 Stop drowning in repetitive tasks that kill productivity and drain profits. Our custom AI agents eliminate manual workflows, boost efficiency by 80%, and deliver measurable ROI within 2 weeks - guaranteed for GCC businesses.
@@ -24,25 +29,25 @@ const Hero = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-gradient-primary hover:shadow-glow text-lg px-8 py-6">
+              <Button size="lg" className="bg-gradient-primary hover:shadow-glow text-lg px-8 py-6" aria-label="Start Free Trial and Automate 2 Processes">
                 Start Free Trial - Automate 2 Processes
               </Button>
-              <Button variant="outline" size="lg" className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground text-lg px-8 py-6">
+              <Button variant="outline" size="lg" className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground text-lg px-8 py-6" aria-label="Watch Demo Video">
                 Watch Demo
               </Button>
             </div>
 
-            <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
+            <div className="flex flex-wrap items-center gap-4 text-sm text-foreground">
               <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                <div className="w-2 h-2 bg-green-600 rounded-full"></div>
                 <span>30+ Workflows Built</span>
               </div>
               <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                <div className="w-2 h-2 bg-green-600 rounded-full"></div>
                 <span>2-4 Week Deployment</span>
               </div>
               <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                <div className="w-2 h-2 bg-green-600 rounded-full"></div>
                 <span>99.9% Success Rate</span>
               </div>
             </div>

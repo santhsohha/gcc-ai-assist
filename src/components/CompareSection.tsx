@@ -83,38 +83,38 @@ const CompareSection = () => {
                 <div className="w-12 h-12 bg-green-100 dark:bg-green-900/20 rounded-full flex items-center justify-center">
                   <Check className="h-6 w-6 text-green-600" />
                 </div>
-                <h3 className="text-2xl font-bold text-green-600" data-translate data-en="Nunar AI Agents (Your Growth Accelerator)" data-ar="وكلاء نونار الذكية (محرك نموك)">
+                <h3 className="text-2xl font-bold text-green-700" data-translate data-en="Nunar AI Agents (Your Growth Accelerator)" data-ar="وكلاء نونار الذكية (محرك نموك)">
                   Nunar AI Agents (Your Growth Accelerator)
                 </h3>
               </div>
               
               <div className="space-y-4 mb-6">
                 <div className="flex items-start space-x-3">
-                  <Check className="h-5 w-5 text-green-500 mt-1" />
+                  <Check className="h-5 w-5 text-green-600 mt-1" />
                   <div>
                     <p className="font-semibold text-green-700">Fixed Monthly Price = Predictable Costs</p>
-                    <p className="text-sm text-green-600">Scale without bleeding money</p>
+                    <p className="text-sm text-green-700">Scale without bleeding money</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <Check className="h-5 w-5 text-green-500 mt-1" />
+                  <Check className="h-5 w-5 text-green-600 mt-1" />
                   <div>
                     <p className="font-semibold text-green-700">Instant Onboarding = Faster Execution</p>
-                    <p className="text-sm text-green-600">New team members hit the ground running</p>
+                    <p className="text-sm text-green-700">New team members hit the ground running</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <Check className="h-5 w-5 text-green-500 mt-1" />
+                  <Check className="h-5 w-5 text-green-600 mt-1" />
                   <div>
                     <p className="font-semibold text-green-700">100% Custom = Perfect Fit</p>
-                    <p className="text-sm text-green-600">Built around YOUR exact processes</p>
+                    <p className="text-sm text-green-700">Built around YOUR exact processes</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <Check className="h-5 w-5 text-green-500 mt-1" />
+                  <Check className="h-5 w-5 text-green-600 mt-1" />
                   <div>
                     <p className="font-semibold text-green-700">WhatsApp Native = Seamless Flow</p>
-                    <p className="text-sm text-green-600">Works exactly how MENA businesses operate</p>
+                    <p className="text-sm text-green-700">Works exactly how MENA businesses operate</p>
                   </div>
                 </div>
               </div>
@@ -125,7 +125,7 @@ const CompareSection = () => {
                 </p>
               </div>
 
-              <Button className="w-full bg-gradient-to-r from-green-500 to-emerald-500 hover:shadow-glow text-lg py-6">
+              <Button className="w-full bg-gradient-to-r from-green-500 to-emerald-500 hover:shadow-glow text-lg py-6" aria-label="Get Your AI Agents Now - Limited Spots Available">
                 Get Your AI Agents Now - Limited Spots
               </Button>
             </CardContent>
@@ -140,10 +140,10 @@ const CompareSection = () => {
             Every day you delay, you're losing money to inefficiency while competitors pull ahead. Only 15 spots available for Q4 2024.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-gradient-primary hover:shadow-glow text-lg px-8 py-6">
+            <Button size="lg" className="bg-gradient-primary hover:shadow-glow text-lg px-8 py-6" aria-label="Secure Your Spot for AI Automation Service">
               Secure Your Spot Now
             </Button>
-            <Button variant="outline" size="lg" className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground text-lg px-8 py-6">
+            <Button variant="outline" size="lg" className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground text-lg px-8 py-6" aria-label="See Live Demo of AI Agents">
               See Live Demo
             </Button>
           </div>

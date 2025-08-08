@@ -55,7 +55,7 @@ const Services = () => {
                       {feature}
                     </li>)}
                 </ul>
-                <Button size="sm" className="w-full bg-gradient-primary hover:shadow-glow" onClick={() => {
+                <Button size="sm" className="w-full bg-gradient-primary hover:shadow-glow" aria-label={`Learn more about ${service.title}`} onClick={() => {
               const serviceSlug = service.title.toLowerCase().replace(/\s+/g, '').replace(/&/g, '');
               window.location.href = `/services/${serviceSlug}`;
             }}>

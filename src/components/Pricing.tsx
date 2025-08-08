@@ -83,7 +83,7 @@ const Pricing = () => {
                 </ul>
               </div>
               
-              <Button className="w-full bg-gradient-primary hover:shadow-glow text-lg py-6">
+              <Button className="w-full bg-gradient-primary hover:shadow-glow text-lg py-6" aria-label="Start Your Free Trial of AI Automation">
                 Start Your Free Trial
               </Button>
               
@@ -174,7 +174,7 @@ const Pricing = () => {
             
             <p className="text-lg text-muted-foreground mb-6" data-translate data-en="Every month you wait costs you AED 28,500 in lost efficiency. How many months can you afford to lose?" data-ar="كل شهر تنتظره يكلفك 28,500 درهم في الكفاءة المفقودة. كم شهراً يمكنك تحمل خسارته؟">Every month you wait costs you AED 31,500 in lost efficiency. How many months can you afford to lose?</p>
             
-            <Button size="lg" className="bg-gradient-to-r from-red-500 via-orange-500 to-yellow-500 hover:shadow-glow text-white text-lg px-12 py-6 animate-pulse">
+            <Button size="lg" className="bg-gradient-to-r from-red-500 via-orange-500 to-yellow-500 hover:shadow-glow text-white text-lg px-12 py-6 animate-pulse" aria-label="Stop Losing Money and Start Free Trial Now">
               Stop Losing Money - Start Free Trial
             </Button>
           </div>

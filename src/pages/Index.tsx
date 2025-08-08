@@ -11,7 +11,8 @@ import FAQ from "@/components/FAQ";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 import CustomCursor from "@/components/CustomCursor";
-import CookieBanner from "@/components/CookieBanner";
+import About from "@/components/About";
+
 
 const Index = () => {
   return (
@@ -19,6 +20,7 @@ const Index = () => {
       <CustomCursor />
       <Navigation />
       <Hero />
+      <About />
       <PainPoint />
       <Partnership />
       <Services />
@@ -29,7 +31,7 @@ const Index = () => {
       <FAQ />
       <CTA />
       <Footer />
-      <CookieBanner />
+      
     </div>
   );
 };
