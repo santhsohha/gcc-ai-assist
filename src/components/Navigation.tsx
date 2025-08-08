@@ -1,16 +1,17 @@
 import { Button } from "@/components/ui/button";
 import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger } from "@/components/ui/navigation-menu";
+import { Link } from "react-router-dom";
 const Navigation = () => {
   return <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-md border-b border-border z-50">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-        <a href="/" className="flex items-center space-x-2">
+        <Link to="/" className="flex items-center space-x-2">
           <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
             <span className="text-primary-foreground font-bold text-lg">N</span>
           </div>
           <span className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
             Nunar
           </span>
-        </a>
+        </Link>
         
         <NavigationMenu className="hidden md:flex">
           <NavigationMenuList className="space-x-6">
@@ -21,7 +22,7 @@ const Navigation = () => {
               <NavigationMenuContent>
                 <div className="w-[300px] p-2">
                   <NavigationMenuLink asChild>
-                    <a href="/services/customaiagents" className="flex items-center space-x-3 p-3 rounded-md hover:bg-accent transition-colors">
+                    <Link to="/services/customaiagents" className="flex items-center space-x-3 p-3 rounded-md hover:bg-accent transition-colors">
                       <div className="w-8 h-8 bg-blue-100 dark:bg-blue-900/20 rounded-lg flex items-center justify-center">
                         <span className="text-blue-600 text-sm">🤖</span>
                       </div>
@@ -29,10 +30,10 @@ const Navigation = () => {
                         <div className="font-medium text-sm">Custom AI Agents</div>
                         <p className="text-xs text-muted-foreground">Tailored AI solutions</p>
                       </div>
-                    </a>
+                    </Link>
                   </NavigationMenuLink>
                   <NavigationMenuLink asChild>
-                    <a href="/services/whatsappautomation" className="flex items-center space-x-3 p-3 rounded-md hover:bg-accent transition-colors">
+                    <Link to="/services/whatsappautomation" className="flex items-center space-x-3 p-3 rounded-md hover:bg-accent transition-colors">
                       <div className="w-8 h-8 bg-green-100 dark:bg-green-900/20 rounded-lg flex items-center justify-center">
                         <span className="text-green-600 text-sm">📱</span>
                       </div>
@@ -40,10 +41,10 @@ const Navigation = () => {
                         <div className="font-medium text-sm">WhatsApp Automation</div>
                         <p className="text-xs text-muted-foreground">Automate communication</p>
                       </div>
-                    </a>
+                    </Link>
                   </NavigationMenuLink>
                   <NavigationMenuLink asChild>
-                    <a href="/services/gcclocalization" className="flex items-center space-x-3 p-3 rounded-md hover:bg-accent transition-colors">
+                    <Link to="/services/gcclocalization" className="flex items-center space-x-3 p-3 rounded-md hover:bg-accent transition-colors">
                       <div className="w-8 h-8 bg-orange-100 dark:bg-orange-900/20 rounded-lg flex items-center justify-center">
                         <span className="text-orange-600 text-sm">🌍</span>
                       </div>
@@ -51,10 +52,10 @@ const Navigation = () => {
                         <div className="font-medium text-sm">GCC Localization</div>
                         <p className="text-xs text-muted-foreground">Arabic customization</p>
                       </div>
-                    </a>
+                    </Link>
                   </NavigationMenuLink>
                   <NavigationMenuLink asChild>
-                    <a href="/services/processoptimization" className="flex items-center space-x-3 p-3 rounded-md hover:bg-accent transition-colors">
+                    <Link to="/services/processoptimization" className="flex items-center space-x-3 p-3 rounded-md hover:bg-accent transition-colors">
                       <div className="w-8 h-8 bg-purple-100 dark:bg-purple-900/20 rounded-lg flex items-center justify-center">
                         <span className="text-purple-600 text-sm">⚡</span>
                       </div>
@@ -62,7 +63,7 @@ const Navigation = () => {
                         <div className="font-medium text-sm">Process Optimization</div>
                         <p className="text-xs text-muted-foreground">Streamline workflows</p>
                       </div>
-                    </a>
+                    </Link>
                   </NavigationMenuLink>
                 </div>
               </NavigationMenuContent>
@@ -75,7 +76,7 @@ const Navigation = () => {
               <NavigationMenuContent>
                 <div className="w-[300px] p-2">
                   <NavigationMenuLink asChild>
-                    <a href="/industries/manufacturing" className="flex items-center space-x-3 p-3 rounded-md hover:bg-accent transition-colors">
+                    <Link to="/industries/manufacturing" className="flex items-center space-x-3 p-3 rounded-md hover:bg-accent transition-colors">
                       <div className="w-8 h-8 bg-gray-100 dark:bg-gray-900/20 rounded-lg flex items-center justify-center">
                         <span className="text-gray-600 text-sm">🏭</span>
                       </div>
@@ -83,10 +84,10 @@ const Navigation = () => {
                         <div className="font-medium text-sm">Manufacturing</div>
                         <p className="text-xs text-muted-foreground">Production automation</p>
                       </div>
-                    </a>
+                    </Link>
                   </NavigationMenuLink>
                   <NavigationMenuLink asChild>
-                    <a href="/industries/healthcare" className="flex items-center space-x-3 p-3 rounded-md hover:bg-accent transition-colors">
+                    <Link to="/industries/healthcare" className="flex items-center space-x-3 p-3 rounded-md hover:bg-accent transition-colors">
                       <div className="w-8 h-8 bg-red-100 dark:bg-red-900/20 rounded-lg flex items-center justify-center">
                         <span className="text-red-600 text-sm">🏥</span>
                       </div>
@@ -94,10 +95,10 @@ const Navigation = () => {
                         <div className="font-medium text-sm">Healthcare</div>
                         <p className="text-xs text-muted-foreground">Patient management</p>
                       </div>
-                    </a>
+                    </Link>
                   </NavigationMenuLink>
                   <NavigationMenuLink asChild>
-                    <a href="/industries/logistics" className="flex items-center space-x-3 p-3 rounded-md hover:bg-accent transition-colors">
+                    <Link to="/industries/logistics" className="flex items-center space-x-3 p-3 rounded-md hover:bg-accent transition-colors">
                       <div className="w-8 h-8 bg-blue-100 dark:bg-blue-900/20 rounded-lg flex items-center justify-center">
                         <span className="text-blue-600 text-sm">🚚</span>
                       </div>
@@ -105,7 +106,7 @@ const Navigation = () => {
                         <div className="font-medium text-sm">Logistics</div>
                         <p className="text-xs text-muted-foreground">Delivery tracking</p>
                       </div>
-                    </a>
+                    </Link>
                   </NavigationMenuLink>
                 </div>
               </NavigationMenuContent>
