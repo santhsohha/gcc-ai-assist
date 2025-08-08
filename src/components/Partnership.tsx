@@ -1,7 +1,7 @@
 import { Users, Lightbulb, Puzzle, TrendingUp } from "lucide-react";
 
 // Import company logos - using actual company logos
-import whatsappLogo from "@/assets/logos/whatsapp.png";
+import whatsappLogo from "https://drive.google.com/file/d/12NX8AD2D-rbRv9uU4quEeZShFFPlZAh_/view?usp=sharing";
 import chatgptLogo from "@/assets/logos/chatgpt.png";
 import facebookLogo from "@/assets/logos/facebook.png";
 import gmailLogo from "@/assets/logos/gmail.png";
