@@ -157,7 +157,7 @@ const Pricing = () => {
             <div className="grid md:grid-cols-3 gap-6 mb-8">
               <div className="bg-white dark:bg-gray-900 rounded-xl p-6 shadow-md">
                 <div className="text-3xl font-bold text-red-600 mb-2">AED 48,000</div>
-                <p className="text-sm text-muted-foreground">Monthly cost of manual inefficiencies (2 employees x 40 hours x AED 50/hour)</p>
+                <p className="text-sm text-muted-foreground">Yearly cost of manual inefficiencies (2 employees x 40 hours x AED 50/hour)</p>
               </div>
               <div className="bg-white dark:bg-gray-900 rounded-xl p-6 shadow-md">
                 <div className="text-3xl font-bold text-green-600 mb-2">AED 16,500</div>
@@ -169,7 +169,7 @@ const Pricing = () => {
               </div>
             </div>
             
-            <p className="text-lg text-muted-foreground mb-6" data-translate data-en="Every month you wait costs you AED 28,500 in lost efficiency. How many months can you afford to lose?" data-ar="كل شهر تنتظره يكلفك 28,500 درهم في الكفاءة المفقودة. كم شهراً يمكنك تحمل خسارته؟">Every month you wait costs you AED 31,500 in lost efficiency. How many months can you afford to lose?</p>
+            <p className="text-lg text-muted-foreground mb-6" data-translate data-en="Every year you wait costs you AED 31,500 in lost efficiency. How many months can you afford to lose?" data-ar="كل عام تنتظره يكلفك 31,500 درهم في الكفاءة المفقودة. كم شهراً يمكنك تحمل خسارته؟">Every year you wait costs you AED 31,500 in lost efficiency. How many months can you afford to lose?</p>
             
             <Button size="lg" className="bg-gradient-to-r from-red-500 via-orange-500 to-yellow-500 hover:shadow-glow text-white text-lg px-12 py-6 animate-pulse" aria-label="Stop Losing Money and Start Free Trial Now">
               Stop Losing Money - Start Free Trial

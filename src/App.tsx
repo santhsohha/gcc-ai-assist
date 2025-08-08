@@ -8,7 +8,7 @@ import NotFound from "./pages/NotFound";
 import Manufacturing from "./pages/industries/Manufacturing";
 import Healthcare from "./pages/industries/Healthcare";
 import Logistics from "./pages/industries/Logistics";
-import Retail from "./pages/industries/Retail";
+
 import CustomAIAgents from "./pages/services/CustomAIAgents";
 import WhatsAppAutomation from "./pages/services/WhatsAppAutomation";
 import GCCLocalization from "./pages/services/GCCLocalization";
@@ -30,7 +30,7 @@ const App = () => (
           <Route path="/industries/manufacturing" element={<Manufacturing />} />
           <Route path="/industries/healthcare" element={<Healthcare />} />
           <Route path="/industries/logistics" element={<Logistics />} />
-          <Route path="/industries/retail" element={<Retail />} />
+          
           <Route path="/services/customaiagents" element={<CustomAIAgents />} />
           <Route path="/services/whatsappautomation" element={<WhatsAppAutomation />} />
           <Route path="/services/gcclocalization" element={<GCCLocalization />} />

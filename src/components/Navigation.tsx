@@ -3,14 +3,14 @@ import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMe
 const Navigation = () => {
   return <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-md border-b border-border z-50">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-        <div className="flex items-center space-x-2">
+        <a href="/" className="flex items-center space-x-2">
           <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
             <span className="text-primary-foreground font-bold text-lg">N</span>
           </div>
           <span className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
             Nunar
           </span>
-        </div>
+        </a>
         
         <NavigationMenu className="hidden md:flex">
           <NavigationMenuList className="space-x-6">
@@ -104,17 +104,6 @@ const Navigation = () => {
                       <div>
                         <div className="font-medium text-sm">Logistics</div>
                         <p className="text-xs text-muted-foreground">Delivery tracking</p>
-                      </div>
-                    </a>
-                  </NavigationMenuLink>
-                  <NavigationMenuLink asChild>
-                    <a href="/industries/retail" className="flex items-center space-x-3 p-3 rounded-md hover:bg-accent transition-colors">
-                      <div className="w-8 h-8 bg-green-100 dark:bg-green-900/20 rounded-lg flex items-center justify-center">
-                        <span className="text-green-600 text-sm">🛒</span>
-                      </div>
-                      <div>
-                        <div className="font-medium text-sm">Retail & Hypermarkets</div>
-                        <p className="text-xs text-muted-foreground">Inventory management</p>
                       </div>
                     </a>
                   </NavigationMenuLink>
