@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-image.jpg";
 const Hero = () => {
-  return <section className="pt-24 pb-16 px-4 bg-gradient-secondary min-h-screen flex items-center bg-red-100">
+  return <section className="pt-24 pb-16 px-4 bg-gradient-secondary min-h-screen flex items-center">
       <div className="container mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
@@ -14,11 +14,11 @@ const Hero = () => {
             <div className="space-y-6">
               <div className="space-y-2">
                 <p className="text-sm text-muted-foreground font-medium">
-                  Nunar – An AI Workflow Automation Service by Hakuna Matata Solutions
+                  Nunar – An AI Workflow Automation Service by <a href="https://www.hakunamatatatech.com/">Hakuna Matata Solutions</a>
                 </p>
                 <h1 className="text-5xl lg:text-6xl font-bold leading-tight" data-translate data-en="Get AI Agents That Cut 80% Manual Work in 14 Days" data-ar="احصل على وكلاء ذكيين يقطعون 80% من العمل اليدوي في 14 يوم">
                   <span className="bg-gradient-hero bg-clip-text text-transparent">
-                    Get AI Agents That Cut 80% Manual Work in 14 Days
+                    Get AI Agents That Cut 80% Manual Work in <b>14 Days</b>
                   </span>
                 </h1>
               </div>
