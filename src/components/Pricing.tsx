@@ -115,7 +115,7 @@ const Pricing = () => {
                       </div>
                       <div>
                         <h4 className="text-xl font-bold">{tier.tier}</h4>
-                        <p className="text-primary font-semibold">{tier.hours}</p>
+                        
                       </div>
                     </div>
                     {tier.included > 0 ? <Badge variant="default" className="bg-green-100 text-green-700 animate-bounce">
