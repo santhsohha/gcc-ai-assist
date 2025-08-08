@@ -60,13 +60,10 @@ const Pricing = () => {
                     <span className="text-green-500 mr-3">✓</span>
                     <span>1 Process Consultant</span>
                   </li>
+                  
                   <li className="flex items-center">
                     <span className="text-green-500 mr-3">✓</span>
-                    <span>80 Development Hours/Month</span>
-                  </li>
-                  <li className="flex items-center">
-                    <span className="text-green-500 mr-3">✓</span>
-                    <span>2 Medium Complexity Workflows</span>
+                    <span>3 Simple & Medium Complexity Workflows</span>
                   </li>
                   <li className="flex items-center">
                     <span className="text-green-500 mr-3">✓</span>
