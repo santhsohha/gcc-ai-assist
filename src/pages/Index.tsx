@@ -11,6 +11,7 @@ import FAQ from "@/components/FAQ";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 import CustomCursor from "@/components/CustomCursor";
+import CookieBanner from "@/components/CookieBanner";
 
 const Index = () => {
   return (
@@ -28,6 +29,7 @@ const Index = () => {
       <FAQ />
       <CTA />
       <Footer />
+      <CookieBanner />
     </div>
   );
 };

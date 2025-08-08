@@ -1,7 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger } from "@/components/ui/navigation-menu";
-import { ChevronDown } from "lucide-react";
-import TranslationButton from "./TranslationButton";
 const Navigation = () => {
   return <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-md border-b border-border z-50">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
@@ -159,9 +157,6 @@ const Navigation = () => {
         </NavigationMenu>
 
         <div className="flex items-center space-x-4">
-          <span className="text-sm text-muted-foreground">
-        </span>
-          <TranslationButton />
           <Button size="sm" className="bg-gradient-primary hover:shadow-glow">
             Start Free Trial
           </Button>
