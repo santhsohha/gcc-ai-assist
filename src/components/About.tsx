@@ -1,6 +1,5 @@
 const About = () => {
-  return (
-    <section className="py-16 px-4 bg-background">
+  return <section className="py-16 px-4 rounded-lg bg-amber-50">
       <div className="container mx-auto max-w-4xl text-center">
         <h2 className="text-3xl lg:text-4xl font-bold mb-8">
           About Nunar
@@ -12,8 +11,6 @@ const About = () => {
           Middle East and US.
         </p>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default About;

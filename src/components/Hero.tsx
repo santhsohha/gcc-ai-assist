@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-image.jpg";
 const Hero = () => {
-  return <section className="pt-24 pb-16 px-4 bg-gradient-secondary min-h-screen flex items-center">
+  return <section className="pt-24 pb-16 px-4 bg-gradient-secondary min-h-screen flex items-center bg-red-100">
       <div className="container mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">

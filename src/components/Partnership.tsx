@@ -43,7 +43,7 @@ import awsLogo from "@/assets/logos/aws.png";
 import geminiLogo from "@/assets/logos/gemini.png";
 import mailchimpLogo from "@/assets/logos/mailchimp.png";
 const Partnership = () => {
-  return <section className="py-20 bg-gradient-to-br from-muted/10 to-background">
+  return <section className="py-20 bg-gradient-to-br from-muted/10 to-background bg-green-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
