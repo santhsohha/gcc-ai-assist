@@ -3,10 +3,14 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { X } from "lucide-react";
+import { sanitizeInput, isValidEmail, checkRateLimit, getRateLimitIdentifier } from "@/lib/security";
+import { useToast } from "@/hooks/use-toast";
 
 const ExitIntentPopup = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
 
   useEffect(() => {
     let timeoutId: NodeJS.Timeout;
@@ -38,10 +42,43 @@ const ExitIntentPopup = () => {
 
   const handleSubscribe = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle newsletter subscription
-    console.log('Newsletter subscription:', email);
-    setIsVisible(false);
-    setEmail("");
+    setIsSubmitting(true);
+    
+    // Input validation and sanitization
+    const sanitizedEmail = sanitizeInput(email);
+    
+    if (!isValidEmail(sanitizedEmail)) {
+      toast({
+        title: "Invalid Email",
+        description: "Please enter a valid email address.",
+        variant: "destructive",
+      });
+      setIsSubmitting(false);
+      return;
+    }
+    
+    // Rate limiting
+    const rateLimitId = getRateLimitIdentifier();
+    if (!checkRateLimit(rateLimitId, 3, 300000)) { // 3 attempts per 5 minutes
+      toast({
+        title: "Too Many Attempts",
+        description: "Please wait a few minutes before trying again.",
+        variant: "destructive",
+      });
+      setIsSubmitting(false);
+      return;
+    }
+    
+    // Simulate API call
+    setTimeout(() => {
+      toast({
+        title: "Success!",
+        description: "Thank you for subscribing to our newsletter.",
+      });
+      setIsVisible(false);
+      setEmail("");
+      setIsSubmitting(false);
+    }, 1000);
   };
 
   if (!isVisible) return null;
@@ -72,15 +109,18 @@ const ExitIntentPopup = () => {
               type="email"
               placeholder="Enter your email address"
               value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={(e) => setEmail(sanitizeInput(e.target.value))}
               required
               className="w-full"
+              maxLength={254}
+              disabled={isSubmitting}
             />
             <Button 
               type="submit"
               className="w-full bg-gradient-primary hover:shadow-glow"
+              disabled={isSubmitting}
             >
-              Subscribe to Newsletter
+              {isSubmitting ? "Subscribing..." : "Subscribe to Newsletter"}
             </Button>
           </form>
           

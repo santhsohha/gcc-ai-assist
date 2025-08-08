@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Cookie, Settings, X } from "lucide-react";
+import { sanitizeInput } from "@/lib/security";
 import {
   Dialog,
   DialogContent,
@@ -44,12 +45,26 @@ const CookieBanner = () => {
       functional: true,
     };
     setPreferences(allAccepted);
-    localStorage.setItem('cookie-consent', JSON.stringify(allAccepted));
+    try {
+      localStorage.setItem('cookie-consent', JSON.stringify(allAccepted));
+    } catch (error) {
+      // Handle localStorage errors gracefully
+      if (process.env.NODE_ENV === 'development') {
+        console.warn('Failed to save cookie preferences:', error);
+      }
+    }
     setShowBanner(false);
   };
 
   const acceptSelected = () => {
-    localStorage.setItem('cookie-consent', JSON.stringify(preferences));
+    try {
+      localStorage.setItem('cookie-consent', JSON.stringify(preferences));
+    } catch (error) {
+      // Handle localStorage errors gracefully
+      if (process.env.NODE_ENV === 'development') {
+        console.warn('Failed to save cookie preferences:', error);
+      }
+    }
     setShowBanner(false);
     setShowSettings(false);
   };
@@ -62,7 +77,14 @@ const CookieBanner = () => {
       functional: false,
     };
     setPreferences(rejected);
-    localStorage.setItem('cookie-consent', JSON.stringify(rejected));
+    try {
+      localStorage.setItem('cookie-consent', JSON.stringify(rejected));
+    } catch (error) {
+      // Handle localStorage errors gracefully
+      if (process.env.NODE_ENV === 'development') {
+        console.warn('Failed to save cookie preferences:', error);
+      }
+    }
     setShowBanner(false);
   };
 

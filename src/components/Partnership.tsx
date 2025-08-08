@@ -1,11 +1,18 @@
 import { Users, Lightbulb, Puzzle, TrendingUp } from "lucide-react";
 
-// Import company logos
-import chatgptLogo from "@/assets/logos/chatgpt.png";
-import whatsappLogo from "@/assets/logos/whatsapp.png";
-import facebookLogo from "@/assets/logos/facebook.png";
+// Import company logos - first 10 are new partner logos
+import partner1Logo from "@/assets/logos/partner1.png";
+import partner2Logo from "@/assets/logos/partner2.png";
+import partner3Logo from "@/assets/logos/partner3.png";
+import partner4Logo from "@/assets/logos/partner4.png";
+import partner5Logo from "@/assets/logos/partner5.png";
+import partner6Logo from "@/assets/logos/partner6.png";
+import partner7Logo from "@/assets/logos/partner7.png";
+import partner8Logo from "@/assets/logos/partner8.png";
+import partner9Logo from "@/assets/logos/partner9.png";
+import partner10Logo from "@/assets/logos/partner10.png";
+// Import remaining logos
 import microsoftLogo from "@/assets/logos/microsoft.png";
-import mailchimpLogo from "@/assets/logos/mailchimp.png";
 import asanaLogo from "@/assets/logos/asana.png";
 import shopifyLogo from "@/assets/logos/shopify.png";
 import paypalLogo from "@/assets/logos/paypal.png";
@@ -41,6 +48,7 @@ import dropboxLogo from "@/assets/logos/dropbox.png";
 import zoomLogo from "@/assets/logos/zoom.png";
 import gmailLogo from "@/assets/logos/gmail.png";
 import notionLogo from "@/assets/logos/notion.png";
+import mailchimpLogo from "@/assets/logos/mailchimp.png";
 const Partnership = () => {
   return <section className="py-20 bg-gradient-to-br from-muted/10 to-background">
       <div className="container mx-auto px-4">
@@ -149,34 +157,34 @@ const Partnership = () => {
                 <h4 className="text-foreground mb-4 font-bold text-xl">30+ Integrations to boost your productivity by 5X</h4>
                 <div className="grid grid-cols-6 gap-3">
                   <div className="w-10 h-10 bg-background border border-border rounded-lg flex items-center justify-center p-1">
-                    <img src={gmailLogo} alt="Gmail" className="w-full h-full object-contain" />
+                    <img src={partner1Logo} alt="Partner 1" className="w-full h-full object-contain" />
                   </div>
                   <div className="w-10 h-10 bg-background border border-border rounded-lg flex items-center justify-center p-1">
-                    <img src={whatsappLogo} alt="WhatsApp" className="w-full h-full object-contain" />
+                    <img src={partner2Logo} alt="Partner 2" className="w-full h-full object-contain" />
                   </div>
                   <div className="w-10 h-10 bg-background border border-border rounded-lg flex items-center justify-center p-1">
-                    <img src={quickbooksLogo} alt="QuickBooks" className="w-full h-full object-contain" />
+                    <img src={partner3Logo} alt="Partner 3" className="w-full h-full object-contain" />
                   </div>
                   <div className="w-10 h-10 bg-background border border-border rounded-lg flex items-center justify-center p-1">
-                    <img src={googleLogo} alt="Google" className="w-full h-full object-contain" />
+                    <img src={partner4Logo} alt="Partner 4" className="w-full h-full object-contain" />
                   </div>
                   <div className="w-10 h-10 bg-background border border-border rounded-lg flex items-center justify-center p-1">
-                    <img src={chatgptLogo} alt="ChatGPT" className="w-full h-full object-contain" />
+                    <img src={partner5Logo} alt="Partner 5" className="w-full h-full object-contain" />
                   </div>
                   <div className="w-10 h-10 bg-background border border-border rounded-lg flex items-center justify-center p-1">
-                    <img src={geminiLogo} alt="Google Gemini" className="w-full h-full object-contain" />
+                    <img src={partner6Logo} alt="Partner 6" className="w-full h-full object-contain" />
                   </div>
                   <div className="w-10 h-10 bg-background border border-border rounded-lg flex items-center justify-center p-1">
-                    <img src={facebookLogo} alt="Facebook" className="w-full h-full object-contain" />
+                    <img src={partner7Logo} alt="Partner 7" className="w-full h-full object-contain" />
                   </div>
                   <div className="w-10 h-10 bg-background border border-border rounded-lg flex items-center justify-center p-1">
-                    <img src={instagramLogo} alt="Instagram" className="w-full h-full object-contain" />
+                    <img src={partner8Logo} alt="Partner 8" className="w-full h-full object-contain" />
                   </div>
                   <div className="w-10 h-10 bg-background border border-border rounded-lg flex items-center justify-center p-1">
-                    <img src={linkedinLogo} alt="LinkedIn" className="w-full h-full object-contain" />
+                    <img src={partner9Logo} alt="Partner 9" className="w-full h-full object-contain" />
                   </div>
                   <div className="w-10 h-10 bg-background border border-border rounded-lg flex items-center justify-center p-1">
-                    <img src={slackLogo} alt="Slack" className="w-full h-full object-contain" />
+                    <img src={partner10Logo} alt="Partner 10" className="w-full h-full object-contain" />
                   </div>
                   <div className="w-10 h-10 bg-background border border-border rounded-lg flex items-center justify-center p-1">
                     <img src={microsoftLogo} alt="Microsoft" className="w-full h-full object-contain" />
