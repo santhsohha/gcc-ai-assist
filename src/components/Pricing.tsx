@@ -32,7 +32,7 @@ const Pricing = () => {
 
         <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Main Pricing Card */}
-          <Card className="shadow-glow border-2 border-primary relative overflow-hidden">
+          <Card className="shadow-glow border-2 border-primary relative overflow-hidden my-[240px]">
             <div className="absolute top-0 right-0 bg-gradient-primary text-primary-foreground px-4 py-2 text-sm font-semibold">
               MOST POPULAR
             </div>
@@ -95,16 +95,12 @@ const Pricing = () => {
 
           {/* Workflow Tiers with FOMO */}
           <div className="space-y-6">
-            <div className="text-center mb-8">
+            <div className="text-center mb-8 bg-gray-100 rounded-lg mx-0">
               <Badge variant="secondary" className="bg-orange-100 text-orange-700 mb-4 animate-pulse">
                 ⚡ Your Automation Roadmap
               </Badge>
-              <h3 className="text-2xl font-bold mb-4" data-translate data-en="What You Get vs What Competitors Are Missing" data-ar="ما تحصل عليه مقابل ما يفقده المنافسون">
-                What You Get vs What Competitors Are Missing
-              </h3>
-              <p className="text-muted-foreground" data-translate data-en="While others pay per user and struggle with English-only systems, you get everything included." data-ar="بينما يدفع الآخرون عن كل مستخدم ويعانون من الأنظمة الإنجليزية فقط، تحصل على كل شيء متضمن.">
-                While others pay per user and struggle with English-only systems, you get everything included.
-              </p>
+              <h3 className="text-2xl font-bold mb-4" data-translate data-en="What You Get vs What Competitors Are Missing" data-ar="ما تحصل عليه مقابل ما يفقده المنافسون">⚠️ While competitors charge AED 2,000+ per user monthly...</h3>
+              <p className="text-muted-foreground" data-translate data-en="While others pay per user and struggle with English-only systems, you get everything included." data-ar="بينما يدفع الآخرون عن كل مستخدم ويعانون من الأنظمة الإنجليزية فقط، تحصل على كل شيء متضمن.">You get unlimited users, Arabic support, and custom workflows for one fixed price.</p>
             </div>
             
             {workflowTiers.map((tier, index) => <Card key={index} className={`shadow-card hover:shadow-glow transition-all duration-300 transform hover:-translate-y-1 ${tier.included > 0 ? 'border-primary bg-gradient-to-r from-green-50/50 to-emerald-50/50 dark:from-green-950/20 dark:to-emerald-950/20' : 'border-border hover:border-primary/50'} relative overflow-hidden`}>
@@ -146,12 +142,8 @@ const Pricing = () => {
               </Card>)}
             
             <div className="text-center mt-8 bg-gradient-to-r from-orange-50 to-red-50 dark:from-orange-950/20 dark:to-red-950/20 rounded-xl p-6 border-2 border-orange-200">
-              <p className="text-orange-700 font-semibold mb-2" data-translate data-en="⚠️ While competitors charge AED 2,000+ per user monthly..." data-ar="⚠️ بينما يتقاضى المنافسون 2,000+ درهم لكل مستخدم شهرياً...">
-                ⚠️ While competitors charge AED 2,000+ per user monthly...
-              </p>
-              <p className="text-muted-foreground" data-translate data-en="You get unlimited users, Arabic support, and custom workflows for one fixed price." data-ar="تحصل على مستخدمين غير محدودين ودعم العربية وسير عمل مخصص بسعر ثابت واحد.">
-                You get unlimited users, Arabic support, and custom workflows for one fixed price.
-              </p>
+              <p className="text-orange-700 font-semibold mb-2" data-translate data-en="⚠️ While competitors charge AED 2,000+ per user monthly..." data-ar="⚠️ بينما يتقاضى المنافسون 2,000+ درهم لكل مستخدم شهرياً...">What You Get vs What Competitors Are Missing</p>
+              <p className="text-muted-foreground" data-translate data-en="You get unlimited users, Arabic support, and custom workflows for one fixed price." data-ar="تحصل على مستخدمين غير محدودين ودعم العربية وسير عمل مخصص بسعر ثابت واحد.">While others pay per user and struggle with English-only systems, you get everything included.</p>
             </div>
           </div>
         </div>
