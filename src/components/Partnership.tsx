@@ -150,34 +150,34 @@ const Partnership = () => {
                 <h4 className="text-foreground mb-4 font-bold text-xl">30+ Integrations to boost your productivity by 5X</h4>
                 <div className="grid grid-cols-6 gap-3">
                   <div className="w-10 h-10 bg-background border border-border rounded-lg flex items-center justify-center p-1">
-                    <img src={whatsappLogo} alt="WhatsApp" className="w-full h-full object-contain" />
+                    <img src="https://drive.google.com/file/d/12NX8AD2D-rbRv9uU4quEeZShFFPlZAh_/view?usp=sharing" alt="WhatsApp" className="w-full h-full object-contain" />
                   </div>
                   <div className="w-10 h-10 bg-background border border-border rounded-lg flex items-center justify-center p-1">
-                    <img src={chatgptLogo} alt="ChatGPT" className="w-full h-full object-contain" />
+                    <img src="https://drive.google.com/file/d/15HeZKDKtafXkouy6YjhoiyMGA5Jhs245/view?usp=sharing" alt="ChatGPT" className="w-full h-full object-contain" />
                   </div>
                   <div className="w-10 h-10 bg-background border border-border rounded-lg flex items-center justify-center p-1">
-                    <img src={facebookLogo} alt="Facebook" className="w-full h-full object-contain" />
+                    <img src="https://drive.google.com/file/d/1Bs2fz2H6UIVPNWIRU6CmMTw_S50jmPV7/view?usp=sharing" alt="Facebook" className="w-full h-full object-contain" />
                   </div>
                   <div className="w-10 h-10 bg-background border border-border rounded-lg flex items-center justify-center p-1">
-                    <img src={gmailLogo} alt="Gmail" className="w-full h-full object-contain" />
+                    <img src="https://drive.google.com/file/d/1RCAVWxFq60NhPlmqe5eQ9ACd08yXCZ0H/view?usp=sharing" alt="Gmail" className="w-full h-full object-contain" />
                   </div>
                   <div className="w-10 h-10 bg-background border border-border rounded-lg flex items-center justify-center p-1">
-                    <img src={notionLogo} alt="Notion" className="w-full h-full object-contain" />
+                    <img src="https://drive.google.com/file/d/1hJ0mGQs6RtPAL6PT5lOaVDeBEFQwunt0/view?usp=sharing" alt="Notion" className="w-full h-full object-contain" />
                   </div>
                   <div className="w-10 h-10 bg-background border border-border rounded-lg flex items-center justify-center p-1">
-                    <img src={slackLogo} alt="Slack" className="w-full h-full object-contain" />
+                    <img src="https://drive.google.com/file/d/1sIEyePvbAk08vtCDKWgPr970vPXnHIvm/view?usp=sharing" alt="Slack" className="w-full h-full object-contain" />
                   </div>
                   <div className="w-10 h-10 bg-background border border-border rounded-lg flex items-center justify-center p-1">
-                    <img src={zoomLogo} alt="Zoom" className="w-full h-full object-contain" />
+                    <img src="https://drive.google.com/file/d/1tOUjR0Cm3BKIFs1yLICvrTcxzzlAR4Hq/view?usp=sharing" alt="Zoom" className="w-full h-full object-contain" />
                   </div>
                   <div className="w-10 h-10 bg-background border border-border rounded-lg flex items-center justify-center p-1">
-                    <img src={dropboxLogo} alt="Dropbox" className="w-full h-full object-contain" />
+                    <img src="https://drive.google.com/file/d/1utBtW-JTi1X0AMjaU3MhqS0h3UhNLx-0/view?usp=sharing" alt="Dropbox" className="w-full h-full object-contain" />
                   </div>
                   <div className="w-10 h-10 bg-background border border-border rounded-lg flex items-center justify-center p-1">
-                    <img src={trelloLogo} alt="Trello" className="w-full h-full object-contain" />
+                    <img src="https://drive.google.com/file/d/1vgLaO_VdolSNfoaQvQsLctsqFGzJeMPh/view?usp=sharing" alt="Trello" className="w-full h-full object-contain" />
                   </div>
                   <div className="w-10 h-10 bg-background border border-border rounded-lg flex items-center justify-center p-1">
-                    <img src={quickbooksLogo} alt="QuickBooks" className="w-full h-full object-contain" />
+                    <img src="https://drive.google.com/file/d/1zYue1Gje_T70IhBDMy0GL61IA-0eJc1n/view?usp=sharing" alt="QuickBooks" className="w-full h-full object-contain" />
                   </div>
                   <div className="w-10 h-10 bg-background border border-border rounded-lg flex items-center justify-center p-1">
                     <img src={microsoftLogo} alt="Microsoft" className="w-full h-full object-contain" />
