@@ -2,7 +2,7 @@ import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import PainPoint from "@/components/PainPoint";
 import Partnership from "@/components/Partnership";
-import Services from "@/components/Services";
+import Industries from "@/components/Industries";
 import RevenueCalculator from "@/components/RevenueCalculator";
 import HowItWorks from "@/components/HowItWorks";
 import CompareSection from "@/components/CompareSection";
@@ -23,7 +23,8 @@ const Index = () => {
       <About />
       <PainPoint />
       <Partnership />
-      <Services />
+      {/* <Services /> */}
+      <Industries />
       <HowItWorks />
       <RevenueCalculator />
       <CompareSection />
