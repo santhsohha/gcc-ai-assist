@@ -6,39 +6,47 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Calculator, TrendingUp, TrendingDown, AlertCircle, DollarSign } from "lucide-react";
 const RevenueCalculator = () => {
-  const [workflows, setWorkflows] = useState<number>(100);
-  const [avgTransactionValue, setAvgTransactionValue] = useState<number>(500);
-  const [monthlyCosts, setMonthlyCosts] = useState<number>(10000);
+  const [workflows, setWorkflows] = useState<number>(6);
+  const [monthlySalary, setMonthlySalary] = useState<number>(7500);
+  const [hoursSaved, setHoursSaved] = useState<number>(25);
+  const [aiImplementationCost, setAiImplementationCost] = useState<number>(16500);
+  const [periodMonths, setPeriodMonths] = useState<number>(12);
   const [showResults, setShowResults] = useState(false);
 
-  // Assumptions based on prior version (screenshot)
-  const COST_REDUCTION_RATE = 0.4; // 40% cost reduction
-  const EFFICIENCY_IMPROVEMENT = 0.25; // 25% efficiency gain
-  const AI_IMPLEMENTATION_COST = 16500; // One-time cost in AED
-  const MONTHLY_AI_COST = AI_IMPLEMENTATION_COST / 12; // Spread over 12 months
-
   const calculateROI = () => {
-    // With AI: Savings from cost reduction + efficiency gains on transactions
-    const withAiSavings = monthlyCosts * COST_REDUCTION_RATE + workflows * avgTransactionValue * EFFICIENCY_IMPROVEMENT;
-
-    // Without AI: illustrative monthly losses equals the same opportunity not realized
-    const withoutAiLoss = withAiSavings;
-
-    // Net monthly benefit after monthly AI cost
-    const netMonthlyBenefit = withAiSavings - MONTHLY_AI_COST;
-
-    // ROI calculations
-    const monthlyROI = MONTHLY_AI_COST > 0 ? netMonthlyBenefit / MONTHLY_AI_COST * 100 : 0;
+    // Calculate hourly rate (assume 176 working hours in a month)
+    const hourlyRate = monthlySalary / 176;
+    
+    // Monthly Savings with AI = Hours saved per workflow × Hourly Rate × Number of workflows
+    const monthlySavingsWithAi = hoursSaved * hourlyRate * workflows;
+    
+    // Without AI = Negative value of Monthly Savings
+    const withoutAi = -monthlySavingsWithAi;
+    
+    // Monthly AI Cost = AI implementation cost ÷ Period (months)
+    const monthlyAiCost = aiImplementationCost / periodMonths;
+    
+    // Net Monthly Benefit = Monthly Savings with AI – Monthly AI Cost
+    const netMonthlyBenefit = monthlySavingsWithAi - monthlyAiCost;
+    
+    // Monthly ROI (%) = (Net Monthly Benefit ÷ Monthly AI Cost) × 100
+    const monthlyROI = monthlyAiCost > 0 ? (netMonthlyBenefit / monthlyAiCost) * 100 : 0;
+    
+    // Annual Savings = Net Monthly Benefit × 12
     const annualSavings = netMonthlyBenefit * 12;
-    const annualROI = AI_IMPLEMENTATION_COST > 0 ? annualSavings / AI_IMPLEMENTATION_COST * 100 : 0;
+    
+    // Annual ROI (%) = same as Monthly ROI (cost spread evenly)
+    const annualROI = monthlyROI;
+
     return {
-      withAiSavings: Math.round(withAiSavings),
-      withoutAiLoss: Math.round(withoutAiLoss),
-      netMonthlyBenefit: Math.round(netMonthlyBenefit),
-      monthlyROI: Math.round(monthlyROI),
-      annualSavings: Math.round(annualSavings),
-      annualROI: Math.round(annualROI),
-      monthlyAiCost: Math.round(MONTHLY_AI_COST)
+      hourlyRate: Number(hourlyRate.toFixed(2)),
+      monthlySavingsWithAi: Number(monthlySavingsWithAi.toFixed(2)),
+      withoutAi: Number(withoutAi.toFixed(2)),
+      monthlyAiCost: Number(monthlyAiCost.toFixed(2)),
+      netMonthlyBenefit: Number(netMonthlyBenefit.toFixed(2)),
+      monthlyROI: Number(monthlyROI.toFixed(2)),
+      annualSavings: Number(annualSavings.toFixed(2)),
+      annualROI: Number(annualROI.toFixed(2))
     };
   };
   const handleCalculate = () => {
@@ -72,28 +80,40 @@ const RevenueCalculator = () => {
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-6">
+              <div className="space-y-2">
+                <Label htmlFor="workflows">Number of AI Workflows</Label>
+                <Input id="workflows" type="number" value={workflows} onChange={e => setWorkflows(Number(e.target.value))} placeholder="e.g., 6" className="text-lg" />
+              </div>
+
+              <div className="space-y-2">
+                <Label htmlFor="salary">Monthly salary of employee in AED</Label>
+                <Input id="salary" type="number" value={monthlySalary} onChange={e => setMonthlySalary(Number(e.target.value))} placeholder="e.g., 7500" className="text-lg" />
+              </div>
+
+              <div className="space-y-2">
+                <Label htmlFor="hours">Hours saved per workflow per month</Label>
+                <Input id="hours" type="number" value={hoursSaved} onChange={e => setHoursSaved(Number(e.target.value))} placeholder="e.g., 25" className="text-lg" />
+              </div>
+
+              <div className="space-y-2">
+                <Label htmlFor="cost">AI implementation cost (one-time, AED)</Label>
+                <Input id="cost" type="number" value={aiImplementationCost} onChange={e => setAiImplementationCost(Number(e.target.value))} placeholder="e.g., 16500" className="text-lg" />
+              </div>
+
+              <div className="space-y-2">
+                <Label htmlFor="period">Period in months</Label>
+                <Input id="period" type="number" value={periodMonths} onChange={e => setPeriodMonths(Number(e.target.value))} placeholder="e.g., 12" className="text-lg" />
+              </div>
+
               <div className="bg-orange-50 p-4 rounded-lg border border-orange-200 mb-6">
                 <h4 className="font-semibold text-orange-800 mb-2">📊 Sample Calculation Example:</h4>
                 <div className="text-sm text-orange-700 space-y-1">
-                  <p>• Workflows: <span className="font-semibold">100</span></p>
-                  <p>• Average Transaction Value: <span className="font-semibold">AED 500</span></p>
-                  <p>• Current Monthly Operational Costs: <span className="font-semibold">AED 10,000</span></p>
+                  <p>• Number of AI Workflows: <span className="font-semibold">6</span></p>
+                  <p>• Monthly salary of employee: <span className="font-semibold">AED 7,500</span></p>
+                  <p>• Hours saved per workflow per month: <span className="font-semibold">25 hours</span></p>
+                  <p>• AI implementation cost: <span className="font-semibold">AED 16,500</span></p>
+                  <p>• Period in months: <span className="font-semibold">12</span></p>
                 </div>
-              </div>
-
-              <div className="space-y-2">
-                <Label htmlFor="workflows">Number of AI Workflows</Label>
-                <Input id="workflows" type="number" value={workflows} onChange={e => setWorkflows(Number(e.target.value))} placeholder="e.g., 100" className="text-lg" />
-              </div>
-
-              <div className="space-y-2">
-                <Label htmlFor="avg">Average Transaction Value (AED)</Label>
-                <Input id="avg" type="number" value={avgTransactionValue} onChange={e => setAvgTransactionValue(Number(e.target.value))} placeholder="e.g., 500" className="text-lg" />
-              </div>
-
-              <div className="space-y-2">
-                <Label htmlFor="costs">Current Monthly Operational Costs (AED)</Label>
-                <Input id="costs" type="number" value={monthlyCosts} onChange={e => setMonthlyCosts(Number(e.target.value))} placeholder="e.g., 10000" className="text-lg" />
               </div>
 
               <Button onClick={handleCalculate} className="w-full bg-gradient-primary hover:shadow-glow text-white text-lg py-6">
@@ -147,9 +167,9 @@ const RevenueCalculator = () => {
                         <span className="font-semibold text-green-700">With AI Agents</span>
                       </div>
                       <div className="text-2xl font-bold text-green-700">
-                        +AED {results?.withAiSavings.toLocaleString()}
+                        +AED {results?.monthlySavingsWithAi.toLocaleString()}
                       </div>
-                      <div className="text-sm text-green-600">Monthly savings & efficiency gains</div>
+                      <div className="text-sm text-green-600">Monthly savings with AI</div>
                     </div>
 
                     <div className="bg-red-50 p-4 rounded-lg border border-red-200">
@@ -158,9 +178,9 @@ const RevenueCalculator = () => {
                         <span className="font-semibold text-red-700">Without AI</span>
                       </div>
                       <div className="text-2xl font-bold text-red-700">
-                        -AED {results?.withoutAiLoss.toLocaleString()}
+                        AED {Math.abs(results?.withoutAi || 0).toLocaleString()}
                       </div>
-                      <div className="text-sm text-red-600">Monthly losses from inefficiency</div>
+                      <div className="text-sm text-red-600">Negative of monthly savings</div>
                     </div>
                   </div>
 
@@ -186,7 +206,7 @@ const RevenueCalculator = () => {
                           <div className="text-xs text-orange-700">(Net Monthly Benefit × 12)</div>
                         </div>
                         <div>
-                          <div className="text-orange-700">ROI (Annual)</div>
+                          <div className="text-orange-700">ROI (Annual %)</div>
                           <div className="text-xl font-bold text-orange-900">{results?.annualROI}%</div>
                           <div className="text-xs text-orange-700">Return on Investment</div>
                         </div>
@@ -196,7 +216,7 @@ const RevenueCalculator = () => {
 
                   {/* Assumptions Note */}
                   <div className="text-center text-xs text-muted-foreground">
-                    * Calculations based on 40% cost reduction and 25% efficiency improvement with AI automation
+                    * Calculations based on hourly rate methodology and AI implementation cost spread over {results?.monthlyROI ? periodMonths : 12} months
                   </div>
 
                   <div className="text-center mt-2">
