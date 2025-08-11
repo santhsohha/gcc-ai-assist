@@ -76,6 +76,9 @@ All colors MUST be HSL.
     --sidebar-border: 220 13% 91%;
 
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Nunar Orange for animated borders */
+    --nunar-orange: 24 95% 54%;
   }
 
   .dark {
@@ -124,5 +127,39 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+/* Components layer: custom effects */
+@layer components {
+  /* Revolving Orange Border around cards */
+  .revolving-border {
+    position: relative;
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+  .revolving-border::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    background: conic-gradient(from 0deg,
+      hsla(var(--nunar-orange) / 0), hsla(var(--nunar-orange) / 0),
+      hsla(var(--nunar-orange) / 0.5) 25%, hsla(var(--nunar-orange) / 0) 50%,
+      hsla(var(--nunar-orange) / 0.5) 75%, hsla(var(--nunar-orange) / 0) 100%);
+    animation: nunar-revolve 6s linear infinite;
+    z-index: 0;
+  }
+  .revolving-border::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: hsl(var(--card));
+    z-index: 1;
+  }
+  .revolving-border > * { position: relative; z-index: 2; }
+
+  @keyframes nunar-revolve {
+    to { transform: rotate(360deg); }
   }
 }
