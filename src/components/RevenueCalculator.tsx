@@ -8,9 +8,12 @@ import { Calculator, TrendingUp, TrendingDown, AlertCircle, DollarSign } from "l
 const RevenueCalculator = () => {
   const [workflows, setWorkflows] = useState<number>(6);
   const [monthlySalary, setMonthlySalary] = useState<number>(7500);
-  const [hoursSaved, setHoursSaved] = useState<number>(25);
-  const [aiImplementationCost, setAiImplementationCost] = useState<number>(16500);
-  const [periodMonths, setPeriodMonths] = useState<number>(12);
+  
+  // Fixed constants
+  const hoursSaved = 25; // Hours saved per workflow per month
+  const aiImplementationCost = 16500; // AI implementation cost (one-time, AED)
+  const periodMonths = 12; // Period in months
+  
   const [showResults, setShowResults] = useState(false);
 
   const calculateROI = () => {
@@ -90,29 +93,11 @@ const RevenueCalculator = () => {
                 <Input id="salary" type="number" value={monthlySalary} onChange={e => setMonthlySalary(Number(e.target.value))} placeholder="e.g., 7500" className="text-lg" />
               </div>
 
-              <div className="space-y-2">
-                <Label htmlFor="hours">Hours saved per workflow per month</Label>
-                <Input id="hours" type="number" value={hoursSaved} onChange={e => setHoursSaved(Number(e.target.value))} placeholder="e.g., 25" className="text-lg" />
-              </div>
-
-              <div className="space-y-2">
-                <Label htmlFor="cost">AI implementation cost (one-time, AED)</Label>
-                <Input id="cost" type="number" value={aiImplementationCost} onChange={e => setAiImplementationCost(Number(e.target.value))} placeholder="e.g., 16500" className="text-lg" />
-              </div>
-
-              <div className="space-y-2">
-                <Label htmlFor="period">Period in months</Label>
-                <Input id="period" type="number" value={periodMonths} onChange={e => setPeriodMonths(Number(e.target.value))} placeholder="e.g., 12" className="text-lg" />
-              </div>
-
               <div className="bg-orange-50 p-4 rounded-lg border border-orange-200 mb-6">
                 <h4 className="font-semibold text-orange-800 mb-2">📊 Sample Calculation Example:</h4>
                 <div className="text-sm text-orange-700 space-y-1">
                   <p>• Number of AI Workflows: <span className="font-semibold">6</span></p>
                   <p>• Monthly salary of employee: <span className="font-semibold">AED 7,500</span></p>
-                  <p>• Hours saved per workflow per month: <span className="font-semibold">25 hours</span></p>
-                  <p>• AI implementation cost: <span className="font-semibold">AED 16,500</span></p>
-                  <p>• Period in months: <span className="font-semibold">12</span></p>
                 </div>
               </div>
 
