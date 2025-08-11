@@ -76,11 +76,15 @@ const WhatsAppAutomation = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-gradient-primary hover:shadow-glow">
-                Setup WhatsApp Automation
+              <Button size="lg" className="bg-gradient-primary hover:shadow-glow" asChild>
+                <a href="https://app.apollo.io/#/meet/kms-oa7-aeq/30-min" target="_blank" rel="noopener noreferrer">
+                  Setup WhatsApp Automation
+                </a>
               </Button>
-              <Button variant="outline" size="lg">
-                See WhatsApp Demo
+              <Button variant="outline" size="lg" asChild>
+                <a href="https://app.apollo.io/#/meet/kms-oa7-aeq/30-min" target="_blank" rel="noopener noreferrer">
+                  See WhatsApp Demo
+                </a>
               </Button>
             </div>
           </div>
@@ -172,8 +176,10 @@ const WhatsAppAutomation = () => {
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
             Join 50+ GCC businesses who have automated their WhatsApp communication and improved customer satisfaction by 60%.
           </p>
-          <Button size="lg" className="bg-gradient-primary hover:shadow-glow">
-            Start WhatsApp Automation Today
+          <Button size="lg" className="bg-gradient-primary hover:shadow-glow" asChild>
+            <a href="https://app.apollo.io/#/meet/kms-oa7-aeq/30-min" target="_blank" rel="noopener noreferrer">
+              Start WhatsApp Automation Today
+            </a>
           </Button>
         </div>
       </section>

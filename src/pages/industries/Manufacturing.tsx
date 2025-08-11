@@ -335,11 +335,15 @@ const Manufacturing = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-gradient-primary hover:shadow-glow">
-                Schedule Manufacturing Consultation
+              <Button size="lg" className="bg-gradient-primary hover:shadow-glow" asChild>
+                <a href="https://app.apollo.io/#/meet/kms-oa7-aeq/30-min" target="_blank" rel="noopener noreferrer">
+                  Schedule Manufacturing Consultation
+                </a>
               </Button>
-              <Button variant="outline" size="lg">
-                Download Manufacturing Case Study
+              <Button variant="outline" size="lg" asChild>
+                <a href="https://app.apollo.io/#/meet/kms-oa7-aeq/30-min" target="_blank" rel="noopener noreferrer">
+                  Download Manufacturing Case Study
+                </a>
               </Button>
             </div>
           </div>
@@ -464,8 +468,10 @@ const Manufacturing = () => {
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
             Join 15+ GCC manufacturers who have already automated their workflows with our AI agents.
           </p>
-          <Button size="lg" className="bg-gradient-primary hover:shadow-glow">
-            Start Your Manufacturing Transformation
+          <Button size="lg" className="bg-gradient-primary hover:shadow-glow" asChild>
+            <a href="https://app.apollo.io/#/meet/kms-oa7-aeq/30-min" target="_blank" rel="noopener noreferrer">
+              Start Your Manufacturing Transformation
+            </a>
           </Button>
         </div>
       </section>

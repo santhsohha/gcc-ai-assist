@@ -282,11 +282,15 @@ const Logistics = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-gradient-primary hover:shadow-glow">
-                Schedule Logistics Consultation
+              <Button size="lg" className="bg-gradient-primary hover:shadow-glow" asChild>
+                <a href="https://app.apollo.io/#/meet/kms-oa7-aeq/30-min" target="_blank" rel="noopener noreferrer">
+                  Schedule Logistics Consultation
+                </a>
               </Button>
-              <Button variant="outline" size="lg">
-                Download Logistics Case Study
+              <Button variant="outline" size="lg" asChild>
+                <a href="https://app.apollo.io/#/meet/kms-oa7-aeq/30-min" target="_blank" rel="noopener noreferrer">
+                  Download Logistics Case Study
+                </a>
               </Button>
             </div>
           </div>
@@ -390,8 +394,10 @@ const Logistics = () => {
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
             Join top GCC logistics providers who have revolutionized their operations with our intelligent AI agents.
           </p>
-          <Button size="lg" className="bg-gradient-primary hover:shadow-glow">
-            Optimize Your Logistics Today
+          <Button size="lg" className="bg-gradient-primary hover:shadow-glow" asChild>
+            <a href="https://app.apollo.io/#/meet/kms-oa7-aeq/30-min" target="_blank" rel="noopener noreferrer">
+              Optimize Your Logistics Today
+            </a>
           </Button>
         </div>
       </section>

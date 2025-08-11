@@ -80,8 +80,10 @@ const Pricing = () => {
                 </ul>
               </div>
               
-              <Button className="w-full bg-gradient-primary hover:shadow-glow text-lg py-6" aria-label="Start Your Free Trial of AI Automation">
-                Start Your Free Trial
+              <Button className="w-full bg-gradient-primary hover:shadow-glow text-lg py-6" aria-label="Start Your Free Trial of AI Automation" asChild>
+                <a href="https://app.apollo.io/#/meet/kms-oa7-aeq/30-min" target="_blank" rel="noopener noreferrer">
+                  Start Your Free Trial
+                </a>
               </Button>
               
               <p className="text-center text-sm text-muted-foreground">

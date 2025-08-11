@@ -76,11 +76,15 @@ const CustomAIAgents = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-gradient-primary hover:shadow-glow">
-                Build Your AI Agent
+              <Button size="lg" className="bg-gradient-primary hover:shadow-glow" asChild>
+                <a href="https://app.apollo.io/#/meet/kms-oa7-aeq/30-min" target="_blank" rel="noopener noreferrer">
+                  Build Your AI Agent
+                </a>
               </Button>
-              <Button variant="outline" size="lg">
-                Watch AI Agent Demo
+              <Button variant="outline" size="lg" asChild>
+                <a href="https://app.apollo.io/#/meet/kms-oa7-aeq/30-min" target="_blank" rel="noopener noreferrer">
+                  Watch AI Agent Demo
+                </a>
               </Button>
             </div>
           </div>
@@ -165,8 +169,10 @@ const CustomAIAgents = () => {
               <p className="text-muted-foreground">We integrate with your systems and train your team for optimal results.</p>
             </div>
           </div>
-          <Button size="lg" className="bg-gradient-primary hover:shadow-glow mt-12">
-            Start Building Your AI Agent
+          <Button size="lg" className="bg-gradient-primary hover:shadow-glow mt-12" asChild>
+            <a href="https://app.apollo.io/#/meet/kms-oa7-aeq/30-min" target="_blank" rel="noopener noreferrer">
+              Start Building Your AI Agent
+            </a>
           </Button>
         </div>
       </section>
