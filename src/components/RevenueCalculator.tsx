@@ -5,7 +5,6 @@ import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Calculator, TrendingUp, TrendingDown, AlertCircle, DollarSign } from "lucide-react";
-
 const RevenueCalculator = () => {
   const [workflows, setWorkflows] = useState<number>(100);
   const [avgTransactionValue, setAvgTransactionValue] = useState<number>(500);
@@ -29,10 +28,9 @@ const RevenueCalculator = () => {
     const netMonthlyBenefit = withAiSavings - MONTHLY_AI_COST;
 
     // ROI calculations
-    const monthlyROI = MONTHLY_AI_COST > 0 ? (netMonthlyBenefit / MONTHLY_AI_COST) * 100 : 0;
+    const monthlyROI = MONTHLY_AI_COST > 0 ? netMonthlyBenefit / MONTHLY_AI_COST * 100 : 0;
     const annualSavings = netMonthlyBenefit * 12;
-    const annualROI = AI_IMPLEMENTATION_COST > 0 ? (annualSavings / AI_IMPLEMENTATION_COST) * 100 : 0;
-
+    const annualROI = AI_IMPLEMENTATION_COST > 0 ? annualSavings / AI_IMPLEMENTATION_COST * 100 : 0;
     return {
       withAiSavings: Math.round(withAiSavings),
       withoutAiLoss: Math.round(withoutAiLoss),
@@ -43,15 +41,11 @@ const RevenueCalculator = () => {
       monthlyAiCost: Math.round(MONTHLY_AI_COST)
     };
   };
-
   const handleCalculate = () => {
     setShowResults(true);
   };
-
   const results = showResults ? calculateROI() : null;
-
-  return (
-    <section id="roi-calculator" className="py-20 px-4 bg-gradient-secondary">
+  return <section id="roi-calculator" className="py-20 px-4 bg-gradient-secondary">
       <div className="container mx-auto max-w-4xl">
         <div className="text-center mb-16">
           <Badge variant="secondary" className="bg-red-50 text-red-700 border-red-200 mb-4">
@@ -65,14 +59,7 @@ const RevenueCalculator = () => {
           </p>
           
           {/* Assumptions Section */}
-          <div className="mt-8 bg-accent/30 rounded-lg p-6 max-w-2xl mx-auto">
-            <h3 className="text-lg font-semibold mb-4 text-foreground">Our Conservative Assumptions:</h3>
-            <div className="text-sm text-muted-foreground space-y-1">
-              <p>• Hours Saved per Workflow/Month: <span className="font-semibold text-foreground">25 hrs</span> (Conservative estimate)</p>
-              <p>• AI Implementation Cost: <span className="font-semibold text-foreground">AED 16,500</span> (One-time, spread over 12 months)</p>
-              <p>• Calculation Period: <span className="font-semibold text-foreground">12 months</span> (Annual calculation)</p>
-            </div>
-          </div>
+          
         </div>
 
         <div className="grid lg:grid-cols-2 gap-8">
@@ -96,38 +83,17 @@ const RevenueCalculator = () => {
 
               <div className="space-y-2">
                 <Label htmlFor="workflows">Number of AI Workflows</Label>
-                <Input 
-                  id="workflows" 
-                  type="number" 
-                  value={workflows} 
-                  onChange={e => setWorkflows(Number(e.target.value))} 
-                  placeholder="e.g., 100" 
-                  className="text-lg"
-                />
+                <Input id="workflows" type="number" value={workflows} onChange={e => setWorkflows(Number(e.target.value))} placeholder="e.g., 100" className="text-lg" />
               </div>
 
               <div className="space-y-2">
                 <Label htmlFor="avg">Average Transaction Value (AED)</Label>
-                <Input 
-                  id="avg" 
-                  type="number" 
-                  value={avgTransactionValue} 
-                  onChange={e => setAvgTransactionValue(Number(e.target.value))} 
-                  placeholder="e.g., 500" 
-                  className="text-lg"
-                />
+                <Input id="avg" type="number" value={avgTransactionValue} onChange={e => setAvgTransactionValue(Number(e.target.value))} placeholder="e.g., 500" className="text-lg" />
               </div>
 
               <div className="space-y-2">
                 <Label htmlFor="costs">Current Monthly Operational Costs (AED)</Label>
-                <Input 
-                  id="costs" 
-                  type="number" 
-                  value={monthlyCosts} 
-                  onChange={e => setMonthlyCosts(Number(e.target.value))} 
-                  placeholder="e.g., 10000" 
-                  className="text-lg"
-                />
+                <Input id="costs" type="number" value={monthlyCosts} onChange={e => setMonthlyCosts(Number(e.target.value))} placeholder="e.g., 10000" className="text-lg" />
               </div>
 
               <Button onClick={handleCalculate} className="w-full bg-gradient-primary hover:shadow-glow text-white text-lg py-6">
@@ -142,8 +108,7 @@ const RevenueCalculator = () => {
               <CardTitle className="text-xl text-center">💰 Your Financial Reality Check</CardTitle>
             </CardHeader>
             <CardContent>
-              {!showResults ? (
-                <div className="grid grid-cols-1 gap-4">
+              {!showResults ? <div className="grid grid-cols-1 gap-4">
                   <div className="bg-green-50 p-4 rounded-lg border border-green-200">
                     <div className="flex items-center space-x-2 mb-2">
                       <TrendingUp className="h-5 w-5 text-green-600" />
@@ -173,9 +138,7 @@ const RevenueCalculator = () => {
                   <div className="text-center text-xs text-muted-foreground">
                     * Calculations based on 40% cost reduction and 25% efficiency improvement with AI automation
                   </div>
-                </div>
-              ) : (
-                <div className="space-y-6">
+                </div> : <div className="space-y-6">
                   {/* Main Results */}
                   <div className="grid grid-cols-1 gap-4">
                     <div className="bg-green-50 p-4 rounded-lg border border-green-200">
@@ -241,14 +204,11 @@ const RevenueCalculator = () => {
                       🚀 Start Free Trial - Automate 2 Processes
                     </Button>
                   </div>
-                </div>
-              )}
+                </div>}
             </CardContent>
           </Card>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default RevenueCalculator;
