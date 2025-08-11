@@ -97,8 +97,8 @@ const RevenueCalculator = () => {
                 <h4 className="font-semibold text-orange-800 mb-2">📊 Sample Calculation Example:</h4>
                 <div className="text-sm text-orange-700 space-y-1">
                   <p>. Hours Saved per Workflow / Month: <span className="font-semibold"> 25</span></p>
-                  <p>. AI Implementation Cost (One-time) AED <span className="font-semibold"> AED 16,500 Spread over 12 months for monthly ROI</span></p>
-                  <p>. Period<span className="font-semibold"> 12 Months</span></p>
+                  <p>. AI Implementation Cost (One-time) AED <span className="font-semibold">: AED 16,500 Spread over 12 months for monthly ROI</span></p>
+                  <p>. Period<span className="font-semibold">: 12 Months</span></p>
                 </div>
               </div>
 
