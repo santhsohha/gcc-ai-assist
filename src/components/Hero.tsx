@@ -23,9 +23,7 @@ const Hero = () => {
                 </h1>
               </div>
               
-                <p className="text-xl text-muted-foreground leading-relaxed max-w-lg" data-translate data-en="Paper, WhatsApp, email, Excel, apps — our AI Agents read, intelligently process, and reply automatically. Save 80+ hours monthly, cut 80% manual work, and free your team for creative tasks." data-ar="الأوراق، واتساب، البريد الإلكتروني، إكسل، التطبيقات — وكلاؤنا يقرؤون ويحللون ويردون تلقائياً. وفّر 80+ ساعة شهرياً، خفّض 80% من العمل اليدوي، وحرّر فريقك للمهام الإبداعية.">
-                  Paper, WhatsApp, email, Excel, apps — our AI Agents read, intelligently process, and reply automatically. Save 80+ hours monthly, cut 80% manual work, and free your team for creative tasks.
-                </p>
+                <p className="text-xl text-muted-foreground leading-relaxed max-w-lg" data-translate data-en="Paper, WhatsApp, email, Excel, apps — our AI Agents read, intelligently process, and reply automatically. Save 80+ hours monthly, cut 80% manual work, and free your team for creative tasks." data-ar="الأوراق، واتساب، البريد الإلكتروني، إكسل، التطبيقات — وكلاؤنا يقرؤون ويحللون ويردون تلقائياً. وفّر 80+ ساعة شهرياً، خفّض 80% من العمل اليدوي، وحرّر فريقك للمهام الإبداعية.">WhatsApp, E-Mail, Excel,Paper, apps — our AI Agents read, intelligently process, and reply automatically. Save 80+ hours monthly, cut 80% manual work, and free your team for creative tasks.</p>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
