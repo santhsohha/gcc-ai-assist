@@ -13,9 +13,9 @@ const Hero = () => {
             
             <div className="space-y-6">
               <div className="space-y-2">
-<p className="text-sm text-muted-foreground font-medium">
+              <p className="text-sm text-muted-foreground font-medium">
   Nunar – An AI Workflow Automation Service by <a href="https://www.hakunamatatatech.com/" target="_blank">Hakuna Matata Solutions</a>
-</p>
+              </p>
                 <h1 className="text-5xl lg:text-6xl font-bold leading-tight" data-translate data-en="AI Agents That Turn Scattered Work into 5× Efficiency" data-ar="وكلاء ذكاء اصطناعي يحولون العمل المبعثر إلى كفاءة مضاعفة 5 مرات">
                   <span className="bg-gradient-hero bg-clip-text text-transparent">
                     AI Agents That Turn Scattered Work into 5× Efficiency
@@ -32,9 +32,7 @@ const Hero = () => {
               <Button size="lg" className="bg-gradient-primary hover:shadow-glow text-lg px-8 py-6" aria-label="Start Free Trial - Automate 2 Processes">
                 🚀 Start Free Trial - Automate 2 Processes
               </Button>
-              <Button variant="outline" size="lg" className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground text-lg px-8 py-6" aria-label="See How It Works">
-                📌 See How It Works
-              </Button>
+              
             </div>
 
             <div className="flex flex-wrap items-center gap-4 text-sm text-foreground">
