@@ -4,43 +4,42 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Calculator, TrendingUp, TrendingDown, DollarSign } from "lucide-react";
+import { Calculator, TrendingUp, TrendingDown, AlertCircle, DollarSign } from "lucide-react";
 
 const RevenueCalculator = () => {
-  const [numWorkflows, setNumWorkflows] = useState<number>(6);
-  const [hourlyRate, setHourlyRate] = useState<number>(50);
+  const [numWorkflows, setNumWorkflows] = useState<number>(0);
+  const [hourlyRate, setHourlyRate] = useState<number>(0);
   const [showResults, setShowResults] = useState(false);
 
   // Fixed assumptions based on user requirements
   const HOURS_SAVED_PER_WORKFLOW = 25; // Conservative estimate
-  const AI_IMPLEMENTATION_COST = 16500; // One-time cost
+  const AI_IMPLEMENTATION_COST = 16500; // One-time cost in AED
   const MONTHLY_AI_COST = AI_IMPLEMENTATION_COST / 12; // Spread over 12 months
 
   const calculateROI = () => {
-    // Monthly savings with AI agents
-    const monthlyHoursSaved = numWorkflows * HOURS_SAVED_PER_WORKFLOW;
-    const withAiSavings = monthlyHoursSaved * hourlyRate;
+    // Monthly savings calculation (25 hrs saved/workflow × AED hourly rate × number of workflows)
+    const withAiSavings = HOURS_SAVED_PER_WORKFLOW * hourlyRate * numWorkflows;
     
-    // Monthly losses without AI (inefficiency losses)
-    const withoutAiLoss = withAiSavings; // Same amount is being lost due to inefficiency
+    // Without AI (monthly losses from inefficiency)
+    const withoutAiLoss = withAiSavings;
     
-    // Net monthly benefit (after AI cost)
+    // Net monthly benefit (after deducting AI cost)
     const netMonthlyBenefit = withAiSavings - MONTHLY_AI_COST;
     
     // ROI calculations
-    const monthlyROI = (netMonthlyBenefit / MONTHLY_AI_COST) * 100;
+    const monthlyROI = MONTHLY_AI_COST > 0 ? (netMonthlyBenefit / MONTHLY_AI_COST) * 100 : 0;
     const annualSavings = netMonthlyBenefit * 12;
     const annualROI = (annualSavings / AI_IMPLEMENTATION_COST) * 100;
     
     return {
       withAiSavings: Math.round(withAiSavings),
       withoutAiLoss: Math.round(withoutAiLoss),
-      netMonthlyBenefit: Math.round(Math.max(netMonthlyBenefit, 0)),
-      monthlyROI: Math.round(Math.max(monthlyROI, 0)),
-      annualSavings: Math.round(Math.max(annualSavings, 0)),
-      annualROI: Math.round(Math.max(annualROI, 0)),
+      netMonthlyBenefit: Math.round(netMonthlyBenefit),
+      monthlyROI: Math.round(monthlyROI),
+      annualSavings: Math.round(annualSavings),
+      annualROI: Math.round(annualROI),
       monthlyAiCost: Math.round(MONTHLY_AI_COST),
-      hoursSaved: monthlyHoursSaved
+      hoursSaved: HOURS_SAVED_PER_WORKFLOW * numWorkflows
     };
   };
 
