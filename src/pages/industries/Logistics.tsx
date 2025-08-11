@@ -327,7 +327,7 @@ const Logistics = () => {
                       >
                         <Card className="relative overflow-hidden shadow-card hover:shadow-glow transition-all duration-300 revolving-border">
                           <AccordionTrigger className="hover:no-underline p-0 [&[data-state=open]>svg]:rotate-180 [&>svg]:mr-6 [&>svg]:text-muted-foreground">
-                            <CardHeader className="w-full pr-10">
+                            <CardHeader className="w-full pr-12">
                               <CardTitle className="text-lg leading-tight text-left">{solution.title}</CardTitle>
                               <CardContent className="px-0 pb-0">
                                 <p className="text-muted-foreground text-sm leading-relaxed text-left">{solution.description}</p>
@@ -370,11 +370,6 @@ const Logistics = () => {
                               </div>
                             </CardContent>
                           </AccordionContent>
-                          <div className="px-6 pb-6">
-                            <Button variant="outline" size="sm" onClick={() => setOpenByCategory((prev) => ({ ...prev, [categoryIndex]: undefined }))}>
-                              Close
-                            </Button>
-                          </div>
                         </Card>
                       </AccordionItem>
                     ))}

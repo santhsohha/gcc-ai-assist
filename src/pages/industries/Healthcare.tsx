@@ -264,8 +264,8 @@ const Healthcare = () => {
                     <Accordion key={index} type="single" collapsible className="w-full">
                       <AccordionItem value={`item-${categoryIndex}-${index}`} className="border-none">
                         <Card className="relative shadow-card hover:shadow-glow transition-all duration-300 cursor-pointer group revolving-border">
-                          <AccordionTrigger className="hover:no-underline p-0 [&[data-state=open]>div>div>svg]:rotate-180">
-                            <CardHeader className="w-full">
+                          <AccordionTrigger className="hover:no-underline p-0 [&[data-state=open]>div>div>svg]:rotate-180 [&>svg]:mr-6 [&>svg]:text-muted-foreground">
+                            <CardHeader className="w-full pr-12">
                               <div className="flex items-center space-x-4">
                                 <div className="p-2 bg-primary/10 rounded-lg text-primary flex-shrink-0">
                                   {useCase.icon}

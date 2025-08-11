@@ -144,15 +144,16 @@ All colors MUST be HSL.
     inset: -2px;
     background: conic-gradient(from 0deg,
       hsla(var(--nunar-orange) / 0), hsla(var(--nunar-orange) / 0),
-      hsla(var(--nunar-orange) / 0.5) 25%, hsla(var(--nunar-orange) / 0) 50%,
-      hsla(var(--nunar-orange) / 0.5) 75%, hsla(var(--nunar-orange) / 0) 100%);
-    animation: nunar-revolve 6s linear infinite;
+      hsla(var(--nunar-orange) / 0.7) 25%, hsla(var(--nunar-orange) / 0) 50%,
+      hsla(var(--nunar-orange) / 0.7) 75%, hsla(var(--nunar-orange) / 0) 100%);
+    animation: nunar-revolve 4s linear infinite;
+    filter: drop-shadow(0 0 18px hsla(var(--nunar-orange) / 0.35)) brightness(1.1);
     z-index: 0;
   }
   .revolving-border::after {
     content: "";
     position: absolute;
-    inset: 0;
+    inset: 2px;
     border-radius: inherit;
     background: hsl(var(--card));
     z-index: 1;
