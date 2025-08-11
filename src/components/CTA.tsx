@@ -90,18 +90,15 @@ const CTA = () => {
                 </div>
 
                 <Button
-                  type="submit"
+                  type="button"
                   disabled={isSubmitting}
                   className="w-full h-14 text-lg font-semibold bg-gradient-primary hover:shadow-glow transition-all duration-300"
+                  asChild
                 >
-                  {isSubmitting ? (
-                    "Booking Your Session..."
-                  ) : (
-                    <>
-                      <Calendar className="mr-2 h-5 w-5" />
-                      Book My FREE Strategy Session
-                    </>
-                  )}
+                  <a href="https://app.apollo.io/#/meet/kms-oa7-aeq/30-min" target="_blank" rel="noopener noreferrer">
+                    <Calendar className="mr-2 h-5 w-5" />
+                    Book My FREE Strategy Session
+                  </a>
                 </Button>
               </form>
 
