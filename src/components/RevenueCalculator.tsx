@@ -133,7 +133,7 @@ const RevenueCalculator = () => {
               {!showResults ? (
                 <div className="flex items-center justify-center h-64 text-muted-foreground">
                   <div className="text-center">
-                    <DollarSign className="h-12 w-12 mx-auto mb-4 opacity-50 text-red-500" />
+                    <AlertCircle className="h-12 w-12 mx-auto mb-4 opacity-50 text-red-500" />
                     <p className="text-lg font-medium mb-2 text-red-600">Your money is bleeding away...</p>
                     <p className="text-sm text-muted-foreground">Enter your numbers above to see exactly how much you're losing every month.</p>
                   </div>
