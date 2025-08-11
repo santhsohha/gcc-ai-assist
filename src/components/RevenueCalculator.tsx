@@ -96,8 +96,9 @@ const RevenueCalculator = () => {
               <div className="bg-orange-50 p-4 rounded-lg border border-orange-200 mb-6">
                 <h4 className="font-semibold text-orange-800 mb-2">📊 Sample Calculation Example:</h4>
                 <div className="text-sm text-orange-700 space-y-1">
-                  <p>• Number of AI Workflows: <span className="font-semibold">6</span></p>
-                  <p>• Monthly salary of employee: <span className="font-semibold">AED 7,500</span></p>
+                  <p>Hours Saved per Workflow / Month<span className="font-semibold">25</span></p>
+                  <p>AI Implementation Cost (One-time) AED <span className="font-semibold">AED 16,500 Spread over 12 months for monthly ROI</span></p>
+                  <p>Period<span className="font-semibold">12 Months</span></p>
                 </div>
               </div>
 
