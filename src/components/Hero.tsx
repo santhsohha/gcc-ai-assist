@@ -53,13 +53,13 @@ const Hero = () => {
           </div>
 
           <div className="space-y-6">
-            <div className="text-center space-y-3">
-              <h3 className="text-xl lg:text-2xl font-bold leading-tight">
+            <div className="bg-gradient-to-br from-orange-50/80 to-yellow-50/60 backdrop-blur-sm border border-orange-100/50 rounded-2xl p-6 shadow-lg shadow-orange-100/30 space-y-4">
+              <h3 className="text-2xl lg:text-3xl font-bold leading-tight text-center">
                 <span className="bg-gradient-hero bg-clip-text text-transparent">
                   Win–Win Model | Risk-Free, Outcome-Driven Approach
                 </span>
               </h3>
-              <p className="text-sm lg:text-base text-muted-foreground leading-relaxed">
+              <p className="text-base lg:text-lg text-muted-foreground/80 leading-relaxed text-center font-medium">
                 We guarantee 50% savings by streamlining 5–6 workflows. If the results don't meet expectations, you pay nothing.
               </p>
             </div>
