@@ -53,9 +53,11 @@ const Hero = () => {
           </div>
 
           <div className="space-y-6">
-            <div className="text-right space-y-3">
-              <h3 className="text-xl lg:text-2xl font-bold text-foreground">
-                Win–Win Model | Risk-Free, Outcome-Driven Approach
+            <div className="text-center space-y-3">
+              <h3 className="text-xl lg:text-2xl font-bold leading-tight">
+                <span className="bg-gradient-hero bg-clip-text text-transparent">
+                  Win–Win Model | Risk-Free, Outcome-Driven Approach
+                </span>
               </h3>
               <p className="text-sm lg:text-base text-muted-foreground leading-relaxed">
                 We guarantee 50% savings by streamlining 5–6 workflows. If the results don't meet expectations, you pay nothing.
