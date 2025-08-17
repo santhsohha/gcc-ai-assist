@@ -60,7 +60,7 @@ const Hero = () => {
                 </span>
               </h3>
               <p className="text-base lg:text-lg text-muted-foreground/80 leading-relaxed text-center font-medium">
-                We guarantee 50% savings by streamlining 5–6 workflows. If the results don't meet expectations, you pay nothing.
+                We guarantee 50% savings by streamlining 5–6 workflows. Test Nunar with 2 processes free of charge—pay only if results meet expectations.
               </p>
             </div>
             
