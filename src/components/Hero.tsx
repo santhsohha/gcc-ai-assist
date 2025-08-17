@@ -52,9 +52,20 @@ const Hero = () => {
 
           </div>
 
-          <div className="relative">
-            <div className="absolute inset-0 bg-gradient-primary opacity-20 rounded-3xl blur-3xl"></div>
-            <img src={heroImage} alt="AI Workflow Automation for GCC Businesses" className="relative rounded-3xl shadow-2xl w-full h-auto" />
+          <div className="space-y-6">
+            <div className="text-right space-y-3">
+              <h3 className="text-xl lg:text-2xl font-bold text-foreground">
+                Win–Win Model | Risk-Free, Outcome-Driven Approach
+              </h3>
+              <p className="text-sm lg:text-base text-muted-foreground leading-relaxed">
+                We guarantee 50% savings by streamlining 5–6 workflows. If the results don't meet expectations, you pay nothing.
+              </p>
+            </div>
+            
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-primary opacity-20 rounded-3xl blur-3xl"></div>
+              <img src={heroImage} alt="AI Workflow Automation for GCC Businesses" className="relative rounded-3xl shadow-2xl w-full h-auto" />
+            </div>
           </div>
         </div>
       </div>
