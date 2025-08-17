@@ -54,11 +54,11 @@ const Hero = () => {
 
           <div className="space-y-6">
             <div className="bg-gradient-to-br from-orange-50/80 to-yellow-50/60 backdrop-blur-sm border border-orange-100/50 rounded-2xl p-6 shadow-lg shadow-orange-100/30 space-y-4">
-              <h3 className="text-2xl lg:text-3xl font-bold leading-tight text-center">
+              <h2 className="text-2xl lg:text-3xl font-bold leading-tight text-center">
                 <span className="bg-gradient-hero bg-clip-text text-transparent">
                   Win–Win Model | Risk-Free, Outcome-Driven Approach
                 </span>
-              </h3>
+              </h2>
               <p className="text-base lg:text-lg text-muted-foreground/80 leading-relaxed text-center font-medium">
                 We guarantee 50% savings by streamlining 5–6 workflows. Test Nunar with 2 processes free of charge—pay only if results meet expectations.
               </p>
