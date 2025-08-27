@@ -144,12 +144,12 @@ const Support = () => {
 
           <div className="text-center">
             <Button size="lg" className="bg-gradient-primary hover:shadow-glow mr-4" asChild>
-              <a href="https://app.apollo.io/#/meet/kms-oa7-aeq/30-min" target="_blank" rel="noopener noreferrer">
+              <a href="https://app.apollo.io/#/meet/managed-meetings/AnandEthiraj/hgz-qap-fw2/30-min" target="_blank" rel="noopener noreferrer">
                 Contact Support Now
               </a>
             </Button>
             <Button variant="outline" size="lg" asChild>
-              <a href="https://app.apollo.io/#/meet/kms-oa7-aeq/30-min" target="_blank" rel="noopener noreferrer">
+              <a href="https://app.apollo.io/#/meet/managed-meetings/AnandEthiraj/hgz-qap-fw2/30-min" target="_blank" rel="noopener noreferrer">
                 Schedule Consultation
               </a>
             </Button>
@@ -180,7 +180,7 @@ const Support = () => {
           <div className="text-center mt-12">
             <p className="text-muted-foreground mb-4">Can't find what you're looking for?</p>
             <Button size="lg" className="bg-gradient-primary hover:shadow-glow" asChild>
-              <a href="https://app.apollo.io/#/meet/kms-oa7-aeq/30-min" target="_blank" rel="noopener noreferrer">
+              <a href="https://app.apollo.io/#/meet/managed-meetings/AnandEthiraj/hgz-qap-fw2/30-min" target="_blank" rel="noopener noreferrer">
                 Ask Our AI Experts
               </a>
             </Button>

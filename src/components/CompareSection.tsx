@@ -126,7 +126,7 @@ const CompareSection = () => {
               </div>
 
               <Button className="w-full bg-gradient-to-r from-green-500 to-emerald-500 hover:shadow-glow text-lg py-6" aria-label="Get Your AI Agents Now - Limited Spots Available" asChild>
-                <a href="https://app.apollo.io/#/meet/kms-oa7-aeq/30-min" target="_blank" rel="noopener noreferrer">
+                <a href="https://app.apollo.io/#/meet/managed-meetings/AnandEthiraj/hgz-qap-fw2/30-min" target="_blank" rel="noopener noreferrer">
                   Get Your AI Agents Now - Limited Spots
                 </a>
               </Button>
@@ -143,12 +143,12 @@ const CompareSection = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="bg-gradient-primary hover:shadow-glow text-lg px-8 py-6" aria-label="Secure Your Spot for AI Automation Service" asChild>
-              <a href="https://app.apollo.io/#/meet/kms-oa7-aeq/30-min" target="_blank" rel="noopener noreferrer">
+              <a href="https://app.apollo.io/#/meet/managed-meetings/AnandEthiraj/hgz-qap-fw2/30-min" target="_blank" rel="noopener noreferrer">
                 Secure Your Spot Now
               </a>
             </Button>
             <Button variant="outline" size="lg" className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground text-lg px-8 py-6" aria-label="See Live Demo of AI Agents" asChild>
-              <a href="https://app.apollo.io/#/meet/kms-oa7-aeq/30-min" target="_blank" rel="noopener noreferrer">
+              <a href="https://app.apollo.io/#/meet/managed-meetings/AnandEthiraj/hgz-qap-fw2/30-min" target="_blank" rel="noopener noreferrer">
                 See Live Demo
               </a>
             </Button>

@@ -28,7 +28,7 @@ const Hero = () => {
 
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" className="bg-gradient-primary hover:shadow-glow text-lg px-8 py-6" aria-label="Start Free Trial - Automate 2 Processes" asChild>
-                <a href="https://app.apollo.io/#/meet/kms-oa7-aeq/30-min" target="_blank" rel="noopener noreferrer">
+                <a href="https://app.apollo.io/#/meet/managed-meetings/AnandEthiraj/hgz-qap-fw2/30-min" target="_blank" rel="noopener noreferrer">
                   🚀 Start Free Trial - Automate 2 Processes
                 </a>
               </Button>

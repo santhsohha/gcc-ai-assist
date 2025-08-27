@@ -77,12 +77,12 @@ const WhatsAppAutomation = () => {
             
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" className="bg-gradient-primary hover:shadow-glow" asChild>
-                <a href="https://app.apollo.io/#/meet/kms-oa7-aeq/30-min" target="_blank" rel="noopener noreferrer">
+                <a href="https://app.apollo.io/#/meet/managed-meetings/AnandEthiraj/hgz-qap-fw2/30-min" target="_blank" rel="noopener noreferrer">
                   Setup WhatsApp Automation
                 </a>
               </Button>
               <Button variant="outline" size="lg" asChild>
-                <a href="https://app.apollo.io/#/meet/kms-oa7-aeq/30-min" target="_blank" rel="noopener noreferrer">
+                <a href="https://app.apollo.io/#/meet/managed-meetings/AnandEthiraj/hgz-qap-fw2/30-min" target="_blank" rel="noopener noreferrer">
                   See WhatsApp Demo
                 </a>
               </Button>
@@ -177,7 +177,7 @@ const WhatsAppAutomation = () => {
             Join 50+ GCC businesses who have automated their WhatsApp communication and improved customer satisfaction by 60%.
           </p>
           <Button size="lg" className="bg-gradient-primary hover:shadow-glow" asChild>
-            <a href="https://app.apollo.io/#/meet/kms-oa7-aeq/30-min" target="_blank" rel="noopener noreferrer">
+            <a href="https://app.apollo.io/#/meet/managed-meetings/AnandEthiraj/hgz-qap-fw2/30-min" target="_blank" rel="noopener noreferrer">
               Start WhatsApp Automation Today
             </a>
           </Button>

@@ -95,7 +95,7 @@ const CTA = () => {
                   className="w-full h-14 text-lg font-semibold bg-gradient-primary hover:shadow-glow transition-all duration-300"
                   asChild
                 >
-                  <a href="https://app.apollo.io/#/meet/kms-oa7-aeq/30-min" target="_blank" rel="noopener noreferrer">
+                  <a href="https://app.apollo.io/#/meet/managed-meetings/AnandEthiraj/hgz-qap-fw2/30-min" target="_blank" rel="noopener noreferrer">
                     <Calendar className="mr-2 h-5 w-5" />
                     Book My FREE Strategy Session
                   </a>

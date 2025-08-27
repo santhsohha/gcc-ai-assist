@@ -90,7 +90,7 @@ const FAQ = () => {
                 📧 Email Us
               </a>
               <a 
-                href="https://app.apollo.io/#/meet/kms-oa7-aeq/30-min" 
+                href="https://app.apollo.io/#/meet/managed-meetings/AnandEthiraj/hgz-qap-fw2/30-min" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center border-2 border-primary text-primary px-6 py-3 rounded-lg hover:bg-primary hover:text-primary-foreground transition-all"
