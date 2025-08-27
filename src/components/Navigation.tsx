@@ -145,9 +145,11 @@ const Navigation = () => {
         </NavigationMenu>
 
         <div className="flex items-center space-x-4">
-          <Button size="sm" className="bg-gradient-primary hover:shadow-glow" aria-label="Start Free Trial of AI Automation">
-            Start Free Trial
-          </Button>
+          <a href="https://app.apollo.io/#/meet/managed-meetings/AnandEthiraj/hgz-qap-fw2/30-min" target="_blank" rel="noopener noreferrer">
+            <Button size="sm" className="bg-gradient-primary hover:shadow-glow" aria-label="Start Free Trial of AI Automation">
+              Start Free Trial
+            </Button>
+          </a>
         </div>
       </div>
     </nav>;
