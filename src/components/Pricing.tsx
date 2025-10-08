@@ -1,7 +1,28 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { useState } from "react";
+
 const Pricing = () => {
+  const [currency, setCurrency] = useState("AED");
+  
+  const currencies = {
+    AED: { symbol: "AED", rate: 1, name: "UAE Dirham" },
+    SAR: { symbol: "SAR", rate: 1.09, name: "Saudi Riyal" },
+    USD: { symbol: "$", rate: 0.27, name: "US Dollar" },
+    EUR: { symbol: "€", rate: 0.25, name: "Euro" },
+    GBP: { symbol: "£", rate: 0.21, name: "British Pound" },
+    INR: { symbol: "₹", rate: 23, name: "Indian Rupee" },
+    RUB: { symbol: "₽", rate: 26, name: "Russian Ruble" },
+    CNY: { symbol: "¥", rate: 1.95, name: "Chinese Yuan" },
+  };
+  
+  const convertPrice = (aedPrice: number) => {
+    const converted = aedPrice * currencies[currency as keyof typeof currencies].rate;
+    return `${currencies[currency as keyof typeof currencies].symbol} ${Math.round(converted).toLocaleString()}`;
+  };
+  
   const workflowTiers = [{
     tier: "Simple",
     hours: "4-8h",
@@ -40,10 +61,7 @@ const Pricing = () => {
               <CardTitle className="text-3xl font-bold">AI Automation Retainer</CardTitle>
               <div className="space-y-2">
                 <div className="text-5xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-                  AED 16,500
-                </div>
-                <div className="text-2xl font-semibold text-muted-foreground">
-                  SAR 18,000
+                  {convertPrice(16500)}
                 </div>
                 <p className="text-muted-foreground">per month</p>
               </div>
@@ -98,7 +116,7 @@ const Pricing = () => {
               <Badge variant="secondary" className="bg-orange-100 text-orange-700 mb-4 animate-pulse">
                 ⚡ Your Automation Roadmap
               </Badge>
-              <h3 className="text-2xl font-bold mb-4" data-translate data-en="What You Get vs What Competitors Are Missing" data-ar="ما تحصل عليه مقابل ما يفقده المنافسون">⚠️ While competitors charge AED 2,000+ per user monthly...</h3>
+              <h3 className="text-2xl font-bold mb-4" data-translate data-en="What You Get vs What Competitors Are Missing" data-ar="ما تحصل عليه مقابل ما يفقده المنافسون">What You Get vs What Competitors Are Missing</h3>
               <p className="text-muted-foreground" data-translate data-en="While others pay per user and struggle with English-only systems, you get everything included." data-ar="بينما يدفع الآخرون عن كل مستخدم ويعانون من الأنظمة الإنجليزية فقط، تحصل على كل شيء متضمن.">You get unlimited users, Arabic support, and custom workflows for one fixed price.</p>
             </div>
             
@@ -131,9 +149,9 @@ const Pricing = () => {
                           <span className="text-muted-foreground">{example}</span>
                         </li>)}
                     </ul>
-                    {tier.included > 0 && <div className="bg-green-50 dark:bg-green-950/30 rounded-lg p-3 mt-4">
+                     {tier.included > 0 && <div className="bg-green-50 dark:bg-green-950/30 rounded-lg p-3 mt-4">
                         <p className="text-green-700 dark:text-green-400 text-sm font-medium">
-                          💰 Value: AED {index === 0 ? '8,000' : '12,000'}/month - Yours FREE
+                          💰 Value: {convertPrice(index === 0 ? 8000 : 12000)}/month - Yours FREE
                         </p>
                       </div>}
                   </div>
@@ -141,14 +159,28 @@ const Pricing = () => {
               </Card>)}
             
             <div className="text-center mt-8 bg-gradient-to-r from-orange-50 to-red-50 dark:from-orange-950/20 dark:to-red-950/20 rounded-xl p-6 border-2 border-orange-200">
-              <p className="text-orange-700 font-semibold mb-2" data-translate data-en="⚠️ While competitors charge AED 2,000+ per user monthly..." data-ar="⚠️ بينما يتقاضى المنافسون 2,000+ درهم لكل مستخدم شهرياً...">What You Get vs What Competitors Are Missing</p>
+              <p className="text-orange-700 font-semibold mb-2" data-translate data-en="⚠️ While competitors charge AED 2,000+ per user monthly..." data-ar="⚠️ بينما يتقاضى المنافسون 2,000+ درهم لكل مستخدم شهرياً...">⚠️ While competitors charge {convertPrice(2000)}+ per user monthly...</p>
               <p className="text-muted-foreground" data-translate data-en="You get unlimited users, Arabic support, and custom workflows for one fixed price." data-ar="تحصل على مستخدمين غير محدودين ودعم العربية وسير عمل مخصص بسعر ثابت واحد.">While others pay per user and struggle with English-only systems, you get everything included.</p>
             </div>
           </div>
         </div>
 
         <div className="mt-16">
-          <div className="max-w-7xl mx-auto">
+          <div className="max-w-7xl mx-auto relative">
+            <div className="absolute top-0 right-0 z-10">
+              <Select value={currency} onValueChange={setCurrency}>
+                <SelectTrigger className="w-[180px] bg-background border-2 border-primary/30">
+                  <SelectValue placeholder="Select currency" />
+                </SelectTrigger>
+                <SelectContent>
+                  {Object.entries(currencies).map(([code, data]) => (
+                    <SelectItem key={code} value={code}>
+                      {data.symbol} {data.name}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
             <div className="text-center mb-12">
               <Badge className="bg-primary/10 text-primary mb-4 text-base px-6 py-2">
                 Executive ROI Analysis
@@ -257,10 +289,10 @@ const Pricing = () => {
                   <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-red-100 dark:bg-red-900/20 mb-4">
                     <span className="text-3xl">⚠️</span>
                   </div>
-                  <div className="text-3xl font-bold text-red-600 mb-2">AED 288,000</div>
+                  <div className="text-3xl font-bold text-red-600 mb-2">{convertPrice(288000)}</div>
                   <p className="text-sm text-muted-foreground font-medium mb-3">6-Month Cost of Manual Operations</p>
                   <ul className="text-xs text-left space-y-1 text-muted-foreground">
-                    <li>• 2 staff x 160 hrs/month x AED 50/hr</li>
+                    <li>• 2 staff x 160 hrs/month x {convertPrice(50)}/hr</li>
                     <li>• Delayed decisions & errors</li>
                     <li>• Missed opportunities</li>
                     <li>• Customer dissatisfaction</li>
@@ -271,7 +303,7 @@ const Pricing = () => {
                   <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-100 dark:bg-blue-900/20 mb-4">
                     <span className="text-3xl">💰</span>
                   </div>
-                  <div className="text-3xl font-bold text-blue-600 mb-2">AED 99,000</div>
+                  <div className="text-3xl font-bold text-blue-600 mb-2">{convertPrice(99000)}</div>
                   <p className="text-sm text-muted-foreground font-medium mb-3">6-Month Investment with Nunar</p>
                   <ul className="text-xs text-left space-y-1 text-muted-foreground">
                     <li>✓ Dedicated AI Developer</li>
@@ -285,7 +317,7 @@ const Pricing = () => {
                   <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-100 dark:bg-green-900/20 mb-4">
                     <span className="text-3xl">📈</span>
                   </div>
-                  <div className="text-3xl font-bold text-green-600 mb-2">AED 189,000</div>
+                  <div className="text-3xl font-bold text-green-600 mb-2">{convertPrice(189000)}</div>
                   <p className="text-sm text-muted-foreground font-medium mb-3">Net Savings in 6 Months</p>
                   <ul className="text-xs text-left space-y-1 text-muted-foreground">
                     <li>✓ 191% ROI in first 6 months</li>
