@@ -181,24 +181,32 @@ const Pricing = () => {
                 </SelectContent>
               </Select>
             </div>
-            <div className="text-center mb-12">
-              <Badge className="bg-primary/10 text-primary mb-4 text-base px-6 py-2">
-                Executive ROI Analysis
+            <div className="text-center mb-12 pt-16">
+              <Badge className="bg-red-500 text-white mb-6 text-lg px-8 py-3 animate-pulse">
+                ⚡ Limited Time: Only 3 Spots Left This Quarter
               </Badge>
-              <h3 className="text-4xl font-bold mb-4">
-                <span className="bg-gradient-primary bg-clip-text text-transparent">Strategic Business Impact</span>
+              <h3 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+                <span className="bg-gradient-primary bg-clip-text text-transparent">While Your Competitors Automate,</span>
+                <br />
+                <span className="text-red-600">You're Burning Money Every Day</span>
               </h3>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                Real numbers from companies like yours who automated with Nunar AI
+              <p className="text-2xl md:text-3xl text-muted-foreground max-w-4xl mx-auto font-semibold">
+                Real ROI from 50+ GCC companies who refused to wait and took action
               </p>
             </div>
 
             {/* Industry-Specific Value Grid */}
+            <div className="mb-8 text-center">
+              <p className="text-2xl font-bold text-orange-600 mb-4 animate-pulse">
+                ⏰ Your competitors implemented this 6 months ago. How much revenue did you lose?
+              </p>
+            </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-              <Card className="border-2 border-primary/20 hover:border-primary/50 transition-all shadow-card hover:shadow-glow">
+              <Card className="border-2 border-primary/20 hover:border-primary/50 transition-all shadow-card hover:shadow-glow transform hover:scale-105">
                 <CardContent className="p-6">
-                  <div className="text-3xl mb-3">🏭</div>
-                  <h4 className="font-bold text-lg mb-2">Manufacturing</h4>
+                  <div className="text-4xl mb-3">🏭</div>
+                  <h4 className="font-bold text-xl mb-3">Manufacturing</h4>
+                  <p className="text-sm text-orange-600 font-semibold mb-3">⚠️ Stop losing {convertPrice(50000)}/month to inefficiency</p>
                   <div className="space-y-2 text-sm">
                     <div className="flex justify-between">
                       <span className="text-muted-foreground">Order Processing:</span>
@@ -216,10 +224,11 @@ const Pricing = () => {
                 </CardContent>
               </Card>
 
-              <Card className="border-2 border-primary/20 hover:border-primary/50 transition-all shadow-card hover:shadow-glow">
+              <Card className="border-2 border-primary/20 hover:border-primary/50 transition-all shadow-card hover:shadow-glow transform hover:scale-105">
                 <CardContent className="p-6">
-                  <div className="text-3xl mb-3">🚚</div>
-                  <h4 className="font-bold text-lg mb-2">Logistics</h4>
+                  <div className="text-4xl mb-3">🚚</div>
+                  <h4 className="font-bold text-xl mb-3">Logistics</h4>
+                  <p className="text-sm text-orange-600 font-semibold mb-3">⚠️ Lost deliveries = Lost customers forever</p>
                   <div className="space-y-2 text-sm">
                     <div className="flex justify-between">
                       <span className="text-muted-foreground">Delivery Updates:</span>
@@ -237,10 +246,11 @@ const Pricing = () => {
                 </CardContent>
               </Card>
 
-              <Card className="border-2 border-primary/20 hover:border-primary/50 transition-all shadow-card hover:shadow-glow">
+              <Card className="border-2 border-primary/20 hover:border-primary/50 transition-all shadow-card hover:shadow-glow transform hover:scale-105">
                 <CardContent className="p-6">
-                  <div className="text-3xl mb-3">🏥</div>
-                  <h4 className="font-bold text-lg mb-2">Healthcare</h4>
+                  <div className="text-4xl mb-3">🏥</div>
+                  <h4 className="font-bold text-xl mb-3">Healthcare</h4>
+                  <p className="text-sm text-orange-600 font-semibold mb-3">⚠️ Every no-show = {convertPrice(500)} down the drain</p>
                   <div className="space-y-2 text-sm">
                     <div className="flex justify-between">
                       <span className="text-muted-foreground">Appointment No-Shows:</span>
@@ -258,10 +268,11 @@ const Pricing = () => {
                 </CardContent>
               </Card>
 
-              <Card className="border-2 border-primary/20 hover:border-primary/50 transition-all shadow-card hover:shadow-glow">
+              <Card className="border-2 border-primary/20 hover:border-primary/50 transition-all shadow-card hover:shadow-glow transform hover:scale-105">
                 <CardContent className="p-6">
-                  <div className="text-3xl mb-3">🛍️</div>
-                  <h4 className="font-bold text-lg mb-2">Retail</h4>
+                  <div className="text-4xl mb-3">🛍️</div>
+                  <h4 className="font-bold text-xl mb-3">Retail</h4>
+                  <p className="text-sm text-orange-600 font-semibold mb-3">⚠️ Stock-outs cost you {convertPrice(30000)}/month</p>
                   <div className="space-y-2 text-sm">
                     <div className="flex justify-between">
                       <span className="text-muted-foreground">Inventory Alerts:</span>
@@ -281,59 +292,70 @@ const Pricing = () => {
             </div>
 
             {/* ROI Breakdown */}
-            <div className="bg-gradient-to-r from-primary/5 via-background to-primary/5 rounded-2xl p-8 shadow-glow border-2 border-primary/20 mb-12">
-              <h4 className="text-2xl font-bold text-center mb-8">Your 6-Month Business Transformation</h4>
+            <div className="bg-gradient-to-r from-red-50 via-orange-50 to-red-50 dark:from-red-950/20 dark:via-orange-950/20 dark:to-red-950/20 rounded-2xl p-10 shadow-glow border-4 border-red-500/30 mb-12 relative overflow-hidden">
+              <div className="absolute top-4 right-4 bg-red-600 text-white px-6 py-2 rounded-full font-bold text-sm animate-bounce">
+                ⚡ ACT NOW
+              </div>
+              <h4 className="text-4xl md:text-5xl font-bold text-center mb-4 text-red-600">
+                The Cost of Doing Nothing
+              </h4>
+              <p className="text-center text-xl mb-10 font-semibold text-muted-foreground">
+                Every day you wait = Money walking out the door to competitors
+              </p>
               
               <div className="grid md:grid-cols-3 gap-8 mb-8">
                 <div className="text-center">
-                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-red-100 dark:bg-red-900/20 mb-4">
-                    <span className="text-3xl">⚠️</span>
+                  <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-red-100 dark:bg-red-900/20 mb-6 animate-pulse">
+                    <span className="text-5xl">⚠️</span>
                   </div>
-                  <div className="text-3xl font-bold text-red-600 mb-2">{convertPrice(288000)}</div>
-                  <p className="text-sm text-muted-foreground font-medium mb-3">6-Month Cost of Manual Operations</p>
-                  <ul className="text-xs text-left space-y-1 text-muted-foreground">
-                    <li>• 2 staff x 160 hrs/month x {convertPrice(50)}/hr</li>
-                    <li>• Delayed decisions & errors</li>
-                    <li>• Missed opportunities</li>
-                    <li>• Customer dissatisfaction</li>
+                  <div className="text-4xl md:text-5xl font-bold text-red-600 mb-3">{convertPrice(288000)}</div>
+                  <p className="text-lg text-muted-foreground font-bold mb-4 uppercase tracking-wide">What You're LOSING Every 6 Months</p>
+                  <ul className="text-sm text-left space-y-2 text-muted-foreground bg-white/50 dark:bg-black/20 p-4 rounded-lg">
+                    <li className="font-semibold">❌ 2 staff x 160 hrs/month x {convertPrice(50)}/hr</li>
+                    <li className="font-semibold">❌ Delayed decisions costing you deals</li>
+                    <li className="font-semibold">❌ Errors killing customer trust</li>
+                    <li className="font-semibold">❌ Competitors stealing your market share</li>
                   </ul>
                 </div>
 
                 <div className="text-center">
-                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-100 dark:bg-blue-900/20 mb-4">
-                    <span className="text-3xl">💰</span>
+                  <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-blue-100 dark:bg-blue-900/20 mb-6">
+                    <span className="text-5xl">💰</span>
                   </div>
-                  <div className="text-3xl font-bold text-blue-600 mb-2">{convertPrice(99000)}</div>
-                  <p className="text-sm text-muted-foreground font-medium mb-3">6-Month Investment with Nunar</p>
-                  <ul className="text-xs text-left space-y-1 text-muted-foreground">
-                    <li>✓ Dedicated AI Developer</li>
-                    <li>✓ Process Consultant</li>
-                    <li>✓ 4-6 Custom Workflows</li>
-                    <li>✓ Unlimited users & support</li>
+                  <div className="text-4xl md:text-5xl font-bold text-blue-600 mb-3">{convertPrice(99000)}</div>
+                  <p className="text-lg text-muted-foreground font-bold mb-4 uppercase tracking-wide">Smart Investment (6 Months)</p>
+                  <ul className="text-sm text-left space-y-2 text-muted-foreground bg-white/50 dark:bg-black/20 p-4 rounded-lg">
+                    <li className="font-semibold">✅ Dedicated AI Developer (YOUR secret weapon)</li>
+                    <li className="font-semibold">✅ Process Consultant (Optimize EVERYTHING)</li>
+                    <li className="font-semibold">✅ 4-6 Custom Workflows (Built for YOUR business)</li>
+                    <li className="font-semibold">✅ Unlimited users & 24/7 support (No hidden fees)</li>
                   </ul>
                 </div>
 
                 <div className="text-center">
-                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-100 dark:bg-green-900/20 mb-4">
-                    <span className="text-3xl">📈</span>
+                  <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-green-100 dark:bg-green-900/20 mb-6 animate-bounce">
+                    <span className="text-5xl">🚀</span>
                   </div>
-                  <div className="text-3xl font-bold text-green-600 mb-2">{convertPrice(189000)}</div>
-                  <p className="text-sm text-muted-foreground font-medium mb-3">Net Savings in 6 Months</p>
-                  <ul className="text-xs text-left space-y-1 text-muted-foreground">
-                    <li>✓ 191% ROI in first 6 months</li>
-                    <li>✓ Staff focus on growth tasks</li>
-                    <li>✓ Faster customer response</li>
-                    <li>✓ Competitive advantage</li>
+                  <div className="text-4xl md:text-5xl font-bold text-green-600 mb-3">{convertPrice(189000)}</div>
+                  <p className="text-lg text-muted-foreground font-bold mb-4 uppercase tracking-wide">Pure Profit You're Missing</p>
+                  <ul className="text-sm text-left space-y-2 text-muted-foreground bg-white/50 dark:bg-black/20 p-4 rounded-lg">
+                    <li className="font-semibold">🔥 191% ROI - Your competitors already have this</li>
+                    <li className="font-semibold">🔥 Staff crushing goals, not drowning in tasks</li>
+                    <li className="font-semibold">🔥 Instant customer response = More sales</li>
+                    <li className="font-semibold">🔥 Market dominance while others play catch-up</li>
                   </ul>
                 </div>
               </div>
 
-              <div className="bg-gradient-primary p-6 rounded-xl text-center">
-                <p className="text-2xl font-bold text-primary-foreground mb-2">
+              <div className="bg-gradient-primary p-8 rounded-xl text-center mt-8 border-4 border-green-400 relative">
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-green-500 text-white px-6 py-2 rounded-full font-bold animate-pulse">
+                  ⚡ LIMITED OFFER
+                </div>
+                <p className="text-3xl md:text-4xl font-bold text-primary-foreground mb-3">
                   Break-even in 1.7 months • Full ROI by Month 3
                 </p>
-                <p className="text-primary-foreground/90">
-                  After that, it's pure profit and competitive advantage
+                <p className="text-xl md:text-2xl text-primary-foreground/90 font-semibold">
+                  After that? Pure profit while competitors scramble to catch up
                 </p>
               </div>
             </div>
@@ -420,22 +442,31 @@ const Pricing = () => {
             </div>
 
             {/* Final CTA */}
-            <div className="bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 rounded-2xl p-8 text-center border-2 border-primary/30">
-              <h4 className="text-2xl font-bold mb-3">The Question Isn't "Should We Automate?"</h4>
-              <p className="text-xl text-muted-foreground mb-6">
-                It's "Can We Afford to Wait Another Month?"
+            <div className="bg-gradient-to-r from-red-100 via-orange-100 to-red-100 dark:from-red-950/30 dark:via-orange-950/30 dark:to-red-950/30 rounded-2xl p-10 text-center border-4 border-red-500/50 relative overflow-hidden">
+              <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-red-500 via-orange-500 to-red-500 animate-pulse"></div>
+              <Badge className="bg-red-600 text-white mb-6 text-lg px-8 py-3 animate-bounce">
+                ⏰ URGENT: Only 3 spots remaining this quarter
+              </Badge>
+              <h4 className="text-4xl md:text-5xl font-bold mb-4 text-red-600">The Real Question:</h4>
+              <p className="text-3xl md:text-4xl text-muted-foreground font-bold mb-8">
+                Can You Afford Another Month of Losses?
               </p>
-              <p className="text-lg mb-8 max-w-2xl mx-auto">
-                Every day your competitors are getting faster, your customers are getting more demanding, 
-                and your team is getting more overwhelmed. Start your 30-day trial and see the impact in Week 1.
+              <p className="text-xl md:text-2xl mb-10 max-w-3xl mx-auto font-semibold leading-relaxed">
+                <span className="text-red-600">Right now, competitors are stealing your customers.</span> They respond in seconds while you're stuck in manual chaos. 
+                Your team is burning out. Your revenue is leaking. <span className="font-bold text-2xl">Every. Single. Day.</span>
               </p>
-              <Button size="lg" className="bg-gradient-primary hover:shadow-glow text-lg px-12 py-6 mb-4" aria-label="Book Your Free ROI Consultation" asChild>
+              <div className="mb-8 p-6 bg-white/70 dark:bg-black/30 rounded-xl">
+                <p className="text-2xl font-bold text-orange-600 mb-2">
+                  🔥 Companies that started 3 months ago are now processing 3x the volume with HALF the team
+                </p>
+              </div>
+              <Button size="lg" className="bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 hover:shadow-glow text-2xl px-16 py-8 mb-6 animate-pulse font-bold" aria-label="Book Your Free ROI Consultation" asChild>
                 <a href="https://app.apollo.io/#/meet/managed-meetings/AnandEthiraj/hgz-qap-fw2/30-min" target="_blank" rel="noopener noreferrer">
-                  Book Your Free ROI Consultation
+                  CLAIM YOUR SPOT NOW →
                 </a>
               </Button>
-              <p className="text-sm text-muted-foreground">
-                30-day risk-free trial • Custom roadmap for your industry • No setup fees
+              <p className="text-lg text-muted-foreground font-semibold">
+                ✅ 30-day risk-free trial • ✅ See ROI in Week 1 • ✅ No setup fees • ✅ Cancel anytime (but you won't want to)
               </p>
             </div>
           </div>
