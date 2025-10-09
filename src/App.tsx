@@ -3,7 +3,6 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { useGoogleAnalytics } from "@/hooks/useGoogleAnalytics";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Manufacturing from "./pages/industries/Manufacturing";
@@ -20,9 +19,7 @@ import Support from "./pages/Support";
 
 const queryClient = new QueryClient();
 
-const AppWithGA = () => {
-  useGoogleAnalytics(); // This will track all page views
-  
+const AppRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<Index />} />
@@ -49,7 +46,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <AppWithGA />
+        <AppRoutes />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
