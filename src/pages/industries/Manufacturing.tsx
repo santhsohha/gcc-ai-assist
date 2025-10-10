@@ -352,109 +352,144 @@ const Manufacturing = () => {
 
       {/* Manufacturing Workflows Section */}
       <section className="py-20 px-4">
-        <div className="container mx-auto">
+        <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-6">
-              Nunar Manufacturing <span className="bg-gradient-primary bg-clip-text text-transparent">AI Workflows</span>
+            <Badge className="mb-6 text-base px-8 py-3 bg-gradient-to-r from-primary/20 to-purple-600/20 border-primary/30">
+              Executive-Ready AI Solutions
+            </Badge>
+            <h2 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+              <span className="bg-gradient-to-r from-primary via-purple-600 to-primary bg-clip-text text-transparent">
+                Transform Operations
+              </span>
+              <br />
+              <span className="text-foreground">With Proven ROI</span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Proven AI implementations that have helped GCC manufacturers reduce costs by 25% and increase efficiency by 40%. 
-              Each workflow is specifically designed for manufacturing operations in the UAE and GCC region.
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+              Battle-tested workflows delivering measurable impact for GCC manufacturers. 
+              <span className="block mt-2 text-primary font-semibold">Zero coding. Enterprise-grade security. Seamless integration.</span>
             </p>
           </div>
 
           <div className="space-y-12">
             {workflowCategories.map((category, categoryIndex) => (
-              <div key={categoryIndex} className="space-y-8">
+              <div key={categoryIndex} className="group">
                 {/* Category Header */}
-                <div className="text-center">
-                  <div className="flex items-center justify-center space-x-3 mb-4">
-                    <div className="p-3 bg-primary/10 rounded-lg text-primary">
-                      {category.icon}
-                    </div>
-                    <h3 className="text-2xl font-bold text-foreground">
-                      {category.title}
-                    </h3>
+                <div className="flex items-center gap-6 mb-8 pb-6 border-b-2 border-primary/20">
+                  <div className="p-4 bg-gradient-to-br from-primary/20 to-purple-600/20 rounded-2xl group-hover:scale-110 transition-transform">
+                    {category.icon}
                   </div>
-                  <p className="text-muted-foreground max-w-2xl mx-auto">
-                    {category.description}
-                  </p>
+                  <div className="flex-1">
+                    <h3 className="text-3xl md:text-4xl font-bold mb-2 text-foreground">{category.title}</h3>
+                    <p className="text-lg text-muted-foreground">{category.description}</p>
+                  </div>
                 </div>
 
                 {/* Use Cases Grid */}
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {category.useCases.map((useCase, index) => (
-                    <Accordion key={index} type="single" collapsible className="w-full">
-                      <AccordionItem value={`item-${categoryIndex}-${index}`} className="border-none">
-                        <Card className="relative shadow-card hover:shadow-glow transition-all duration-300 cursor-pointer group revolving-border">
-                          <AccordionTrigger className="hover:no-underline p-0 [&[data-state=open]>div>div>svg]:rotate-180 [&>svg]:mr-6 [&>svg]:text-muted-foreground">
-                            <CardHeader className="w-full pr-12">
-                              <div className="flex items-center space-x-4">
-                                <div className="p-2 bg-primary/10 rounded-lg text-primary flex-shrink-0">
-                                  {useCase.icon}
-                                </div>
-                                <div className="text-left">
-                                  <CardTitle className="text-lg leading-tight">{useCase.title}</CardTitle>
-                                  <p className="text-sm text-muted-foreground mt-1 line-clamp-2">
-                                    {useCase.workflow}
-                                  </p>
-                                  <Badge variant="secondary" className="mt-2 text-xs">
-                                    {useCase.benefit}
-                                  </Badge>
-                                </div>
-                              </div>
-                            </CardHeader>
-                          </AccordionTrigger>
-                          
-                          <AccordionContent className="pb-6">
-                            <div className="px-6 bg-muted/20 rounded-lg mx-6 p-6 space-y-4 border border-border/50">
+                    <Card 
+                      key={index}
+                      className="group/card hover:shadow-2xl hover:shadow-primary/10 transition-all duration-300 border-2 hover:border-primary/50 cursor-pointer overflow-hidden h-full flex flex-col"
+                    >
+                      <CardHeader className="pb-4">
+                        <div className="flex items-start justify-between mb-4">
+                          <div className="p-3 bg-gradient-to-br from-primary/10 to-purple-600/10 rounded-xl group-hover/card:scale-110 transition-transform">
+                            {useCase.icon}
+                          </div>
+                          <Badge variant="outline" className="text-xs font-semibold border-primary/30">
+                            {useCase.source}
+                          </Badge>
+                        </div>
+                        <CardTitle className="text-xl md:text-2xl mb-3 leading-tight group-hover/card:text-primary transition-colors">
+                          {useCase.title}
+                        </CardTitle>
+                        
+                        {/* Business Impact Badge */}
+                        <div className="flex items-center gap-2 bg-primary/10 rounded-lg px-4 py-3 border border-primary/20">
+                          <TrendingUp className="h-5 w-5 text-primary flex-shrink-0" />
+                          <span className="font-bold text-sm md:text-base text-primary">{useCase.benefit}</span>
+                        </div>
+                      </CardHeader>
+
+                      <CardContent className="space-y-4 flex-1 flex flex-col">
+                        {/* Workflow Overview */}
+                        <div className="bg-muted/50 rounded-lg p-4">
+                          <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+                            <span className="font-semibold text-foreground">How it works: </span>
+                            {useCase.workflow}
+                          </p>
+                        </div>
+
+                        <Accordion type="single" collapsible className="w-full flex-1">
+                          <AccordionItem value={`details-${categoryIndex}-${index}`} className="border-none">
+                            <AccordionTrigger className="hover:no-underline py-3 text-primary hover:text-primary/80 font-semibold text-base">
+                              View Full Details & ROI
+                            </AccordionTrigger>
+                            <AccordionContent className="space-y-5 pt-4 border-t">
+                              {/* Strategic Value */}
                               <div>
-                                <h4 className="font-semibold text-foreground mb-3 flex items-center">
-                                  <span className="w-2 h-2 bg-primary rounded-full mr-2"></span>
-                                  What it does:
-                                </h4>
-                                <p className="text-muted-foreground leading-relaxed">
+                                <h5 className="font-bold text-base md:text-lg mb-3 flex items-center gap-2 text-foreground">
+                                  <Shield className="h-5 w-5 text-primary" />
+                                  Strategic Value
+                                </h5>
+                                <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
                                   {useCase.details.whatItDoes}
                                 </p>
                               </div>
-                              
-                              <div>
-                                <h4 className="font-semibold text-foreground mb-3 flex items-center">
-                                  <span className="w-2 h-2 bg-primary rounded-full mr-2"></span>
-                                  How it helps:
-                                </h4>
-                                <ul className="space-y-2">
+
+                              {/* Quantified Benefits */}
+                              <div className="bg-gradient-to-br from-primary/5 to-purple-600/5 rounded-lg p-4 border border-primary/10">
+                                <h5 className="font-bold text-base md:text-lg mb-4 flex items-center gap-2 text-foreground">
+                                  <TrendingUp className="h-5 w-5 text-primary" />
+                                  Quantified Impact
+                                </h5>
+                                <ul className="space-y-3">
                                   {useCase.details.howItHelps.map((help, helpIdx) => (
-                                    <li key={helpIdx} className="flex items-start">
-                                      <span className="text-green-500 mr-2 mt-1">✓</span>
-                                      <span className="text-muted-foreground">{help}</span>
+                                    <li key={helpIdx} className="flex items-start gap-3">
+                                      <div className="mt-0.5 p-1 bg-primary/20 rounded-full">
+                                        <div className="h-2 w-2 bg-primary rounded-full" />
+                                      </div>
+                                      <span className="text-sm md:text-base font-medium text-foreground flex-1">{help}</span>
                                     </li>
                                   ))}
                                 </ul>
                               </div>
-                              
-                              {useCase.details.example && (
-                                <div>
-                                  <h4 className="font-semibold text-foreground mb-3 flex items-center">
-                                    <span className="w-2 h-2 bg-primary rounded-full mr-2"></span>
-                                    Real-world example:
-                                  </h4>
-                                  <div className="bg-gradient-to-r from-primary/5 to-accent/5 p-4 rounded-lg border-l-4 border-primary">
-                                    <p className="text-muted-foreground leading-relaxed italic">
-                                      {useCase.details.example}
-                                    </p>
-                                  </div>
-                                </div>
-                              )}
-                            </div>
-                          </AccordionContent>
-                        </Card>
-                      </AccordionItem>
-                    </Accordion>
+
+                              {/* Live Scenario */}
+                              <div className="bg-gradient-to-br from-muted/80 to-muted/40 rounded-xl p-5 border-l-4 border-primary">
+                                <h5 className="font-bold text-base md:text-lg mb-3 flex items-center gap-2 text-foreground">
+                                  <Factory className="h-5 w-5 text-primary" />
+                                  Live Scenario
+                                </h5>
+                                <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+                                  "{useCase.details.example}"
+                                </p>
+                              </div>
+                            </AccordionContent>
+                          </AccordionItem>
+                        </Accordion>
+                      </CardContent>
+                    </Card>
                   ))}
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* Executive CTA */}
+          <div className="mt-20 text-center bg-gradient-to-br from-primary/10 via-purple-600/10 to-primary/10 rounded-3xl p-12 border-2 border-primary/20">
+            <h3 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">Ready to Scale Your Manufacturing Excellence?</h3>
+            <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
+              Join GCC manufacturing leaders who've achieved <span className="font-bold text-primary">40-70% efficiency gains</span> with our AI workflows.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" className="text-base md:text-lg px-8 py-6 bg-gradient-to-r from-primary to-purple-600 hover:opacity-90">
+                Schedule Executive Briefing
+              </Button>
+              <Button size="lg" variant="outline" className="text-base md:text-lg px-8 py-6 border-2 hover:bg-primary/10">
+                Download ROI Calculator
+              </Button>
+            </div>
           </div>
         </div>
       </section>
