@@ -268,26 +268,26 @@ const Logistics = () => {
               🚛 Logistics Industry
             </Badge>
             
-            <h1 className="text-5xl font-bold mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
               <span className="bg-gradient-primary bg-clip-text text-transparent">
-                Smart Logistics
+                Supply Chain Intelligence
               </span>
               <br />
-              for GCC Supply Chains
+              for Modern Logistics
             </h1>
             
-            <p className="text-xl text-muted-foreground mb-8 max-w-3xl">
-              Optimize your logistics operations with AI agents that understand GCC market dynamics, 
-              integrate with local systems, and communicate effectively in Arabic and English.
+            <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl leading-relaxed">
+              Automate operations, finance, and customer communications with AI-powered workflows. 
+              <span className="block mt-2 font-semibold">Real-time tracking. Seamless integration. Enterprise-grade reliability.</span>
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-gradient-primary hover:shadow-glow" asChild>
+              <Button size="lg" className="text-base md:text-lg px-8 py-6 bg-gradient-primary hover:shadow-glow" asChild>
                 <a href="https://app.apollo.io/#/meet/managed-meetings/AnandEthiraj/hgz-qap-fw2/30-min" target="_blank" rel="noopener noreferrer">
-                  Schedule Logistics Consultation
+                  Schedule Operations Review
                 </a>
               </Button>
-              <Button variant="outline" size="lg" asChild>
+              <Button variant="outline" size="lg" className="text-base md:text-lg px-8 py-6 border-2" asChild>
                 <a href="https://app.apollo.io/#/meet/managed-meetings/AnandEthiraj/hgz-qap-fw2/30-min" target="_blank" rel="noopener noreferrer">
                   Download Logistics Case Study
                 </a>
@@ -297,90 +297,131 @@ const Logistics = () => {
         </div>
       </section>
 
-      {/* Solutions Section */}
+      {/* Logistics Solutions Section - Executive Design */}
       <section className="py-20 px-4">
-        <div className="container mx-auto">
+        <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-6">
-              AI Solutions for <span className="bg-gradient-primary bg-clip-text text-transparent">Logistics</span>
+            <Badge className="mb-6 text-base px-8 py-3 bg-gradient-to-r from-primary/20 to-purple-600/20 border-primary/30">
+              Operations-Ready AI Solutions
+            </Badge>
+            <h2 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+              <span className="bg-gradient-to-r from-primary via-purple-600 to-primary bg-clip-text text-transparent">
+                Optimize Operations
+              </span>
+              <br />
+              <span className="text-foreground">Drive Efficiency</span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Proven by 20+ GCC logistics companies to reduce delivery costs by 30% and improve customer satisfaction by 50%.
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+              Trusted by logistics companies to reduce operational costs by 30% and improve response times by 60%. 
+              <span className="block mt-2 text-primary font-semibold">Zero coding. Instant deployment. Full automation.</span>
             </p>
           </div>
 
-          <div className="space-y-16">
+          <div className="space-y-12">
             {solutionCategories.map((category, categoryIndex) => (
-              <div key={categoryIndex} className="space-y-8">
-                <div className="text-center">
-                  <div className="flex items-center justify-center space-x-3 mb-4">
-                    <div className="p-2 bg-primary/10 rounded-lg text-primary">
-                      {category.icon}
-                    </div>
-                    <h3 className="text-2xl font-bold">{category.title}</h3>
+              <div key={categoryIndex} className="group">
+                {/* Category Header */}
+                <div className="flex items-center gap-6 mb-8 pb-6 border-b-2 border-primary/20">
+                  <div className="p-4 bg-gradient-to-br from-primary/20 to-purple-600/20 rounded-2xl group-hover:scale-110 transition-transform">
+                    {category.icon}
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-3xl md:text-4xl font-bold mb-2 text-foreground">{category.title}</h3>
                   </div>
                 </div>
-                
-                <Accordion type="single" collapsible className="w-full">
-                  <div className="grid md:grid-cols-2 gap-6">
-                    {category.solutions.map((solution, solutionIndex) => (
-                      <AccordionItem 
-                        key={`${categoryIndex}-${solutionIndex}`} 
-                        value={`${categoryIndex}-${solutionIndex}`}
-                        className="border-none"
-                      >
-                        <Card className="relative overflow-hidden shadow-card hover:shadow-glow transition-all duration-300 revolving-border">
-                          <AccordionTrigger className="hover:no-underline p-0 [&[data-state=open]>svg]:rotate-180 [&>svg]:mr-6 [&>svg]:text-muted-foreground">
-                            <CardHeader className="w-full pr-12">
-                              <CardTitle className="text-lg leading-tight text-left">{solution.title}</CardTitle>
-                              <CardContent className="px-0 pb-0">
-                                <p className="text-muted-foreground text-sm leading-relaxed text-left">{solution.description}</p>
-                              </CardContent>
-                            </CardHeader>
-                          </AccordionTrigger>
-                          
-                          <AccordionContent className="pb-0">
-                            <CardContent className="pt-0 space-y-6">
-                              <div className="border-t pt-6">
-                                <div className="space-y-4">
-                                  <div>
-                                    <h4 className="font-semibold text-primary mb-2">What it does</h4>
-                                    <p className="text-sm text-muted-foreground leading-relaxed">
-                                      {solution.whatItDoes}
-                                    </p>
-                                  </div>
-                                  
-                                  <div>
-                                    <h4 className="font-semibold text-primary mb-3">How it helps</h4>
-                                    <ul className="space-y-2">
-                                      {solution.howItHelps.map((benefit, benefitIndex) => (
-                                        <li key={benefitIndex} className="flex items-start space-x-2 text-sm">
-                                          <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                                          <span className="text-muted-foreground">{benefit}</span>
-                                        </li>
-                                      ))}
-                                    </ul>
-                                  </div>
-                                  
-                                  {solution.example && (
-                                    <div className="bg-muted/30 rounded-lg p-4">
-                                      <h4 className="font-semibold text-primary mb-2">Real-world example</h4>
-                                      <p className="text-sm text-muted-foreground leading-relaxed italic">
-                                        {solution.example}
-                                      </p>
-                                    </div>
-                                  )}
-                                </div>
+
+                {/* Solutions Grid */}
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {category.solutions.map((solution, index) => (
+                    <Card 
+                      key={index}
+                      className="group/card hover:shadow-2xl hover:shadow-primary/10 transition-all duration-300 border-2 hover:border-primary/50 cursor-pointer overflow-hidden h-full flex flex-col"
+                    >
+                      <CardHeader className="pb-4">
+                        <CardTitle className="text-xl md:text-2xl mb-3 leading-tight group-hover/card:text-primary transition-colors">
+                          {solution.title}
+                        </CardTitle>
+                        
+                        {/* Description */}
+                        <div className="bg-muted/50 rounded-lg p-4">
+                          <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+                            <span className="font-semibold text-foreground">Solution: </span>
+                            {solution.description}
+                          </p>
+                        </div>
+                      </CardHeader>
+
+                      <CardContent className="space-y-4 flex-1 flex flex-col">
+                        <Accordion type="single" collapsible className="w-full flex-1">
+                          <AccordionItem value={`details-${categoryIndex}-${index}`} className="border-none">
+                            <AccordionTrigger className="hover:no-underline py-3 text-primary hover:text-primary/80 font-semibold text-base">
+                              View Full Details & ROI
+                            </AccordionTrigger>
+                            <AccordionContent className="space-y-5 pt-4 border-t">
+                              {/* Strategic Value */}
+                              <div>
+                                <h5 className="font-bold text-base md:text-lg mb-3 flex items-center gap-2 text-foreground">
+                                  <Truck className="h-5 w-5 text-primary" />
+                                  Operational Value
+                                </h5>
+                                <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+                                  {solution.whatItDoes}
+                                </p>
                               </div>
-                            </CardContent>
-                          </AccordionContent>
-                        </Card>
-                      </AccordionItem>
-                    ))}
-                  </div>
-                </Accordion>
+
+                              {/* Quantified Benefits */}
+                              <div className="bg-gradient-to-br from-primary/5 to-purple-600/5 rounded-lg p-4 border border-primary/10">
+                                <h5 className="font-bold text-base md:text-lg mb-4 flex items-center gap-2 text-foreground">
+                                  <CheckCircle className="h-5 w-5 text-primary" />
+                                  Business Impact
+                                </h5>
+                                <ul className="space-y-3">
+                                  {solution.howItHelps.map((help, helpIdx) => (
+                                    <li key={helpIdx} className="flex items-start gap-3">
+                                      <div className="mt-0.5 p-1 bg-primary/20 rounded-full">
+                                        <div className="h-2 w-2 bg-primary rounded-full" />
+                                      </div>
+                                      <span className="text-sm md:text-base font-medium text-foreground flex-1">{help}</span>
+                                    </li>
+                                  ))}
+                                </ul>
+                              </div>
+
+                              {/* Real-World Example */}
+                              <div className="bg-gradient-to-br from-muted/80 to-muted/40 rounded-xl p-5 border-l-4 border-primary">
+                                <h5 className="font-bold text-base md:text-lg mb-3 flex items-center gap-2 text-foreground">
+                                  <MapPin className="h-5 w-5 text-primary" />
+                                  Real-World Scenario
+                                </h5>
+                                <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+                                  "{solution.example}"
+                                </p>
+                              </div>
+                            </AccordionContent>
+                          </AccordionItem>
+                        </Accordion>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
               </div>
             ))}
+          </div>
+
+          {/* Executive CTA */}
+          <div className="mt-20 text-center bg-gradient-to-br from-primary/10 via-purple-600/10 to-primary/10 rounded-3xl p-12 border-2 border-primary/20">
+            <h3 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">Ready to Streamline Your Logistics?</h3>
+            <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
+              Join logistics leaders who've achieved <span className="font-bold text-primary">30-60% cost reduction</span> with our AI workflows.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" className="text-base md:text-lg px-8 py-6 bg-gradient-to-r from-primary to-purple-600 hover:opacity-90">
+                Schedule Operations Audit
+              </Button>
+              <Button size="lg" variant="outline" className="text-base md:text-lg px-8 py-6 border-2 hover:bg-primary/10">
+                Download Efficiency Guide
+              </Button>
+            </div>
           </div>
         </div>
       </section>

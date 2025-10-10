@@ -321,28 +321,28 @@ const Manufacturing = () => {
               🏭 Manufacturing Industry
             </Badge>
             
-            <h1 className="text-5xl font-bold mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
               <span className="bg-gradient-primary bg-clip-text text-transparent">
-                Smart Manufacturing
+                Manufacturing Intelligence
               </span>
               <br />
-              for the GCC Region
+              for Modern Operations
             </h1>
             
-            <p className="text-xl text-muted-foreground mb-8 max-w-3xl">
-              Transform your manufacturing operations with AI agents that understand local regulations, 
-              communicate in Arabic/English, and integrate seamlessly with GCC supply chains.
+            <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl leading-relaxed">
+              Transform production efficiency and supply chain agility with AI-powered workflows. 
+              <span className="block mt-2 font-semibold">Enterprise-grade security. Seamless ERP integration. Zero coding required.</span>
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-gradient-primary hover:shadow-glow" asChild>
+              <Button size="lg" className="text-base md:text-lg px-8 py-6 bg-gradient-primary hover:shadow-glow" asChild>
                 <a href="https://app.apollo.io/#/meet/managed-meetings/AnandEthiraj/hgz-qap-fw2/30-min" target="_blank" rel="noopener noreferrer">
-                  Schedule Manufacturing Consultation
+                  Schedule Executive Briefing
                 </a>
               </Button>
-              <Button variant="outline" size="lg" asChild>
+              <Button variant="outline" size="lg" className="text-base md:text-lg px-8 py-6 border-2" asChild>
                 <a href="https://app.apollo.io/#/meet/managed-meetings/AnandEthiraj/hgz-qap-fw2/30-min" target="_blank" rel="noopener noreferrer">
-                  Download Manufacturing Case Study
+                  Download ROI Calculator
                 </a>
               </Button>
             </div>
