@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { ArrowLeft, Heart, Calendar, FileText, Users, MessageSquare, Mail, Upload, TestTube, CreditCard, Clock, Stethoscope, Clipboard, DollarSign, Star } from "lucide-react";
+import { ArrowLeft, Heart, Calendar, FileText, Users, MessageSquare, Mail, Upload, TestTube, CreditCard, Clock, Stethoscope, Clipboard, DollarSign, Star, CheckCircle, Shield, TrendingUp } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Healthcare = () => {
@@ -270,69 +270,98 @@ const Healthcare = () => {
                   {category.useCases.map((useCase, index) => (
                     <Card 
                       key={index}
-                      className="group/card hover:shadow-2xl hover:shadow-primary/10 transition-all duration-300 border-2 hover:border-primary/50 cursor-pointer overflow-hidden h-full flex flex-col"
+                      className="group/card hover:shadow-2xl hover:shadow-primary/10 transition-all duration-300 border-2 hover:border-primary/50 overflow-hidden h-full flex flex-col"
                     >
-                      <CardHeader className="pb-4">
-                        <div className="flex items-start justify-between mb-4">
+                      <CardHeader className="pb-6 space-y-5">
+                        <div className="flex items-start justify-between">
                           <div className="p-3 bg-gradient-to-br from-primary/10 to-purple-600/10 rounded-xl group-hover/card:scale-110 transition-transform">
                             {useCase.icon}
                           </div>
                         </div>
-                        <CardTitle className="text-xl md:text-2xl mb-3 leading-tight group-hover/card:text-primary transition-colors">
+                        
+                        <CardTitle className="text-2xl md:text-3xl font-bold leading-tight group-hover/card:text-primary transition-colors">
                           {useCase.title}
                         </CardTitle>
                         
-                        {/* Description */}
-                        <div className="bg-muted/50 rounded-lg p-4">
-                          <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
-                            {useCase.description}
+                        {/* Pain Point - What healthcare leaders face */}
+                        <div className="bg-destructive/10 border-l-4 border-destructive rounded-lg p-4">
+                          <p className="text-sm font-semibold text-destructive mb-1">⚠️ Current Challenge:</p>
+                          <p className="text-sm md:text-base text-foreground leading-relaxed">
+                            {useCase.details.example.split('.')[0]}.
                           </p>
                         </div>
                       </CardHeader>
 
-                      <CardContent className="space-y-4 flex-1 flex flex-col">
-                        <Accordion type="single" collapsible className="w-full flex-1">
+                      <CardContent className="space-y-5 flex-1 flex flex-col pt-0">
+                        {/* Quantified Clinical Impact - Front & Center */}
+                        <div className="bg-gradient-to-br from-primary/10 to-purple-600/10 rounded-xl p-5 border-2 border-primary/20">
+                          <div className="flex items-center gap-3 mb-4">
+                            <Heart className="h-6 w-6 text-primary" />
+                            <h4 className="text-lg md:text-xl font-bold text-foreground">Proven Outcomes</h4>
+                          </div>
+                          <ul className="space-y-3">
+                            {useCase.details.howItHelps.slice(0, 3).map((help, helpIdx) => (
+                              <li key={helpIdx} className="flex items-start gap-3">
+                                <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                                <span className="text-sm md:text-base font-semibold text-foreground">{help}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+
+                        {/* Clear Solution Statement */}
+                        <div className="bg-muted/80 rounded-lg p-4 border border-muted-foreground/20">
+                          <p className="text-base md:text-lg font-semibold text-foreground mb-2">The Solution:</p>
+                          <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+                            {useCase.description}
+                          </p>
+                        </div>
+
+                        {/* Accordion for Technical Details */}
+                        <Accordion type="single" collapsible className="w-full">
                           <AccordionItem value={`details-${categoryIndex}-${index}`} className="border-none">
-                            <AccordionTrigger className="hover:no-underline py-3 text-primary hover:text-primary/80 font-semibold text-base">
-                              View Full Details & Impact
+                            <AccordionTrigger className="hover:no-underline py-3 text-primary hover:text-primary/80 font-semibold text-sm md:text-base">
+                              View Technical Implementation Details
                             </AccordionTrigger>
                             <AccordionContent className="space-y-5 pt-4 border-t">
                               {/* Strategic Value */}
                               <div>
                                 <h5 className="font-bold text-base md:text-lg mb-3 flex items-center gap-2 text-foreground">
-                                  <Heart className="h-5 w-5 text-primary" />
-                                  Clinical Value
+                                  <Shield className="h-5 w-5 text-primary" />
+                                  How It Works
                                 </h5>
                                 <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
                                   {useCase.details.whatItDoes}
                                 </p>
                               </div>
 
-                              {/* Quantified Benefits */}
-                              <div className="bg-gradient-to-br from-primary/5 to-purple-600/5 rounded-lg p-4 border border-primary/10">
-                                <h5 className="font-bold text-base md:text-lg mb-4 flex items-center gap-2 text-foreground">
-                                  <Star className="h-5 w-5 text-primary" />
-                                  Measurable Outcomes
-                                </h5>
-                                <ul className="space-y-3">
-                                  {useCase.details.howItHelps.map((help, helpIdx) => (
-                                    <li key={helpIdx} className="flex items-start gap-3">
-                                      <div className="mt-0.5 p-1 bg-primary/20 rounded-full">
-                                        <div className="h-2 w-2 bg-primary rounded-full" />
-                                      </div>
-                                      <span className="text-sm md:text-base font-medium text-foreground flex-1">{help}</span>
-                                    </li>
-                                  ))}
-                                </ul>
-                              </div>
+                              {/* Complete Benefits */}
+                              {useCase.details.howItHelps.length > 3 && (
+                                <div className="bg-gradient-to-br from-primary/5 to-purple-600/5 rounded-lg p-4 border border-primary/10">
+                                  <h5 className="font-bold text-base md:text-lg mb-4 flex items-center gap-2 text-foreground">
+                                    <Heart className="h-5 w-5 text-primary" />
+                                    Additional Benefits
+                                  </h5>
+                                  <ul className="space-y-3">
+                                    {useCase.details.howItHelps.slice(3).map((help, helpIdx) => (
+                                      <li key={helpIdx} className="flex items-start gap-3">
+                                        <div className="mt-0.5 p-1 bg-primary/20 rounded-full">
+                                          <div className="h-2 w-2 bg-primary rounded-full" />
+                                        </div>
+                                        <span className="text-sm md:text-base font-medium text-foreground flex-1">{help}</span>
+                                      </li>
+                                    ))}
+                                  </ul>
+                                </div>
+                              )}
 
-                              {/* Real-World Example */}
+                              {/* Live Scenario */}
                               <div className="bg-gradient-to-br from-muted/80 to-muted/40 rounded-xl p-5 border-l-4 border-primary">
                                 <h5 className="font-bold text-base md:text-lg mb-3 flex items-center gap-2 text-foreground">
                                   <Stethoscope className="h-5 w-5 text-primary" />
-                                  Real-World Scenario
+                                  Real-World Example
                                 </h5>
-                                <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+                                <p className="text-sm md:text-base text-muted-foreground leading-relaxed italic">
                                   "{useCase.details.example}"
                                 </p>
                               </div>

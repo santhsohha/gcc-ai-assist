@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { ArrowLeft, Factory, Cog, TrendingUp, Shield, Calendar, AlertTriangle, ClipboardList, Package, DollarSign, Settings, Bell, QrCode, FileCheck, Truck, MessageSquare, Wrench, Package2, CreditCard, Users } from "lucide-react";
+import { ArrowLeft, Factory, Cog, TrendingUp, Shield, Calendar, AlertTriangle, ClipboardList, Package, DollarSign, Settings, Bell, QrCode, FileCheck, Truck, MessageSquare, Wrench, Package2, CreditCard, Users, CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Manufacturing = () => {
@@ -389,79 +389,101 @@ const Manufacturing = () => {
                   {category.useCases.map((useCase, index) => (
                     <Card 
                       key={index}
-                      className="group/card hover:shadow-2xl hover:shadow-primary/10 transition-all duration-300 border-2 hover:border-primary/50 cursor-pointer overflow-hidden h-full flex flex-col"
+                      className="group/card hover:shadow-2xl hover:shadow-primary/10 transition-all duration-300 border-2 hover:border-primary/50 overflow-hidden h-full flex flex-col"
                     >
-                      <CardHeader className="pb-4">
-                        <div className="flex items-start justify-between mb-4">
+                      <CardHeader className="pb-6 space-y-5">
+                        <div className="flex items-start justify-between">
                           <div className="p-3 bg-gradient-to-br from-primary/10 to-purple-600/10 rounded-xl group-hover/card:scale-110 transition-transform">
                             {useCase.icon}
                           </div>
-                          <Badge variant="outline" className="text-xs font-semibold border-primary/30">
+                          <Badge variant="outline" className="text-xs font-semibold border-primary/30 bg-primary/5">
                             {useCase.source}
                           </Badge>
                         </div>
-                        <CardTitle className="text-xl md:text-2xl mb-3 leading-tight group-hover/card:text-primary transition-colors">
+                        
+                        <CardTitle className="text-2xl md:text-3xl font-bold leading-tight group-hover/card:text-primary transition-colors">
                           {useCase.title}
                         </CardTitle>
                         
-                        {/* Business Impact Badge */}
-                        <div className="flex items-center gap-2 bg-primary/10 rounded-lg px-4 py-3 border border-primary/20">
-                          <TrendingUp className="h-5 w-5 text-primary flex-shrink-0" />
-                          <span className="font-bold text-sm md:text-base text-primary">{useCase.benefit}</span>
+                        {/* Pain Point - What executives feel daily */}
+                        <div className="bg-destructive/10 border-l-4 border-destructive rounded-lg p-4">
+                          <p className="text-sm font-semibold text-destructive mb-1">⚠️ Daily Challenge:</p>
+                          <p className="text-sm md:text-base text-foreground leading-relaxed">
+                            {useCase.details.example.split('.')[0]}.
+                          </p>
                         </div>
                       </CardHeader>
 
-                      <CardContent className="space-y-4 flex-1 flex flex-col">
-                        {/* Workflow Overview */}
-                        <div className="bg-muted/50 rounded-lg p-4">
+                      <CardContent className="space-y-5 flex-1 flex flex-col pt-0">
+                        {/* Quantified Business Impact - Front & Center */}
+                        <div className="bg-gradient-to-br from-primary/10 to-purple-600/10 rounded-xl p-5 border-2 border-primary/20">
+                          <div className="flex items-center gap-3 mb-4">
+                            <TrendingUp className="h-6 w-6 text-primary" />
+                            <h4 className="text-lg md:text-xl font-bold text-foreground">Measurable Results</h4>
+                          </div>
+                          <ul className="space-y-3">
+                            {useCase.details.howItHelps.slice(0, 3).map((help, helpIdx) => (
+                              <li key={helpIdx} className="flex items-start gap-3">
+                                <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                                <span className="text-sm md:text-base font-semibold text-foreground">{help}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+
+                        {/* Clear Solution Statement */}
+                        <div className="bg-muted/80 rounded-lg p-4 border border-muted-foreground/20">
+                          <p className="text-base md:text-lg font-semibold text-foreground mb-2">How It Works:</p>
                           <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
-                            <span className="font-semibold text-foreground">How it works: </span>
                             {useCase.workflow}
                           </p>
                         </div>
 
-                        <Accordion type="single" collapsible className="w-full flex-1">
+                        {/* Accordion for Technical Details */}
+                        <Accordion type="single" collapsible className="w-full">
                           <AccordionItem value={`details-${categoryIndex}-${index}`} className="border-none">
-                            <AccordionTrigger className="hover:no-underline py-3 text-primary hover:text-primary/80 font-semibold text-base">
-                              View Full Details & ROI
+                            <AccordionTrigger className="hover:no-underline py-3 text-primary hover:text-primary/80 font-semibold text-sm md:text-base">
+                              View Technical Implementation Details
                             </AccordionTrigger>
                             <AccordionContent className="space-y-5 pt-4 border-t">
                               {/* Strategic Value */}
                               <div>
                                 <h5 className="font-bold text-base md:text-lg mb-3 flex items-center gap-2 text-foreground">
                                   <Shield className="h-5 w-5 text-primary" />
-                                  Strategic Value
+                                  Technical Implementation
                                 </h5>
                                 <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
                                   {useCase.details.whatItDoes}
                                 </p>
                               </div>
 
-                              {/* Quantified Benefits */}
-                              <div className="bg-gradient-to-br from-primary/5 to-purple-600/5 rounded-lg p-4 border border-primary/10">
-                                <h5 className="font-bold text-base md:text-lg mb-4 flex items-center gap-2 text-foreground">
-                                  <TrendingUp className="h-5 w-5 text-primary" />
-                                  Quantified Impact
-                                </h5>
-                                <ul className="space-y-3">
-                                  {useCase.details.howItHelps.map((help, helpIdx) => (
-                                    <li key={helpIdx} className="flex items-start gap-3">
-                                      <div className="mt-0.5 p-1 bg-primary/20 rounded-full">
-                                        <div className="h-2 w-2 bg-primary rounded-full" />
-                                      </div>
-                                      <span className="text-sm md:text-base font-medium text-foreground flex-1">{help}</span>
-                                    </li>
-                                  ))}
-                                </ul>
-                              </div>
+                              {/* Complete Benefits */}
+                              {useCase.details.howItHelps.length > 3 && (
+                                <div className="bg-gradient-to-br from-primary/5 to-purple-600/5 rounded-lg p-4 border border-primary/10">
+                                  <h5 className="font-bold text-base md:text-lg mb-4 flex items-center gap-2 text-foreground">
+                                    <TrendingUp className="h-5 w-5 text-primary" />
+                                    Additional Benefits
+                                  </h5>
+                                  <ul className="space-y-3">
+                                    {useCase.details.howItHelps.slice(3).map((help, helpIdx) => (
+                                      <li key={helpIdx} className="flex items-start gap-3">
+                                        <div className="mt-0.5 p-1 bg-primary/20 rounded-full">
+                                          <div className="h-2 w-2 bg-primary rounded-full" />
+                                        </div>
+                                        <span className="text-sm md:text-base font-medium text-foreground flex-1">{help}</span>
+                                      </li>
+                                    ))}
+                                  </ul>
+                                </div>
+                              )}
 
                               {/* Live Scenario */}
                               <div className="bg-gradient-to-br from-muted/80 to-muted/40 rounded-xl p-5 border-l-4 border-primary">
                                 <h5 className="font-bold text-base md:text-lg mb-3 flex items-center gap-2 text-foreground">
                                   <Factory className="h-5 w-5 text-primary" />
-                                  Live Scenario
+                                  Real-World Example
                                 </h5>
-                                <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+                                <p className="text-sm md:text-base text-muted-foreground leading-relaxed italic">
                                   "{useCase.details.example}"
                                 </p>
                               </div>

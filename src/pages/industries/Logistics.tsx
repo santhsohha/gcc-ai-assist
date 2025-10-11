@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { ArrowLeft, Truck, MapPin, Package, Phone, CheckCircle } from "lucide-react";
+import { ArrowLeft, Truck, MapPin, Package, Phone, CheckCircle, Shield, TrendingUp } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Logistics = () => {
@@ -335,65 +335,76 @@ const Logistics = () => {
                   {category.solutions.map((solution, index) => (
                     <Card 
                       key={index}
-                      className="group/card hover:shadow-2xl hover:shadow-primary/10 transition-all duration-300 border-2 hover:border-primary/50 cursor-pointer overflow-hidden h-full flex flex-col"
+                      className="group/card hover:shadow-2xl hover:shadow-primary/10 transition-all duration-300 border-2 hover:border-primary/50 overflow-hidden h-full flex flex-col"
                     >
-                      <CardHeader className="pb-4">
-                        <CardTitle className="text-xl md:text-2xl mb-3 leading-tight group-hover/card:text-primary transition-colors">
+                      <CardHeader className="pb-6 space-y-5">
+                        <div className="p-3 bg-gradient-to-br from-primary/10 to-purple-600/10 rounded-xl w-fit group-hover/card:scale-110 transition-transform">
+                          <Package className="h-6 w-6" />
+                        </div>
+                        
+                        <CardTitle className="text-2xl md:text-3xl font-bold leading-tight group-hover/card:text-primary transition-colors">
                           {solution.title}
                         </CardTitle>
                         
-                        {/* Description */}
-                        <div className="bg-muted/50 rounded-lg p-4">
-                          <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
-                            <span className="font-semibold text-foreground">Solution: </span>
-                            {solution.description}
+                        {/* Pain Point - What logistics leaders face */}
+                        <div className="bg-destructive/10 border-l-4 border-destructive rounded-lg p-4">
+                          <p className="text-sm font-semibold text-destructive mb-1">⚠️ Current Pain Point:</p>
+                          <p className="text-sm md:text-base text-foreground leading-relaxed">
+                            {solution.example.split('.')[0]}.
                           </p>
                         </div>
                       </CardHeader>
 
-                      <CardContent className="space-y-4 flex-1 flex flex-col">
-                        <Accordion type="single" collapsible className="w-full flex-1">
+                      <CardContent className="space-y-5 flex-1 flex flex-col pt-0">
+                        {/* Quantified Business Impact - Front & Center */}
+                        <div className="bg-gradient-to-br from-primary/10 to-purple-600/10 rounded-xl p-5 border-2 border-primary/20">
+                          <div className="flex items-center gap-3 mb-4">
+                            <TrendingUp className="h-6 w-6 text-primary" />
+                            <h4 className="text-lg md:text-xl font-bold text-foreground">Business Impact</h4>
+                          </div>
+                          <ul className="space-y-3">
+                            {solution.howItHelps.map((help, helpIdx) => (
+                              <li key={helpIdx} className="flex items-start gap-3">
+                                <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                                <span className="text-sm md:text-base font-semibold text-foreground">{help}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+
+                        {/* Clear Solution Statement */}
+                        <div className="bg-muted/80 rounded-lg p-4 border border-muted-foreground/20">
+                          <p className="text-base md:text-lg font-semibold text-foreground mb-2">The Solution:</p>
+                          <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+                            {solution.description}
+                          </p>
+                        </div>
+
+                        {/* Accordion for Technical Details */}
+                        <Accordion type="single" collapsible className="w-full">
                           <AccordionItem value={`details-${categoryIndex}-${index}`} className="border-none">
-                            <AccordionTrigger className="hover:no-underline py-3 text-primary hover:text-primary/80 font-semibold text-base">
-                              View Full Details & ROI
+                            <AccordionTrigger className="hover:no-underline py-3 text-primary hover:text-primary/80 font-semibold text-sm md:text-base">
+                              View Technical Implementation Details
                             </AccordionTrigger>
                             <AccordionContent className="space-y-5 pt-4 border-t">
-                              {/* Strategic Value */}
+                              {/* Technical Implementation */}
                               <div>
                                 <h5 className="font-bold text-base md:text-lg mb-3 flex items-center gap-2 text-foreground">
-                                  <Truck className="h-5 w-5 text-primary" />
-                                  Operational Value
+                                  <Shield className="h-5 w-5 text-primary" />
+                                  How It Works
                                 </h5>
                                 <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
                                   {solution.whatItDoes}
                                 </p>
                               </div>
 
-                              {/* Quantified Benefits */}
-                              <div className="bg-gradient-to-br from-primary/5 to-purple-600/5 rounded-lg p-4 border border-primary/10">
-                                <h5 className="font-bold text-base md:text-lg mb-4 flex items-center gap-2 text-foreground">
-                                  <CheckCircle className="h-5 w-5 text-primary" />
-                                  Business Impact
-                                </h5>
-                                <ul className="space-y-3">
-                                  {solution.howItHelps.map((help, helpIdx) => (
-                                    <li key={helpIdx} className="flex items-start gap-3">
-                                      <div className="mt-0.5 p-1 bg-primary/20 rounded-full">
-                                        <div className="h-2 w-2 bg-primary rounded-full" />
-                                      </div>
-                                      <span className="text-sm md:text-base font-medium text-foreground flex-1">{help}</span>
-                                    </li>
-                                  ))}
-                                </ul>
-                              </div>
-
-                              {/* Real-World Example */}
+                              {/* Live Scenario */}
                               <div className="bg-gradient-to-br from-muted/80 to-muted/40 rounded-xl p-5 border-l-4 border-primary">
                                 <h5 className="font-bold text-base md:text-lg mb-3 flex items-center gap-2 text-foreground">
-                                  <MapPin className="h-5 w-5 text-primary" />
-                                  Real-World Scenario
+                                  <Truck className="h-5 w-5 text-primary" />
+                                  Real-World Example
                                 </h5>
-                                <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+                                <p className="text-sm md:text-base text-muted-foreground leading-relaxed italic">
                                   "{solution.example}"
                                 </p>
                               </div>
