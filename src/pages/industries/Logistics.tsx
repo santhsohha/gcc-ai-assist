@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { ArrowLeft, Truck, MapPin, Package, Phone, CheckCircle, Shield, TrendingUp, AlertTriangle } from "lucide-react";
+import { ArrowLeft, Truck, MapPin, Package, Phone, CheckCircle, Shield, TrendingUp, AlertTriangle, DollarSign } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Logistics = () => {
@@ -13,6 +13,8 @@ const Logistics = () => {
     {
       title: "Communication Automation (WhatsApp + Email)",
       icon: <Phone className="h-6 w-6" />,
+      stats: "60% faster response times • 40% increase in lead conversion",
+      impact: "Logistics companies save 25+ hours weekly on email and WhatsApp management",
       solutions: [
         {
           title: "AI Email Parser & WhatsApp Responder",
@@ -63,6 +65,8 @@ const Logistics = () => {
     {
       title: "Document Intelligence (Excel, Word, PDF)",
       icon: <Package className="h-6 w-6" />,
+      stats: "85% reduction in data entry • 99% document accuracy",
+      impact: "Operations teams save $150K+ annually from automated document processing",
       solutions: [
         {
           title: "Excel to Workflow Trigger",
@@ -124,6 +128,8 @@ const Logistics = () => {
     {
       title: "Cognitive Assistant for Finance Ops (Ideal for CFO)",
       icon: <Truck className="h-6 w-6" />,
+      stats: "45% improvement in cash flow • 35% increase in collections",
+      impact: "CFOs recover $200K+ annually through automated financial workflows",
       solutions: [
         {
           title: "Aging Report Bot",
@@ -174,6 +180,8 @@ const Logistics = () => {
     {
       title: "Operations Automation",
       icon: <MapPin className="h-6 w-6" />,
+      stats: "80% reduction in status calls • 60% fewer tracking errors",
+      impact: "Operations teams save 20+ hours weekly on shipment coordination and updates",
       solutions: [
         {
           title: "Shipment ETA Trigger",
@@ -213,6 +221,8 @@ const Logistics = () => {
     {
       title: "Approvals & Compliance Workflows",
       icon: <Phone className="h-6 w-6" />,
+      stats: "70% faster approvals • 95% on-time compliance",
+      impact: "Management teams save 15+ hours weekly on approval workflows and compliance tracking",
       solutions: [
         {
           title: "WhatsApp Approvals",
@@ -337,10 +347,20 @@ const Logistics = () => {
                     </div>
                     
                     {/* Content */}
-                    <div className="flex-1">
-                      <h3 className="text-4xl md:text-5xl font-bold mb-3 bg-gradient-to-r from-primary via-purple-600 to-primary bg-clip-text text-transparent">
+                    <div className="flex-1 space-y-3">
+                      <h3 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary via-purple-600 to-primary bg-clip-text text-transparent">
                         {category.title}
                       </h3>
+                      <div className="flex flex-col sm:flex-row gap-4 pt-2">
+                        <div className="flex items-center gap-2 bg-green-500/10 rounded-lg px-4 py-2 border border-green-500/20">
+                          <TrendingUp className="h-5 w-5 text-green-600" />
+                          <span className="text-sm font-bold text-green-700">{category.stats}</span>
+                        </div>
+                        <div className="flex items-center gap-2 bg-primary/10 rounded-lg px-4 py-2 border border-primary/20">
+                          <DollarSign className="h-5 w-5 text-primary" />
+                          <span className="text-sm font-semibold text-foreground/90">{category.impact}</span>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>

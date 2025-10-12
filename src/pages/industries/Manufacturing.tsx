@@ -16,6 +16,8 @@ const Manufacturing = () => {
       title: "Production Planning & Scheduling",
       icon: <Calendar className="h-6 w-6" />,
       description: "Streamline production workflows and optimize scheduling",
+      stats: "Average 40% reduction in planning time • $250K+ annual savings per facility",
+      impact: "Manufacturers save 15-20 hours weekly on production coordination",
       useCases: [
         {
           title: "Production Order Scheduling",
@@ -74,6 +76,8 @@ const Manufacturing = () => {
       title: "Inventory & Supply Chain",
       icon: <Package className="h-6 w-6" />,
       description: "Automate inventory management and supplier communications",
+      stats: "30% reduction in carrying costs • 95% reduction in stockouts",
+      impact: "Companies recover $180K+ annually from optimized inventory",
       useCases: [
         {
           title: "WIP Tracking",
@@ -132,6 +136,8 @@ const Manufacturing = () => {
       title: "Quality & Compliance",
       icon: <Shield className="h-6 w-6" />,
       description: "Ensure quality standards and regulatory compliance",
+      stats: "85% faster defect resolution • 60% reduction in quality costs",
+      impact: "Quality teams prevent $320K+ in rework and warranty claims annually",
       useCases: [
         {
           title: "Supplier Invoice Processing",
@@ -190,6 +196,8 @@ const Manufacturing = () => {
       title: "Logistics & Customer Service",
       icon: <Truck className="h-6 w-6" />,
       description: "Streamline shipping and customer communications",
+      stats: "50% faster delivery cycles • 70% reduction in customer inquiries",
+      impact: "Logistics teams save 25+ hours weekly on coordination and updates",
       useCases: [
         {
           title: "Dispatch Readiness Alerts",
@@ -231,6 +239,8 @@ const Manufacturing = () => {
       title: "Maintenance & Finance",
       icon: <Wrench className="h-6 w-6" />,
       description: "Automate maintenance scheduling and financial processes",
+      stats: "70% reduction in breakdowns • 45% faster payment collection",
+      impact: "Finance & maintenance teams recover $290K+ from improved cash flow and uptime",
       useCases: [
         {
           title: "Preventive Maintenance Scheduling",
@@ -390,13 +400,23 @@ const Manufacturing = () => {
                     </div>
                     
                     {/* Content */}
-                    <div className="flex-1">
-                      <h3 className="text-4xl md:text-5xl font-bold mb-3 bg-gradient-to-r from-primary via-purple-600 to-primary bg-clip-text text-transparent">
+                    <div className="flex-1 space-y-3">
+                      <h3 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary via-purple-600 to-primary bg-clip-text text-transparent">
                         {category.title}
                       </h3>
                       <p className="text-lg md:text-xl text-foreground/80 font-medium">
                         {category.description}
                       </p>
+                      <div className="flex flex-col sm:flex-row gap-4 pt-2">
+                        <div className="flex items-center gap-2 bg-green-500/10 rounded-lg px-4 py-2 border border-green-500/20">
+                          <TrendingUp className="h-5 w-5 text-green-600" />
+                          <span className="text-sm font-bold text-green-700">{category.stats}</span>
+                        </div>
+                        <div className="flex items-center gap-2 bg-primary/10 rounded-lg px-4 py-2 border border-primary/20">
+                          <DollarSign className="h-5 w-5 text-primary" />
+                          <span className="text-sm font-semibold text-foreground/90">{category.impact}</span>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>

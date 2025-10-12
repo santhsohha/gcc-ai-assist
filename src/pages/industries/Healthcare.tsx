@@ -16,6 +16,8 @@ const Healthcare = () => {
       title: "Patient Management & Communication",
       icon: <MessageSquare className="h-6 w-6" />,
       description: "Streamline patient interactions and appointment management",
+      stats: "65% reduction in no-shows • 80% improvement in patient satisfaction",
+      impact: "Clinics save 30+ hours weekly on appointment coordination and reminders",
       useCases: [
         {
           title: "WhatsApp Appointment Bot",
@@ -120,6 +122,8 @@ const Healthcare = () => {
       title: "Patient Care & Follow-up",
       icon: <Heart className="h-6 w-6" />,
       description: "Automated care coordination and patient engagement",
+      stats: "90% medication adherence • 75% fewer missed follow-ups",
+      impact: "Healthcare providers improve patient outcomes and recover $120K+ in follow-up revenue",
       useCases: [
         {
           title: "Post-Consultation Care Reminders",
@@ -271,13 +275,23 @@ const Healthcare = () => {
                     </div>
                     
                     {/* Content */}
-                    <div className="flex-1">
-                      <h3 className="text-4xl md:text-5xl font-bold mb-3 bg-gradient-to-r from-primary via-purple-600 to-primary bg-clip-text text-transparent">
+                    <div className="flex-1 space-y-3">
+                      <h3 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary via-purple-600 to-primary bg-clip-text text-transparent">
                         {category.title}
                       </h3>
                       <p className="text-lg md:text-xl text-foreground/80 font-medium">
                         {category.description}
                       </p>
+                      <div className="flex flex-col sm:flex-row gap-4 pt-2">
+                        <div className="flex items-center gap-2 bg-green-500/10 rounded-lg px-4 py-2 border border-green-500/20">
+                          <TrendingUp className="h-5 w-5 text-green-600" />
+                          <span className="text-sm font-bold text-green-700">{category.stats}</span>
+                        </div>
+                        <div className="flex items-center gap-2 bg-primary/10 rounded-lg px-4 py-2 border border-primary/20">
+                          <DollarSign className="h-5 w-5 text-primary" />
+                          <span className="text-sm font-semibold text-foreground/90">{category.impact}</span>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
