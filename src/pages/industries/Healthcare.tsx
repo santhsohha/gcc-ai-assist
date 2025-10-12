@@ -255,13 +255,30 @@ const Healthcare = () => {
             {workflowCategories.map((category, categoryIndex) => (
               <div key={categoryIndex} className="group">
                 {/* Category Header */}
-                <div className="flex items-center gap-6 mb-8 pb-6 border-b-2 border-primary/20">
-                  <div className="p-4 bg-gradient-to-br from-primary/20 to-purple-600/20 rounded-2xl group-hover:scale-110 transition-transform">
-                    {category.icon}
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-3xl md:text-4xl font-bold mb-2 text-foreground">{category.title}</h3>
-                    <p className="text-lg text-muted-foreground">{category.description}</p>
+                <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-primary/10 via-purple-600/10 to-primary/5 p-8 mb-10 border-2 border-primary/20 group-hover:border-primary/40 transition-all duration-500">
+                  {/* Background decoration */}
+                  <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-primary/20 to-transparent rounded-full blur-3xl opacity-50 group-hover:opacity-70 transition-opacity" />
+                  
+                  <div className="relative flex items-center gap-8">
+                    {/* Icon with enhanced styling */}
+                    <div className="relative">
+                      <div className="absolute inset-0 bg-gradient-primary rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity" />
+                      <div className="relative p-6 bg-gradient-to-br from-primary to-purple-600 rounded-2xl shadow-elegant group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                        <div className="text-white">
+                          {category.icon}
+                        </div>
+                      </div>
+                    </div>
+                    
+                    {/* Content */}
+                    <div className="flex-1">
+                      <h3 className="text-4xl md:text-5xl font-bold mb-3 bg-gradient-to-r from-primary via-purple-600 to-primary bg-clip-text text-transparent">
+                        {category.title}
+                      </h3>
+                      <p className="text-lg md:text-xl text-foreground/80 font-medium">
+                        {category.description}
+                      </p>
+                    </div>
                   </div>
                 </div>
 
