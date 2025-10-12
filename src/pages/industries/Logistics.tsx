@@ -266,42 +266,153 @@ const Logistics = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-24 pb-16 px-4 bg-gradient-secondary">
-        <div className="container mx-auto">
-          <Link to="/" className="inline-flex items-center text-primary hover:text-primary/80 mb-8">
-            <ArrowLeft className="mr-2 h-4 w-4" />
+      <section className="relative pt-24 pb-20 px-4 overflow-hidden">
+        {/* Animated background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-purple-600/5 to-background" />
+        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-primary rounded-full blur-3xl opacity-10 animate-pulse" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-r from-purple-600/20 to-primary/20 rounded-full blur-3xl opacity-10" />
+        
+        <div className="container mx-auto relative z-10">
+          <Link to="/" className="inline-flex items-center text-primary hover:text-primary/80 mb-8 transition-all hover:gap-3 gap-2">
+            <ArrowLeft className="h-4 w-4" />
             Back to Home
           </Link>
           
-          <div className="max-w-4xl">
-            <Badge variant="secondary" className="bg-orange-50 text-orange-700 border-orange-200 mb-6">
-              🚛 Logistics Industry
-            </Badge>
+          <div className="grid lg:grid-cols-2 gap-12 items-center max-w-7xl">
+            {/* Left: Main Message */}
+            <div className="space-y-8">
+              <div className="space-y-4">
+                <Badge className="bg-gradient-to-r from-orange-500/10 to-orange-600/10 text-orange-700 border-orange-500/30 px-6 py-2 text-sm font-bold">
+                  🚛 GCC Logistics & Freight Industry
+                </Badge>
+                
+                <h1 className="text-5xl md:text-7xl font-bold leading-[1.1]">
+                  <span className="bg-gradient-to-r from-primary via-purple-600 to-primary bg-clip-text text-transparent">
+                    Stop Losing Money
+                  </span>
+                  <br />
+                  <span className="text-foreground">on Manual Operations</span>
+                </h1>
+                
+                <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
+                  Every day without automation costs you <span className="font-bold text-destructive">AED 2,500+</span> in wasted staff time, missed collections, and delayed shipments.
+                </p>
+              </div>
+              
+              {/* Pain Points */}
+              <div className="bg-destructive/5 border-l-4 border-destructive rounded-r-xl p-6 space-y-3">
+                <h3 className="font-bold text-lg text-destructive flex items-center gap-2">
+                  <AlertTriangle className="h-5 w-5" />
+                  Your Team Is Drowning In:
+                </h3>
+                <ul className="space-y-2 text-foreground/90">
+                  <li className="flex items-start gap-2">
+                    <span className="text-destructive font-bold mt-1">•</span>
+                    <span>50+ daily WhatsApp messages about shipment status</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-destructive font-bold mt-1">•</span>
+                    <span>Manual email checking eating 3-5 hours every day</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-destructive font-bold mt-1">•</span>
+                    <span>AED 150K+ stuck in overdue payments you forgot to chase</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-destructive font-bold mt-1">•</span>
+                    <span>Excel chaos causing delivery delays and angry customers</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button size="lg" className="text-base md:text-lg px-8 py-6 bg-gradient-to-r from-primary via-purple-600 to-primary hover:shadow-2xl hover:shadow-primary/30 transition-all hover:scale-105" asChild>
+                  <a href="https://app.apollo.io/#/meet/managed-meetings/AnandEthiraj/hgz-qap-fw2/30-min" target="_blank" rel="noopener noreferrer">
+                    Stop the Bleeding - Book Free Audit
+                  </a>
+                </Button>
+                <Button variant="outline" size="lg" className="text-base md:text-lg px-8 py-6 border-2 hover:bg-primary/5" asChild>
+                  <a href="https://app.apollo.io/#/meet/managed-meetings/AnandEthiraj/hgz-qap-fw2/30-min" target="_blank" rel="noopener noreferrer">
+                    See ROI Calculator
+                  </a>
+                </Button>
+              </div>
+            </div>
             
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-              <span className="bg-gradient-primary bg-clip-text text-transparent">
-                Supply Chain Intelligence
-              </span>
-              <br />
-              for Modern Logistics
-            </h1>
-            
-            <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl leading-relaxed">
-              Automate operations, finance, and customer communications with AI-powered workflows. 
-              <span className="block mt-2 font-semibold">Real-time tracking. Seamless integration. Enterprise-grade reliability.</span>
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="text-base md:text-lg px-8 py-6 bg-gradient-primary hover:shadow-glow" asChild>
-                <a href="https://app.apollo.io/#/meet/managed-meetings/AnandEthiraj/hgz-qap-fw2/30-min" target="_blank" rel="noopener noreferrer">
-                  Schedule Operations Review
-                </a>
-              </Button>
-              <Button variant="outline" size="lg" className="text-base md:text-lg px-8 py-6 border-2" asChild>
-                <a href="https://app.apollo.io/#/meet/managed-meetings/AnandEthiraj/hgz-qap-fw2/30-min" target="_blank" rel="noopener noreferrer">
-                  Download Logistics Case Study
-                </a>
-              </Button>
+            {/* Right: Stats & Social Proof */}
+            <div className="space-y-6">
+              {/* Industry Stats Card */}
+              <div className="relative group">
+                <div className="absolute inset-0 bg-gradient-primary rounded-2xl blur-xl opacity-25 group-hover:opacity-40 transition-opacity" />
+                <div className="relative bg-gradient-to-br from-card via-card to-card/80 backdrop-blur-sm rounded-2xl p-8 border-2 border-primary/20 space-y-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="p-3 bg-gradient-primary rounded-xl">
+                      <Truck className="h-6 w-6 text-white" />
+                    </div>
+                    <h3 className="text-2xl font-bold">GCC Logistics Market Reality</h3>
+                  </div>
+                  
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="bg-primary/5 rounded-xl p-4 border border-primary/20">
+                      <div className="text-3xl font-bold text-primary mb-1">$42B</div>
+                      <div className="text-sm text-muted-foreground">GCC Logistics Market Size</div>
+                    </div>
+                    <div className="bg-green-500/5 rounded-xl p-4 border border-green-500/20">
+                      <div className="text-3xl font-bold text-green-600 mb-1">8.5%</div>
+                      <div className="text-sm text-muted-foreground">Annual Growth Rate</div>
+                    </div>
+                    <div className="bg-destructive/5 rounded-xl p-4 border border-destructive/20">
+                      <div className="text-3xl font-bold text-destructive mb-1">35%</div>
+                      <div className="text-sm text-muted-foreground">Avg. Operating Costs</div>
+                    </div>
+                    <div className="bg-orange-500/5 rounded-xl p-4 border border-orange-500/20">
+                      <div className="text-3xl font-bold text-orange-600 mb-1">25hrs</div>
+                      <div className="text-sm text-muted-foreground">Wasted on Admin/Week</div>
+                    </div>
+                  </div>
+                  
+                  <div className="pt-4 border-t border-border/50">
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      <span className="font-bold text-foreground">The Problem:</span> 78% of GCC logistics companies still rely on Excel + WhatsApp + manual follow-ups. This costs them <span className="font-bold text-destructive">30-40% more</span> in operational expenses than automated competitors.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Results Preview */}
+              <div className="bg-gradient-to-br from-green-500/10 to-green-600/10 rounded-2xl p-6 border-2 border-green-500/30">
+                <h4 className="font-bold text-lg mb-4 flex items-center gap-2 text-green-700">
+                  <TrendingUp className="h-5 w-5" />
+                  What You Get in 30 Days:
+                </h4>
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3">
+                    <div className="h-12 w-12 rounded-lg bg-green-500/20 flex items-center justify-center flex-shrink-0">
+                      <span className="text-xl font-bold text-green-700">60%</span>
+                    </div>
+                    <p className="text-sm text-foreground/90">Faster client response times = happier customers</p>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="h-12 w-12 rounded-lg bg-green-500/20 flex items-center justify-center flex-shrink-0">
+                      <span className="text-xl font-bold text-green-700">40%</span>
+                    </div>
+                    <p className="text-sm text-foreground/90">More collections from automated payment reminders</p>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="h-12 w-12 rounded-lg bg-green-500/20 flex items-center justify-center flex-shrink-0">
+                      <span className="text-xl font-bold text-green-700">25hrs</span>
+                    </div>
+                    <p className="text-sm text-foreground/90">Saved per week on email & WhatsApp management</p>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Urgency */}
+              <div className="bg-primary/5 rounded-xl p-6 border border-primary/20">
+                <p className="text-sm text-foreground/80 leading-relaxed">
+                  <span className="font-bold text-primary">⚡ Limited Availability:</span> We're onboarding only 5 logistics companies this quarter to ensure perfect implementation. 2 spots already taken.
+                </p>
+              </div>
             </div>
           </div>
         </div>

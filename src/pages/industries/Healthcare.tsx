@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { ArrowLeft, Heart, Calendar, FileText, Users, MessageSquare, Mail, Upload, TestTube, CreditCard, Clock, Stethoscope, Clipboard, DollarSign, Star, CheckCircle, Shield, TrendingUp } from "lucide-react";
+import { ArrowLeft, Heart, Calendar, FileText, Users, MessageSquare, Mail, Upload, TestTube, CreditCard, Clock, Stethoscope, Clipboard, DollarSign, Star, CheckCircle, Shield, TrendingUp, AlertTriangle } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Healthcare = () => {
@@ -194,42 +194,154 @@ const Healthcare = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-24 pb-16 px-4 bg-gradient-secondary">
-        <div className="container mx-auto">
-          <Link to="/" className="inline-flex items-center text-primary hover:text-primary/80 mb-8">
-            <ArrowLeft className="mr-2 h-4 w-4" />
+      <section className="relative pt-24 pb-20 px-4 overflow-hidden">
+        {/* Animated background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-green-600/5 to-background" />
+        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-primary rounded-full blur-3xl opacity-10 animate-pulse" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-r from-green-600/20 to-primary/20 rounded-full blur-3xl opacity-10" />
+        
+        <div className="container mx-auto relative z-10">
+          <Link to="/" className="inline-flex items-center text-primary hover:text-primary/80 mb-8 transition-all hover:gap-3 gap-2">
+            <ArrowLeft className="h-4 w-4" />
             Back to Home
           </Link>
           
-          <div className="max-w-4xl">
-            <Badge variant="secondary" className="bg-orange-50 text-orange-700 border-orange-200 mb-6">
-              🏥 Healthcare Industry
-            </Badge>
+          <div className="grid lg:grid-cols-2 gap-12 items-center max-w-7xl">
+            {/* Left: Main Message */}
+            <div className="space-y-8">
+              <div className="space-y-4">
+                <Badge className="bg-gradient-to-r from-green-500/10 to-green-600/10 text-green-700 border-green-500/30 px-6 py-2 text-sm font-bold">
+                  ⚕️ GCC Healthcare & Medical Services
+                </Badge>
+                
+                <h1 className="text-5xl md:text-7xl font-bold leading-[1.1]">
+                  <span className="bg-gradient-to-r from-primary via-green-600 to-primary bg-clip-text text-transparent">
+                    Patient Care Is
+                  </span>
+                  <br />
+                  <span className="text-foreground">Suffering From Admin</span>
+                </h1>
+                
+                <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
+                  Your staff spends <span className="font-bold text-destructive">60% of their time</span> on calls, paperwork, and manual scheduling instead of patient care.
+                </p>
+              </div>
+              
+              {/* Pain Points */}
+              <div className="bg-destructive/5 border-l-4 border-destructive rounded-r-xl p-6 space-y-3">
+                <h3 className="font-bold text-lg text-destructive flex items-center gap-2">
+                  <AlertTriangle className="h-5 w-5" />
+                  Your Team Drowns Daily In:
+                </h3>
+                <ul className="space-y-2 text-foreground/90">
+                  <li className="flex items-start gap-2">
+                    <span className="text-destructive font-bold mt-1">•</span>
+                    <span>200+ calls/day asking "Is my report ready?" or "Can I reschedule?"</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-destructive font-bold mt-1">•</span>
+                    <span>35% no-show rate costing you AED 50K+ monthly in lost revenue</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-destructive font-bold mt-1">•</span>
+                    <span>Manual insurance claim tracking causing 2-3 week delays</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-destructive font-bold mt-1">•</span>
+                    <span>Patients forgetting medications and missing follow-ups</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button size="lg" className="text-base md:text-lg px-8 py-6 bg-gradient-to-r from-primary via-green-600 to-primary hover:shadow-2xl hover:shadow-primary/30 transition-all hover:scale-105" asChild>
+                  <a href="https://app.apollo.io/#/meet/managed-meetings/AnandEthiraj/hgz-qap-fw2/30-min" target="_blank" rel="noopener noreferrer">
+                    Free Clinic Automation Audit
+                  </a>
+                </Button>
+                <Button variant="outline" size="lg" className="text-base md:text-lg px-8 py-6 border-2 hover:bg-primary/5" asChild>
+                  <a href="https://app.apollo.io/#/meet/managed-meetings/AnandEthiraj/hgz-qap-fw2/30-min" target="_blank" rel="noopener noreferrer">
+                    See Patient Satisfaction ROI
+                  </a>
+                </Button>
+              </div>
+            </div>
             
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-              <span className="bg-gradient-primary bg-clip-text text-transparent">
-                Healthcare Excellence
-              </span>
-              <br />
-              Through AI Automation
-            </h1>
-            
-            <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl leading-relaxed">
-              Enhance patient care and streamline operations with AI agents designed for modern healthcare facilities. 
-              <span className="block mt-2 font-semibold">HIPAA compliant. Multi-language support. Seamless HIS integration.</span>
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="text-base md:text-lg px-8 py-6 bg-gradient-primary hover:shadow-glow" asChild>
-                <a href="https://app.apollo.io/#/meet/managed-meetings/AnandEthiraj/hgz-qap-fw2/30-min" target="_blank" rel="noopener noreferrer">
-                  Schedule Healthcare Consultation
-                </a>
-              </Button>
-              <Button variant="outline" size="lg" className="text-base md:text-lg px-8 py-6 border-2" asChild>
-                <a href="https://app.apollo.io/#/meet/managed-meetings/AnandEthiraj/hgz-qap-fw2/30-min" target="_blank" rel="noopener noreferrer">
-                  Download Healthcare Case Study
-                </a>
-              </Button>
+            {/* Right: Stats & Social Proof */}
+            <div className="space-y-6">
+              {/* Industry Stats Card */}
+              <div className="relative group">
+                <div className="absolute inset-0 bg-gradient-primary rounded-2xl blur-xl opacity-25 group-hover:opacity-40 transition-opacity" />
+                <div className="relative bg-gradient-to-br from-card via-card to-card/80 backdrop-blur-sm rounded-2xl p-8 border-2 border-primary/20 space-y-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="p-3 bg-gradient-primary rounded-xl">
+                      <Heart className="h-6 w-6 text-white" />
+                    </div>
+                    <h3 className="text-2xl font-bold">GCC Healthcare Reality</h3>
+                  </div>
+                  
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="bg-primary/5 rounded-xl p-4 border border-primary/20">
+                      <div className="text-3xl font-bold text-primary mb-1">$68B</div>
+                      <div className="text-sm text-muted-foreground">GCC Healthcare Market</div>
+                    </div>
+                    <div className="bg-green-500/5 rounded-xl p-4 border border-green-500/20">
+                      <div className="text-3xl font-bold text-green-600 mb-1">12.5%</div>
+                      <div className="text-sm text-muted-foreground">Annual Growth Rate</div>
+                    </div>
+                    <div className="bg-destructive/5 rounded-xl p-4 border border-destructive/20">
+                      <div className="text-3xl font-bold text-destructive mb-1">60%</div>
+                      <div className="text-sm text-muted-foreground">Staff Time on Admin</div>
+                    </div>
+                    <div className="bg-orange-500/5 rounded-xl p-4 border border-orange-500/20">
+                      <div className="text-3xl font-bold text-orange-600 mb-1">35%</div>
+                      <div className="text-sm text-muted-foreground">Appointment No-Shows</div>
+                    </div>
+                  </div>
+                  
+                  <div className="pt-4 border-t border-border/50">
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      <span className="font-bold text-foreground">The Crisis:</span> GCC clinics lose <span className="font-bold text-destructive">30-40 hours weekly</span> on appointment calls, manual report delivery, and insurance claim tracking. This costs AED 15-20K monthly in staff time alone.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Results Preview */}
+              <div className="bg-gradient-to-br from-green-500/10 to-green-600/10 rounded-2xl p-6 border-2 border-green-500/30">
+                <h4 className="font-bold text-lg mb-4 flex items-center gap-2 text-green-700">
+                  <TrendingUp className="h-5 w-5" />
+                  Your Clinic in 30 Days:
+                </h4>
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3">
+                    <div className="h-12 w-12 rounded-lg bg-green-500/20 flex items-center justify-center flex-shrink-0">
+                      <span className="text-xl font-bold text-green-700">65%</span>
+                    </div>
+                    <p className="text-sm text-foreground/90">Fewer no-shows = AED 30K+ more revenue/month</p>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="h-12 w-12 rounded-lg bg-green-500/20 flex items-center justify-center flex-shrink-0">
+                      <span className="text-xl font-bold text-green-700">80%</span>
+                    </div>
+                    <p className="text-sm text-foreground/90">Higher patient satisfaction scores</p>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="h-12 w-12 rounded-lg bg-green-500/20 flex items-center justify-center flex-shrink-0">
+                      <span className="text-xl font-bold text-green-700">30hrs</span>
+                    </div>
+                    <p className="text-sm text-foreground/90">Freed weekly for actual patient care</p>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Social Proof */}
+              <div className="bg-primary/5 rounded-xl p-6 border border-primary/20">
+                <p className="text-sm text-foreground/80 leading-relaxed mb-3">
+                  <span className="font-bold text-primary">"Our no-show rate dropped from 35% to 8%</span> in the first month. The WhatsApp appointment bot alone saved us AED 45K monthly. Game changer."
+                </p>
+                <p className="text-xs text-muted-foreground">— Clinic Manager, Premier Healthcare Group, Abu Dhabi</p>
+              </div>
             </div>
           </div>
         </div>

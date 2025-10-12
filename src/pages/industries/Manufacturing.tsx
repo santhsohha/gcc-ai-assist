@@ -319,42 +319,154 @@ const Manufacturing = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-24 pb-16 px-4 bg-gradient-secondary">
-        <div className="container mx-auto">
-          <Link to="/" className="inline-flex items-center text-primary hover:text-primary/80 mb-8">
-            <ArrowLeft className="mr-2 h-4 w-4" />
+      <section className="relative pt-24 pb-20 px-4 overflow-hidden">
+        {/* Animated background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-blue-600/5 to-background" />
+        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-primary rounded-full blur-3xl opacity-10 animate-pulse" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-r from-blue-600/20 to-primary/20 rounded-full blur-3xl opacity-10" />
+        
+        <div className="container mx-auto relative z-10">
+          <Link to="/" className="inline-flex items-center text-primary hover:text-primary/80 mb-8 transition-all hover:gap-3 gap-2">
+            <ArrowLeft className="h-4 w-4" />
             Back to Home
           </Link>
           
-          <div className="max-w-4xl">
-            <Badge variant="secondary" className="bg-orange-50 text-orange-700 border-orange-200 mb-6">
-              🏭 Manufacturing Industry
-            </Badge>
+          <div className="grid lg:grid-cols-2 gap-12 items-center max-w-7xl">
+            {/* Left: Main Message */}
+            <div className="space-y-8">
+              <div className="space-y-4">
+                <Badge className="bg-gradient-to-r from-blue-500/10 to-blue-600/10 text-blue-700 border-blue-500/30 px-6 py-2 text-sm font-bold">
+                  🏭 GCC Manufacturing & Production
+                </Badge>
+                
+                <h1 className="text-5xl md:text-7xl font-bold leading-[1.1]">
+                  <span className="bg-gradient-to-r from-primary via-blue-600 to-primary bg-clip-text text-transparent">
+                    Your Factory Is
+                  </span>
+                  <br />
+                  <span className="text-foreground">Bleeding Efficiency</span>
+                </h1>
+                
+                <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
+                  Manual production planning, Excel chaos, and delayed alerts cost you <span className="font-bold text-destructive">AED 3,500+/day</span> in downtime and waste.
+                </p>
+              </div>
+              
+              {/* Pain Points */}
+              <div className="bg-destructive/5 border-l-4 border-destructive rounded-r-xl p-6 space-y-3">
+                <h3 className="font-bold text-lg text-destructive flex items-center gap-2">
+                  <AlertTriangle className="h-5 w-5" />
+                  Daily Production Nightmares:
+                </h3>
+                <ul className="space-y-2 text-foreground/90">
+                  <li className="flex items-start gap-2">
+                    <span className="text-destructive font-bold mt-1">•</span>
+                    <span>2 hours every morning just to plan production schedules</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-destructive font-bold mt-1">•</span>
+                    <span>Machine breakdowns discovered hours after they happen</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-destructive font-bold mt-1">•</span>
+                    <span>Shift handover confusion causing 20-30% productivity loss</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-destructive font-bold mt-1">•</span>
+                    <span>Manual Excel inventory leading to stockouts and rush orders</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button size="lg" className="text-base md:text-lg px-8 py-6 bg-gradient-to-r from-primary via-blue-600 to-primary hover:shadow-2xl hover:shadow-primary/30 transition-all hover:scale-105" asChild>
+                  <a href="https://app.apollo.io/#/meet/managed-meetings/AnandEthiraj/hgz-qap-fw2/30-min" target="_blank" rel="noopener noreferrer">
+                    Fix This Now - Free Factory Audit
+                  </a>
+                </Button>
+                <Button variant="outline" size="lg" className="text-base md:text-lg px-8 py-6 border-2 hover:bg-primary/5" asChild>
+                  <a href="https://app.apollo.io/#/meet/managed-meetings/AnandEthiraj/hgz-qap-fw2/30-min" target="_blank" rel="noopener noreferrer">
+                    Calculate Your Waste
+                  </a>
+                </Button>
+              </div>
+            </div>
             
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-              <span className="bg-gradient-primary bg-clip-text text-transparent">
-                Manufacturing Intelligence
-              </span>
-              <br />
-              for Modern Operations
-            </h1>
-            
-            <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl leading-relaxed">
-              Transform production efficiency and supply chain agility with AI-powered workflows. 
-              <span className="block mt-2 font-semibold">Enterprise-grade security. Seamless ERP integration. Zero coding required.</span>
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="text-base md:text-lg px-8 py-6 bg-gradient-primary hover:shadow-glow" asChild>
-                <a href="https://app.apollo.io/#/meet/managed-meetings/AnandEthiraj/hgz-qap-fw2/30-min" target="_blank" rel="noopener noreferrer">
-                  Schedule Executive Briefing
-                </a>
-              </Button>
-              <Button variant="outline" size="lg" className="text-base md:text-lg px-8 py-6 border-2" asChild>
-                <a href="https://app.apollo.io/#/meet/managed-meetings/AnandEthiraj/hgz-qap-fw2/30-min" target="_blank" rel="noopener noreferrer">
-                  Download ROI Calculator
-                </a>
-              </Button>
+            {/* Right: Stats & Social Proof */}
+            <div className="space-y-6">
+              {/* Industry Stats Card */}
+              <div className="relative group">
+                <div className="absolute inset-0 bg-gradient-primary rounded-2xl blur-xl opacity-25 group-hover:opacity-40 transition-opacity" />
+                <div className="relative bg-gradient-to-br from-card via-card to-card/80 backdrop-blur-sm rounded-2xl p-8 border-2 border-primary/20 space-y-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="p-3 bg-gradient-primary rounded-xl">
+                      <Factory className="h-6 w-6 text-white" />
+                    </div>
+                    <h3 className="text-2xl font-bold">GCC Manufacturing Crisis</h3>
+                  </div>
+                  
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="bg-primary/5 rounded-xl p-4 border border-primary/20">
+                      <div className="text-3xl font-bold text-primary mb-1">$156B</div>
+                      <div className="text-sm text-muted-foreground">UAE Manufacturing Value</div>
+                    </div>
+                    <div className="bg-green-500/5 rounded-xl p-4 border border-green-500/20">
+                      <div className="text-3xl font-bold text-green-600 mb-1">11.4%</div>
+                      <div className="text-sm text-muted-foreground">GDP Contribution</div>
+                    </div>
+                    <div className="bg-destructive/5 rounded-xl p-4 border border-destructive/20">
+                      <div className="text-3xl font-bold text-destructive mb-1">40%</div>
+                      <div className="text-sm text-muted-foreground">Lost to Manual Processes</div>
+                    </div>
+                    <div className="bg-orange-500/5 rounded-xl p-4 border border-orange-500/20">
+                      <div className="text-3xl font-bold text-orange-600 mb-1">20hrs</div>
+                      <div className="text-sm text-muted-foreground">Wasted Weekly/Factory</div>
+                    </div>
+                  </div>
+                  
+                  <div className="pt-4 border-t border-border/50">
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      <span className="font-bold text-foreground">Industry Reality:</span> 82% of GCC manufacturers still use Excel sheets, WhatsApp groups, and paper logs. This inefficiency costs them <span className="font-bold text-destructive">25-35% in lost productivity</span> compared to automated factories.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Results Preview */}
+              <div className="bg-gradient-to-br from-green-500/10 to-green-600/10 rounded-2xl p-6 border-2 border-green-500/30">
+                <h4 className="font-bold text-lg mb-4 flex items-center gap-2 text-green-700">
+                  <TrendingUp className="h-5 w-5" />
+                  After 45 Days With Us:
+                </h4>
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3">
+                    <div className="h-12 w-12 rounded-lg bg-green-500/20 flex items-center justify-center flex-shrink-0">
+                      <span className="text-xl font-bold text-green-700">40%</span>
+                    </div>
+                    <p className="text-sm text-foreground/90">Less time planning = more time producing</p>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="h-12 w-12 rounded-lg bg-green-500/20 flex items-center justify-center flex-shrink-0">
+                      <span className="text-xl font-bold text-green-700">85%</span>
+                    </div>
+                    <p className="text-sm text-foreground/90">Faster machine downtime alerts = less waste</p>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="h-12 w-12 rounded-lg bg-green-500/20 flex items-center justify-center flex-shrink-0">
+                      <span className="text-xl font-bold text-green-700">$250K</span>
+                    </div>
+                    <p className="text-sm text-foreground/90">Average annual savings per facility</p>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Social Proof */}
+              <div className="bg-primary/5 rounded-xl p-6 border border-primary/20">
+                <p className="text-sm text-foreground/80 leading-relaxed mb-3">
+                  <span className="font-bold text-primary">"We recovered AED 180K in the first 3 months</span> just from automated inventory tracking and supplier follow-ups. The ROI was instant."
+                </p>
+                <p className="text-xs text-muted-foreground">— Operations Director, Leading FMCG Manufacturer, Dubai</p>
+              </div>
             </div>
           </div>
         </div>
